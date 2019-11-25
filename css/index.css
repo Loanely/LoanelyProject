@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
+
+/* font-family: 'Rambla', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 12vh;
+    background-color: rgb(128, 128, 128);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav #logo {
+    width: 50%;
+}
+
+nav img {
+    width: 15em;
+    margin-left: 3em;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none;
+    margin-right: 3em;
+}
+li {
+    font-family: 'Rambla', sans-serif;
+    color: #2F435E;
+    list-style: none;
+   
+}
+
+a {
+    text-decoration: none;
+    color: #2F435E;
+}
+
