@@ -1,3 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
+
+/* font-family: 'Rambla', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+/* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 12vh;
+    background-color: rgb(128, 128, 128);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    
+}
+
+nav #logo {
+    width: 50%;
+}
+
+nav img {
+    width: 15em;
+    margin-left: 3em;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 3em;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none;
+    
+   
+    
+}
+li {
+    font-family: 'Rambla', sans-serif;
+    color: #2F435E;
+    list-style: none;
+    
+   
+}
+
+a {
+    text-decoration: none;
+    color: #2F435E;
+    display: flex;
+    align-items: center;
+   
+ 
+   
+}
+
+ul li a img {
+    width: 1rem;
+    padding-right: .5em;
+}
+
+
+/* **********************main********************** */
 section{
     background-image: url(../assets/images/inscription/Rectangle\ 45.jpg);
     background-size: cover;
@@ -13,7 +93,12 @@ input{
     width: 25em;
     height: 2.5em;
     border: none;
+    border-radius: 0.3em;
+    margin-top: 1.5em;
     
+}
+form p{
+    margin-top: 2em;
 }
 
 
@@ -43,4 +128,27 @@ button{
     width: 15.625em;
     height: 4em;
     border: none;
+    color: white;
+   
+}
+.conf p{
+    margin: 1em;
+}
+.check{
+    width: 2em;
+    height: 2em;
+    margin: 1em;
+    border: none;
+    border-radius: 1em;
+}
+button p{
+    font-size: 1.6em;
+
+}
+article:nth-child(5){
+    display: flex;
+    justify-content: center;
+}
+article:nth-child(5) button {
+    margin: 1.5em;
 }
