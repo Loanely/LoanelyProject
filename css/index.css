@@ -13,6 +13,9 @@ html, body {
     box-sizing: border-box;
 }
 
+
+/* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
+
 nav {
     position: relative;
     width: 100vw;
@@ -21,7 +24,8 @@ nav {
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: space-between;
+    
+    
 }
 
 nav #logo {
@@ -33,21 +37,42 @@ nav img {
     margin-left: 3em;
 }
 
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 3em;
+}
+
 ul {
     display: flex;
     flex-flow: row;
     text-decoration: none;
-    margin-right: 3em;
+    
+   
+    
 }
 li {
     font-family: 'Rambla', sans-serif;
     color: #2F435E;
     list-style: none;
+    
    
 }
 
 a {
     text-decoration: none;
     color: #2F435E;
+    display: flex;
+    align-items: center;
+   
+ 
+   
 }
 
+ul li a img {
+    width: 1rem;
+    padding-right: .5em;
+}
+
+/* +++++++++++++++ICI JE FINI MON NAVBAR +++++++++++++++++++++++++++++++++++ */
