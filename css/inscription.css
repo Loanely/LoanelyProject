@@ -21,7 +21,7 @@ nav {
     position: relative;
     width: 100vw;
     height: 12vh;
-    background-color: rgb(128, 128, 128);
+    /* background-color: rgb(128, 128, 128); */
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -77,21 +77,25 @@ ul li a img {
 }
 
 
-/* **********************main********************** */
-section{
+/* **********************MAIN********************** */
+aside{
     background-image: url(../assets/images/inscription/Rectangle\ 45.jpg);
     background-size: cover;
     height: 85vh;
     width: 45vw;
 }
+
 p{
     color: #fff;
-    size: 1.5em;
+    font-size: 1.5em;
+    font-family: 'Rambla';
+    font-style: normal;
+  
 }
 input{
-    background-color: #C4C4C4;
+    background-color: rgba(196, 196, 196, 0.521);
     width: 25em;
-    height: 2.5em;
+    height: 3em;
     border: none;
     border-radius: 0.3em;
     margin-top: 1.5em;
@@ -110,7 +114,7 @@ main{
     background-color: #44566C;
     display: flex;
 }
-aside{
+section{
     margin: auto;
    
 }
@@ -123,16 +127,10 @@ aside{
     display: flex;  
     margin-left: 2vw;
 }
-button{
-    background-color: #1B2A3D;
-    width: 15.625em;
-    height: 4em;
-    border: none;
-    color: white;
-   
-}
+
 .conf p{
     margin: 1em;
+    font-size: 0.9em;
 }
 .check{
     width: 2em;
@@ -141,14 +139,35 @@ button{
     border: none;
     border-radius: 1em;
 }
-button p{
+article:nth-child(5) div a{
     font-size: 1.6em;
+    color: white;
+   margin-left: 2.5em;
+   margin-right:2em ;
+   margin-top: 0.3em;
+   
 
-}
+} 
 article:nth-child(5){
     display: flex;
     justify-content: center;
+   
 }
-article:nth-child(5) button {
+article:nth-child(5) div{
     margin: 1.5em;
+    background-color: #1B2A3D;
+    width: 14em;
+    height: 3em;
+    border: none;
+    
+    border:solid 0.1em #1B2A3D ;
+    
 }
+
+@font-face {
+    font-family: 'Rambla';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rambla'), local('Rambla-Regular'), url(https://fonts.gstatic.com/s/rambla/v7/snfrs0ip98hx6mrEKrgPBtg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
