@@ -11,23 +11,56 @@
 </head>
 
 <body>
-    <nav>Lorem ispum</nav>
-    <section>
+    <header>
+
+        <!-- =================================NAV STARTS HERE===================================== -->
+        <nav>
+            <div id="logo">
+                <img src="../assets/logo/loanelyLOGO.png" alt="logo">
+            </div>
+
+            <div id="menu">
+
+                <ul>
+                    <li><a href="#"> <img src="../assets/icons/accueil/contact.png" alt=""> CONTACT</a></li>
+                    <li><a href="#"> <img src="../assets/icons/accueil/connexion.png" alt=""> CONNEXION</a></li>
+                    <li><a href="#"> <img src="../assets/icons/accueil/inscription.png" alt=""> INSCRIPTION</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+    </header>
+    <section id='one'>
         <article>
-            <img>dddddddddddddddddddddd</img>
+            <img id='calculate' src='../assets/images/calcul/calculatrice.png'></img>
         </article>
 
         <article>
             <h1> Calculez votre mensualité</h1>
+            <form>
+                <label for='montant'>Montant du prêt*</label>
+                <input name='montant' type='number'>
+
+                <label for='duree'>Durée du prêt*</label>
+                <input name='duree' type='number'>
+
+                <label for='taux'>Taux*</label>
+                <input name='taux' type='number'>
+            </form>
         </article>
-        <article>fddddddddddddddf</article>
+        <article>
+            <h2>Votre mensualité et à partir de 123 </h2>
+                <h1></h1>
+            <p>Lorem LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</p>
+        </article>
 
     </section>
     <footer>
 
     </footer>
     <script>
-       
+        console.log(document.getElementById('one'))
     </script>
 </body>
 
