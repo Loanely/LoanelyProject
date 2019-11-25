@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap%27');
+
+
+   
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rambla', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    
+}
+
+nav #logo {
+    width: 50%;
+}
+
+nav img {
+    width: 15em;
+    margin-left: 3em;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 3em;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none;
+}
+li {
+    font-family: 'Rambla', sans-serif;
+    color: #2F435E;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #2F435E;
+    display: flex;
+    align-items: center;   
+}
+
+ul li a img {
+    width: 1rem;
+    padding-right: .5em;
+}
+section {
+    display: flex;
+    height:85vh;
+    width:100vw;
+    background-color: #44566C;
+
+}
+#calculate {
+    height:85vh;
+}
+/* section:first-child {
+    width:40%;
+    height:85vh;
+    background-color:red;
+}
+section:nth-child(2) {
+    width:20%;
+    height:85vh;
+    background-color:blue;
+}
+section:nth-child(3) {
+    width:20%;
+    height:85vh;
+    background-color:green;
+} */
+
+form {
+    display:flex;
+    flex-direction: column;
+    
+}
+footer {
+    height:9.4em;
+    width:100vw;
+    background-color: black;
+}
