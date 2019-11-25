@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
+/* font-family: 'Rambla', sans-serif; */
+
+
+html, body, main{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    font-family: 'Rambla', sans-serif;;
+}
+
+#idclient{
+    width: 100%;
+    height: 5vh;
+    background-color: #848D98;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#bloc{
+    height: 700px;
+    width: 100%;
+    background-color: #44566C;
+}
