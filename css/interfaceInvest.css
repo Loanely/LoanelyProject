@@ -19,8 +19,38 @@ html, body, main{
     color: white;
 }
 
-#bloc{
-    height: 700px;
+#icons{
+    height: 200px;
     width: 100%;
     background-color: #44566C;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10vh;
+}
+
+.btntbl{
+    width: 10em;
+    height: 10em;
+    background-color: #312635;
+    display: flex;
+}
+.btnnvodos{
+    width: 10em;
+    height: 10em;
+    background-color: #848D98;
+}
+.btndos{
+    width: 10em;
+    height: 10em;
+    background-color: #848D98;
+}
+.btninfos{
+    width: 10em;
+    height: 10em;
+    background-color: #848D98;
+}
+.btnaide{
+    width: 10em;
+    height: 10em;
+    background-color: #848D98;
 }
