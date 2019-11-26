@@ -20,7 +20,6 @@ nav {
     position: relative;
     width: 100vw;
     height: 12vh;
-    background-color: rgb(128, 128, 128);
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -65,9 +64,6 @@ a {
     color: #2F435E;
     display: flex;
     align-items: center;
-   
- 
-   
 }
 
 ul li a img {
@@ -76,3 +72,65 @@ ul li a img {
 }
 
 /* +++++++++++++++ICI JE FINI MON NAVBAR +++++++++++++++++++++++++++++++++++ */
+
+
+/* ===================SECTION 1 ===================================== */
+
+
+main section:nth-child(1){
+    height: 90vh;
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
+    display: flex;
+    justify-content: center;
+}
+
+
+main section:nth-child(1) article {
+    width: 90vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+main section:nth-child(1) article .txt-photo {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 30rem;
+}
+main section:nth-child(1) article .txt-photo #indice{
+    height: 3.6rem;   
+    
+}
+
+main section:nth-child(1) article .txt-photo h1 {
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.7rem;
+    color: white;
+    letter-spacing: .35rem;
+    
+}
+
+main section:nth-child(1) article .txt {
+    width: 30rem;
+    margin-top: 1rem;
+}
+
+main section:nth-child(1) article p{
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+main section:nth-child(1) article a {
+    text-decoration: none;
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 15rem;
+    margin-top: 2rem;
+    background: linear-gradient(rgb(49, 39, 55), rgb(47, 66, 92));
+    justify-content: center;
+}
