@@ -199,39 +199,6 @@ button p{
 
 
 
-.check{
-    width: 2em;
-    height: 2em;
-    margin: 1em;
-    border: none;
-    border-radius: 1em;
-    background-color: rgba(196, 196, 196, 0.39);
-}
-article:nth-child(5) div a{
-    font-size: 1.6em;
-    color: white;
-   margin-left: 2.5em;
-   margin-right:2em ;
-   margin-top: 0.3em;
-   
-
-} 
-article:nth-child(5){
-    display: flex;
-    justify-content: center;
-   
-}
-article:nth-child(5) div{
-    margin: 0.5em;
-    background-color: #1B2A3D;
-    width: 14em;
-    height: 3em;
-    border: none;
-    
-    border:solid 0.1em #1B2A3D ;
-    
-}
-
 @font-face {
     font-family: 'Rambla';
     font-style: normal;
