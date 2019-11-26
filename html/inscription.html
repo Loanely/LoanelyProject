@@ -8,67 +8,64 @@
     <title>Inscription</title>
 </head>
 <body>
+    <header>
 
-    <!-- Place du header -->
+        <!-- =================================NAV STARTS HERE===================================== -->
+        <nav>
+            <div id="logo">
+                <img src="../assets/logo/loanelyLOGO.png" alt="logo">
+            </div>
+
+            <div id="menu">
+
+                <ul>
+                    <li><a href="#"> <img src="../assets/icons/inscription/accueil.png" alt=""> ACCEUIL</a></li>
+                    <li><a href="#"> <img src="../assets/icons/inscription/connexion.png" alt=""> CONNEXION</a></li>
+                    <li><a href="#"> <img src="../assets/icons/inscription/inscription.png" alt=""> INSCRIPTION</a></li>
+                </ul>
+
+            </div>
+        </nav>  
+
+    </header>
+    
     <main>
-        <section></section>
-        <aside>
-            <article class="nometprenom">
-                <!-- Nom et Prénom -->
-                <div>
-                   <form action="" method="post">
-                       <p>Nom *</p>
-                       <input type="text">
-                   </form>
-                </div>
-                <div class="parti2">
-                  <form action="" method="post">
-                      <p>Prénom *</p>
-                      <input type="text">
-                  </form>  
-                </div>
-            </article>
-            <article class="mdp">
-                <!-- Mots de passe et confirmation -->
-                <div>
-                    <form action="" method="post">
-                        <p>Mot de passe*</p>
-                        <input type="password" name="" id="">
-                    </form>
-                </div>
-                <div class="parti2">
-                    <form action="" method="post">
-                        <p>Confirmer le Mot de passe</p>
-                        <input type="password" name="" id="">
-                    </form>
-                </div>
-            </article>
-            <article class="emailettel">
-                <!-- Email et tel -->
-                <div>
-                    <form action="" method="post">
-                        <p>Email</p>
-                        <input type="email" name="" id="">
-                    </form>
-                </div>
-                <div class="parti2">
-                    <form action="" method="post">
-                        <p>Téléphone</p>
-                        <input type="number" name="" id="">
-                    </form>
-                </div>
-            </article>
-            <article >
-                <form class="conf" action="" method="post">
-                    <input type="checkbox" name="" id="">
-                    <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
-                </form>
-            </article>
+        <aside></aside>
+        <section>
             <article>
-                <button>Annuler</button>
-                <button>Soumettre</button>
-            </article>
-        </aside>
+           <form action="" method="post">
+
+               <div class="parti1">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom">
+                    <label for="motdepasse">Mot de passe *</label>
+                    <input type="password" name="" id="motdepasse">
+                    <label for="emaile">Email *</label>
+                    <input type="email" name="" id="emaile"> 
+               </div>
+               <div class="parti2">
+                    <label for="Prenom">Prénom *</label>
+                    <input type="text" id="Prenom">
+                    <label for="cmdp">Confirmation du Mot De Passe *</label>
+                   <input type="password" name="" id="cmdp">
+                   <label for="numtel">Téléphone *</label>
+                   <input type="tel" name="" id="numtel">
+               </div>
+            </form>
+        
+        </article>
+               <div class="boite">
+                 <input  type="checkbox" name="" id=""> 
+                  <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
+                </div>
+                <div class="buton">
+                        <button><p>Annuler</p></button>
+                        <button><p><strong>Soumettre</strong> </p></button>
+                </div>
+                
+            
+           
+        </section>
     </main>
     <!-- place du footer -->
 </body>
