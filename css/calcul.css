@@ -76,77 +76,51 @@ article {
     height: 88vh;
     background-color: #44566C;  
 }
-#title{
+h3{
     text-align: center;
     color:white;
     font-size:2em;
     margin-top:2vh;
 }
 
-.containerForm {
+.containerCalcul {
     display:flex;
     justify-content: center;
     align-items: center;
     width:70vw;
     height:60vh;
     margin-top:7vh;
-}
-#one {
-    width:53vw;
-}
-
-#container2 {
-    display:flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction:column;
-    width:30vw;
-    color:white;
-}
-#two {
-    display:flex;
-    justify-content: space-around;
-    align-items:center;
-    flex-direction: column;
-    height:60vh;
-    width:22em;
-    background-color: #848D98;
     
 }
-span {
-    font-size:3em;
-    color:white;
-
-}
-form {
+/* ++++++++++++++++++++++ DEBUT FORMULAIRE +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* #containerForm {
+    width:40vw;
     display:flex;
-    justify-content: space-around;
-    align-items:center; 
+    justify-content: space-between; 
+    align-items:center;
     flex-direction:column;
-    height: 60vh;
-
+} */
+form {
+    height: 60vh; 
+}
+.question {
+    height: 16.5vh;
 }
 label {
-    font-size:1.25em;
+    font-size:1,25em;
     color:white;
-    text-align:left;
 }
 input {  
     background-color: #C4C4C4;
-    width: 35em;
-    height: 2.5em;
+    /* width: 35em;*/
+    height: 3em; 
+    
+    width:35em;
     border: none; 
     background: none;
     border-bottom:white 2px solid;
     border-radius:0,4em;
     color:white;
-    
-}
-
-footer {
-    height:9.4em;
-    width:100vw;
-    background-color: black;
 }
 button{
     background-color: #1B2A3D;
@@ -155,13 +129,47 @@ button{
     border: none;
     color:white;
     font-size:1.75em;
-    border-radius:.5em;
+    cursor: pointer;
 }
 ::placeholder {
     color: white;
-    font-size: 2em;
+    font-size: 1.25em;
     text-align:right;
-  }
+    }
+/* ++++++++++++++++++++++ FIN FORMULAIRE +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+#containerResult {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-justify: auto;
+    width:30vw;
+    color:white;
+    
+}
+#result {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+    height:60vh;
+    width:23em;
+    background-color: #848D98;
+}
+h4 {
+    font-size: 1,25em;
+}
+span {
+    font-size:3em;
+    color:white;
+}
+footer {
+    height:9.4em;
+    width:100vw;
+    background-color: black;
+}
+
+
 
 @media screen and (max-width:800px) {
 
