@@ -141,13 +141,6 @@ main section:nth-child(1) article a:hover {
 
 /* =========================section 2 ============================*/
 
-    background: linear-gradient(rgb(49, 39, 55), rgb(47, 66, 92));
-    justify-content: center;
-}
-
-/* section 2*/
-
-
 section:nth-child(2){
     height: 100vh;
     display: flex;
@@ -246,9 +239,6 @@ section:nth-child(2) article:nth-child(2) :nth-child(5){
     justify-content: center;
     letter-spacing: .05em;
 }
-
-
-
 
 
 
