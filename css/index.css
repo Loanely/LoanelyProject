@@ -12,6 +12,7 @@ html, body {
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
+    overflow-x: hidden; 
 }
 
 
@@ -55,9 +56,7 @@ ul {
 li {
     font-family: 'Rambla', sans-serif;
     color: #2F435E;
-    list-style: none;
-    
-   
+    list-style: none;  
 }
 
 a {
@@ -74,7 +73,74 @@ ul li a img {
 
 /* +++++++++++++++ICI JE FINI MON NAVBAR +++++++++++++++++++++++++++++++++++ */
 
-/* section 2*/
+
+/* ===================SECTION 1 ===================================== */
+
+
+main section:nth-child(1){
+    height: 90vh;
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
+    display: flex;
+    justify-content: center;
+}
+
+
+main section:nth-child(1) article {
+    width: 90vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+main section:nth-child(1) article .txt-photo {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 30rem;
+}
+main section:nth-child(1) article .txt-photo #indice{
+    height: 3.6rem;   
+    
+}
+
+main section:nth-child(1) article .txt-photo h1 {
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.7rem;
+    color: white;
+    letter-spacing: .35rem;    
+}
+
+main section:nth-child(1) article .txt {
+    width: 30rem;
+    margin-top: 1rem;
+}
+
+main section:nth-child(1) article p{
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-kerning: auto;
+}
+
+main section:nth-child(1) article a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 15rem;
+    margin-top: 2rem;
+    justify-content: center;
+    background: linear-gradient(to left, rgb(49, 39, 55), rgb(47, 66, 92));  
+}
+
+main section:nth-child(1) article a:hover {
+    background: linear-gradient(to left,  rgb(47, 66, 92), rgb(49, 39, 55));  
+}
+
+/* =========================section 2 ============================*/
 
 section:nth-child(2){
     height: 100vh;
@@ -117,7 +183,9 @@ section:nth-child(2) article:nth-child(2){
 
 
 
-/* section 3*/
+
+
+/* ==================================section 3============================================*/
 
 section:nth-child(3){
     height: 100vh;
@@ -207,64 +275,119 @@ section:nth-child(3) article img{
     text-align: center;
 }
 
-=======
-/* ===================SECTION 1 ===================================== */
 
+/* ================================== section 4 ============================================= */
 
-main section:nth-child(1){
-    height: 90vh;
-    position: relative;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
-    display: flex;
-    justify-content: center;
-}
-
-
-main section:nth-child(1) article {
-    width: 90vw;
+section:nth-child(4) {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
+
 }
-main section:nth-child(1) article .txt-photo {
+
+/* =============================article 1 ========================= */
+
+section:nth-child(4) article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(4) article:nth-child(1){
+    background: #4B5E65;
+}
+section:nth-child(4) article:nth-child(1) .stat-txt {
+    width: 100%;
+    height: 30%;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+section:nth-child(4) article:nth-child(1) .stat-txt p {
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+section:nth-child(4) article:nth-child(1) .stat-nums {
+    width: 100%;
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    width: 30rem;
-}
-main section:nth-child(1) article .txt-photo #indice{
-    height: 3.6rem;   
-    
+    justify-content: space-around;
+    align-items: center;
 }
 
-main section:nth-child(1) article .txt-photo h1 {
-    font-family: 'Rambla', sans-serif;  
-    font-size: 1.7rem;
+section:nth-child(4) article:nth-child(1) .stat-nums h3 {
     color: white;
-    letter-spacing: .35rem;
-    
-}
-
-main section:nth-child(1) article .txt {
-    width: 30rem;
-    margin-top: 1rem;
-}
-
-main section:nth-child(1) article p{
     font-family: 'Rambla', sans-serif;
-    font-size: 1.3rem;
-    color: white;
-    text-align: justify;
-    line-height: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-align: center;
 }
 
-main section:nth-child(1) article a {
-    text-decoration: none;
-    font-family: 'Rambla', sans-serif;  
-    font-size: 1.3rem;
-    padding: 1rem;
-    width: 15rem;
-    margin-top: 2rem;
-    background: linear-gradient(rgb(49, 39, 55), rgb(47, 66, 92));
+/* =============================article 2 ========================= */
+
+section:nth-child(4) article:nth-child(2) {
+    background: rgba(75, 94, 101, 0.5);
+    display: flex;
+    flex-flow: column;
+    overflow-x: hidden;
+}
+
+section:nth-child(4) article:nth-child(2) h3 {
+    font-family: 'Rambla', sans-serif;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+section:nth-child(4) article:nth-child(2) .logo-banque {
+    display: flex;
+    flex-flow: row;
+   
+}
+
+
+/* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
+
+footer {
+    width: auto;
+    height: 9.5rem;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .liens-footer{
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+
+footer a {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    margin-left: 10rem;
+    padding: .3rem;
+}
+
+footer #logo {
+    width: 25%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+}
+
+footer img {
+    align-self: center;
+    width: 50%;
 }
