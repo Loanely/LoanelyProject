@@ -156,34 +156,6 @@
         </section>
 
 
-        <script>
-
-
-
-            let x = document.getElementsByClassName("slide");
-            document.getElementById('btn-left').addEventListener('click', function () {
-                for (let i = 0; i < x.length; i++) {
-                    x[i].style.transform = 'translateX(0)';
-                }
-
-                document.getElementById('btn-right').style.visibility = 'visible';
-                document.getElementById('btn-left').style.visibility = 'hidden';
-
-            })
-
-            document.getElementById('btn-right').addEventListener('click', function () {
-                for (let i = 0; i < x.length; i++) {
-                    x[i].style.transform = 'translateX(-100%)';
-                }
-
-                document.getElementById('btn-left').style.visibility = 'visible';
-                document.getElementById('btn-right').style.visibility = 'hidden';
-
-            })
-
-
-        </script>
-
 
 
 
@@ -191,8 +163,51 @@
         <!-- ====================SECTION 4 STARTS HERE============================ -->
         <section>
 
+            <article>
+
+                <div class="stat-txt">
+                    <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                        magna bibendum metus, id rutrum mi ex a urna. <br> Duis sed diam vestibulum, mattis velit eu, maximus
+                        velit.</p>
+                </div>
+
+                <div class="stat-nums">
+                    <div class="txt-percentage">
+                        <h3>Rapidité</h3>
+                        <h3>90%</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Taux d’acceptation</h3>
+                        <h3>70%</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Investisseurs</h3>
+                        <h3>378</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Visiteurs par jour</h3>
+                        <h3>1736</h3>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>Nos Partenaires</h3>
+                <div class="logo-banque">
+                    <img src="./assets/logo/agricole.png" alt="">
+                    <img src="./assets/logo/bnp.png" alt="">
+                    <img src="./assets/logo/bp.png" alt="">
+                    <img src="./assets/logo/caisse.png" alt="">
+                    <img src="./assets/logo/cic.png" alt="">
+                    <img src="./assets/logo/creditmutuel.png" alt="">
+                    <img src="./assets/logo/hsbc.png" alt="">
+                    <img src="./assets/logo/lcl.png" alt="">
+                    <img src="./assets/logo/société.png" alt="">
 
 
+                </div>
+            </article>
         </section>
 
 
@@ -203,7 +218,70 @@
 
 
 
+        <footer>
+
+            <div id="logo">
+                <img src="./assets/logo/logoBas.png" alt="">
+            </div>
+
+            <div class="liens-footer">
+
+                <div>
+                    <a href="#">Qui Somme Nous?</a>
+                    <a href="#">Espace Banque</a>
+                    <a href="#">Espace Client</a>
+                </div>
+
+                <div>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Recrutement</a>
+                    <a href="#">Contactez-Nous</a>
+                </div>
+
+                <div>
+                    <a href="#">Plan de Site</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Mentions Legales</a>
+                </div>
+
+            </div>
+
+        </footer>
+
+
     </main>
+
+
+
+
+
+
+
+    <script>
+
+        let x = document.getElementsByClassName("slide");
+        document.getElementById('btn-left').addEventListener('click', function () {
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.transform = 'translateX(0)';
+            }
+
+            document.getElementById('btn-right').style.visibility = 'visible';
+            document.getElementById('btn-left').style.visibility = 'hidden';
+
+        })
+
+        document.getElementById('btn-right').addEventListener('click', function () {
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.transform = 'translateX(-100%)';
+            }
+
+            document.getElementById('btn-left').style.visibility = 'visible';
+            document.getElementById('btn-right').style.visibility = 'hidden';
+
+        })
+
+
+    </script>
 
 
 </body>
