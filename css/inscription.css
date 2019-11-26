@@ -1,0 +1,46 @@
+section{
+    background-image: url(../assets/images/inscription/Rectangle\ 45.jpg);
+    background-size: cover;
+    height: 85vh;
+    width: 45vw;
+}
+p{
+    color: #fff;
+    size: 1.5em;
+}
+input{
+    background-color: #C4C4C4;
+    width: 25em;
+    height: 2.5em;
+    border: none;
+    
+}
+
+
+main{
+    margin: 0;
+    padding: 0;
+    height: 85vh;
+    width: auto;
+    background-color: #44566C;
+    display: flex;
+}
+aside{
+    margin: auto;
+   
+}
+.parti2{
+    margin-left: 2em;
+}
+
+
+.nometprenom, .mdp, .emailettel, .conf{
+    display: flex;  
+    margin-left: 2vw;
+}
+button{
+    background-color: #1B2A3D;
+    width: 15.625em;
+    height: 4em;
+    border: none;
+}
