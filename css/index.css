@@ -340,3 +340,17 @@ section:nth-child(3) article img{
 }
 
 
+
+/* ===================SECTION 1 ===================================== */
+
+
+main section:nth-child(1){
+    height: 90vh;
+    position: relative;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
+    display: flex;
+    justify-content: center;
+}
+
+
+
