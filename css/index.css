@@ -80,9 +80,57 @@ ul li a img {
 main section:nth-child(1){
     height: 90vh;
     position: relative;
-    background: url(../assets/images/accueil/people.jpg) ;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
+    display: flex;
+    justify-content: center;
 }
 
-main section:nth-child(1) .txt-photo {
+
+main section:nth-child(1) article {
+    width: 90vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+main section:nth-child(1) article .txt-photo {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 30rem;
+}
+main section:nth-child(1) article .txt-photo #indice{
+    height: 3.6rem;   
     
+}
+
+main section:nth-child(1) article .txt-photo h1 {
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.7rem;
+    color: white;
+    letter-spacing: .35rem;
+    
+}
+
+main section:nth-child(1) article .txt {
+    width: 30rem;
+    margin-top: 1rem;
+}
+
+main section:nth-child(1) article p{
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+main section:nth-child(1) article a {
+    text-decoration: none;
+    font-family: 'Rambla', sans-serif;  
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 15rem;
+    margin-top: 2rem;
+    background: linear-gradient(rgb(49, 39, 55), rgb(47, 66, 92));
+    justify-content: center;
 }
