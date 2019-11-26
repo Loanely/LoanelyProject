@@ -60,10 +60,33 @@
 
         <section>
             <article>
+
+                <div class="demarche-icon">
+                    <a href=""><img src="./assets/icons/accueil/form.png" alt=""></a>
+                    <p>Remplir le formulaire</p>
+                    <img src="./assets/logo/points.png" alt="">
+                </div>
+                <div class="demarche-icon">
+                    <a href=""><img src="./assets/icons/accueil/upload.png" alt=""></a>
+                    <p>Déposer vos documents</p>
+                    <img src="./assets/logo/points.png" alt="">
+                </div>
+                <div class="demarche-icon">
+                    <a href=""><img src="./assets/icons/accueil/USER.png" alt=""></a>
+                    <p>Valider votre inscription</p>
+                    <img src="./assets/logo/points.png" alt="">
+                </div>
+                <div class="demarche-icon">
+                    <a href=""><img src="./assets/icons/accueil/hand.png" alt=""></a>
+                    <p>Recevez les meileurs offres<br>dans votre espace personnel</p>
+
+                </div>
+
                 <div class="demarche-icon"></div>
                 <div class="demarche-icon"></div>
                 <div class="demarche-icon"></div>
                 <div class="demarche-icon"></div>
+
             </article>
 
             <article></article>
@@ -72,19 +95,75 @@
         </section>
 
 
-
-
-
-
         <!-- ====================SECTION 3 STARTS HERE============================ -->
+
         <section>
 
+            <article class="slide">
+                <img src="./assets/icons/accueil/circleQuoi.png" alt="">
+                <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem magna
+                    bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
+                    Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                </p>
+            </article>
 
 
+            <article class="slide">
+                <img src="./assets/icons/accueil/circlePourquoi.png" alt="">
+                <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem magna
+                    bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
+                    Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                </p>
+            </article>
+
+            <article class="slide">
+                <img src="./assets/icons/accueil/circleComment.png" alt="">
+                <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem magna
+                    bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
+                    Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                </p>
+            </article>
+
+            <article class="slide">
+                <img src="./assets/icons/accueil/circlePourquoi1.png" alt="">
+                <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem magna
+                    bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
+                    Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                </p>
+            </article>
+            <p id="btn-left">&#8249;</p>
+            <p id="btn-right">&#8250;</p>
 
         </section>
 
 
+        <script>
+
+
+
+            let x = document.getElementsByClassName("slide");
+            document.getElementById('btn-left').addEventListener('click', function () {
+                for (let i = 0; i < x.length; i++) {
+                    x[i].style.transform = 'translateX(0)';
+                }
+
+                document.getElementById('btn-right').style.visibility = 'visible';
+                document.getElementById('btn-left').style.visibility = 'hidden';
+
+            })
+
+            document.getElementById('btn-right').addEventListener('click', function () {
+                for (let i = 0; i < x.length; i++) {
+                    x[i].style.transform = 'translateX(-100%)';
+                }
+
+                document.getElementById('btn-left').style.visibility = 'visible';
+                document.getElementById('btn-right').style.visibility = 'hidden';
+
+            })
+
+
+        </script>
 
 
 

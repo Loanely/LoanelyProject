@@ -10,6 +10,7 @@
 
 html, body {
     height: 100vh;
+    width: 100vw;
     box-sizing: border-box;
 }
 
@@ -73,7 +74,140 @@ ul li a img {
 
 /* +++++++++++++++ICI JE FINI MON NAVBAR +++++++++++++++++++++++++++++++++++ */
 
+/* section 2*/
 
+section:nth-child(2){
+    height: 100vh;
+    display: flex;
+
+}
+
+section:nth-child(2) article:nth-child(1){
+    background: url(../assets/images/accueil/desktop.jpg);
+    background-size: cover;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.demarche-icon p{
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Rambla', sans-serif;
+    margin-top: 1em;
+}
+
+
+.demarche-icon{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section:nth-child(2) article:nth-child(2){
+    background-image: linear-gradient(#44566C,#312635);
+    width: 60vw;
+    height: 100vh;
+}
+
+
+
+
+/* section 3*/
+
+section:nth-child(3){
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+section:nth-child(3) article{
+    height: 100%;
+    width: 33vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: .7s ease-in-out all;
+}
+
+section:nth-child(3) article:nth-child(1){
+    background: url(../assets/images/accueil/quoi.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    
+}
+
+section:nth-child(3) article:nth-child(2){
+    background: url(../assets/images/accueil/pourquoi.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 33%;
+    top: 0;
+}
+
+section:nth-child(3) article:nth-child(3){
+    background: url(../assets/images/accueil/comment.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 66%;
+    top: 0;
+    
+}
+
+section:nth-child(3) article:nth-child(4){
+    background: url(../assets/images/accueil/photo\ right.jpg);
+    background-size: cover;
+    position: absolute;
+    left: 99%;
+    top: 0;
+   
+}
+
+section:nth-child(3) article p{
+    padding: 2em;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Rambla', sans-serif;
+    text-align: justify;
+}
+
+section:nth-child(3) article img{
+    width: 50%;
+}
+
+#btn-left {
+    width: 1em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: white;
+    font-size: 5em;
+    visibility: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+#btn-right {
+    width: 1em;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    color: white;
+    font-size: 5em;
+    cursor: pointer;
+    text-align: center;
+}
+
+=======
 /* ===================SECTION 1 ===================================== */
 
 
