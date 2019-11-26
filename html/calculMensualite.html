@@ -10,58 +10,69 @@
 
 </head>
 
-<body>
-    <header>
+<main>
 
-        <!-- =================================NAV STARTS HERE===================================== -->
-        <nav>
-            <div id="logo">
-                <img src="../assets/logo/loanelyLOGO.png" alt="logo">
-            </div>
+    <body>
+        <header>
+            <!-- =================================NAV STARTS HERE===================================== -->
+            <nav>
+                <div id="logo">
+                    <img src="../assets/logo/loanelyLOGO.png" alt="logo">
+                </div>
 
-            <div id="menu">
+                <div id="menu">
 
-                <ul>
-                    <li><a href="#"> <img src="../assets/icons/accueil/contact.png" alt=""> CONTACT</a></li>
-                    <li><a href="#"> <img src="../assets/icons/accueil/connexion.png" alt=""> CONNEXION</a></li>
-                    <li><a href="#"> <img src="../assets/icons/accueil/inscription.png" alt=""> INSCRIPTION</a></li>
-                </ul>
+                    <ul>
+                        <li><a href="#"> <img src="../assets/icons/accueil/contact.png" alt=""> CONTACT</a></li>
+                        <li><a href="#"> <img src="../assets/icons/accueil/connexion.png" alt=""> CONNEXION</a></li>
+                        <li><a href="#"> <img src="../assets/icons/accueil/inscription.png" alt=""> INSCRIPTION</a></li>
+                    </ul>
 
-            </div>
-        </nav>
+                </div>
+            </nav>
 
-    </header>
-    <section id='one'>
-        <article>
-            <img id='calculate' src='../assets/images/calcul/calculatrice.png'></img>
-        </article>
+        </header>
+        <section>
 
-        <article>
-            <h1> Calculez votre mensualité</h1>
-            <form>
-                <label for='montant'>Montant du prêt*</label>
-                <input name='montant' type='number'>
+            <aside>
+                <img id='calculate' src='../assets/images/calcul/calculatrice.png'>
+            </aside>
+            
+            <article>
+                <h1 id='title'>Calculez votre mensualité</h1>
+                    <div class='containerForm'>
+                        <div id='one'>
+                            <form method="#" action='POST'>
+                                <label for='montant'>Montant du prêt*</label>
+                                <input name='montant' type='number' id='montant' size='30' placeholder='€'/>
 
-                <label for='duree'>Durée du prêt*</label>
-                <input name='duree' type='number'>
+                                <label for='duree'>Durée du prêt *</label>
+                                <input name='duree' type='number' id='duree' placeholder='€' />
 
-                <label for='taux'>Taux*</label>
-                <input name='taux' type='number'>
-            </form>
-        </article>
-        <article>
-            <h2>Votre mensualité et à partir de 123 </h2>
-                <h1></h1>
-            <p>Lorem LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</p>
-        </article>
+                                <label for='taux'>Taux*</label>
+                                <input name='taux' type='number' id='taux' placeholder='€' />
+                                <button>Calculer</button>
+                            </form>     
+                        </div>
+                    
+                        <div id='container2'>
 
-    </section>
-    <footer>
+                                <div id='two'>
+                                    <h2>Votre mensualité est à partir de : </h2>
+                                    <span>123 €</span>
+                                    <p>* Cette simulation est communiquée à titre informatif, elle est  établie sur la base de taux  du marché  actuelle . Cette présentation indicative ne constitue en aucun cas une offre commerciale de financement et n’a aucune valeur contractuelle.</p>
+                                </div>
+                        </div>
+                    </div>
+            </article>
+            
+        </section>
+        <footer>
 
-    </footer>
-    <script>
-        console.log(document.getElementById('one'))
-    </script>
-</body>
+        </footer>
+        <script>
+        </script>
+    </body>
+</main>
 
 </html>
