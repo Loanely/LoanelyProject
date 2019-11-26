@@ -39,29 +39,36 @@
             </aside>
             
             <article>
-                <h1 id='title'>Calculez votre mensualité</h1>
-                    <div class='containerForm'>
-                        <div id='one'>
-                            <form method="#" action='POST'>
-                                <label for='montant'>Montant du prêt*</label>
-                                <input name='montant' type='number' id='montant' size='30' placeholder='€'/>
-
-                                <label for='duree'>Durée du prêt *</label>
-                                <input name='duree' type='number' id='duree' placeholder='€' />
-
-                                <label for='taux'>Taux*</label>
-                                <input name='taux' type='number' id='taux' placeholder='€' />
-                                <button>Calculer</button>
+                <h3>Calculez votre mensualité</h3>
+                    <div class='containerCalcul'>
+                        <div id='containerForm'>
+                            <form method="#">
+                                <div class='question'>
+                                <label for='montant'>Montant du prêt*</label><br>
+                                <input name='montant' type='number' id='montant' placeholder='€' />
+                                </div>
+                                <div class='question'>
+                                <label for='duree'>Durée du prêt *</label><br>
+                                <input name='duree' type='number' id='duree' placeholder='Année(s)' />
+                                </div>
+                                <div class='question'>
+                                <label for='taux'>Taux*</label><br>
+                                <input name='taux' type='number' id='taux' placeholder='%' />
+                                </div>
+                                <div class='question'>
+                                <button onclick='calcul()'>Calculer</button>
+                                </div>
                             </form>     
                         </div>
                     
-                        <div id='container2'>
+                        <div id='containerResult'>
 
-                                <div id='two'>
-                                    <h2>Votre mensualité est à partir de : </h2>
-                                    <span>123 €</span>
-                                    <p>* Cette simulation est communiquée à titre informatif, elle est  établie sur la base de taux  du marché  actuelle . Cette présentation indicative ne constitue en aucun cas une offre commerciale de financement et n’a aucune valeur contractuelle.</p>
-                                </div>
+                            <div id='result'>
+                                <h4>Votre mensualité est à partir de : </h4>
+                                <span>123 €</span>
+                                <p>* Cette simulation est communiquée à titre informatif, elle est  établie sur la base de taux  du marché  actuelle . Cette présentation indicative ne constitue en aucun cas une offre commerciale de financement et n’a aucune valeur contractuelle.</p>
+                            </div>
+
                         </div>
                     </div>
             </article>
