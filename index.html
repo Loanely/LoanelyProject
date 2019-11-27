@@ -46,9 +46,9 @@
                     <h1> Obtenez rapidement la <br> meilleure offre de prêt</h1>
                 </div>
                 <div class="txt">
-                <p>LOANELY permet aux investisseurs immobiliers de structurer facilement leur dossier de financement
-                    bancaire afin de le partager directement avec les banques dans le but d’obtenir rapidement la
-                    meilleure offre de prêt.</p>
+                    <p>LOANELY permet aux investisseurs immobiliers de structurer facilement leur dossier de financement
+                        bancaire afin de le partager directement avec les banques dans le but d’obtenir rapidement la
+                        meilleure offre de prêt.</p>
                 </div>
                 <a href="#">Déposer mon dossier</a>
 
@@ -62,34 +62,48 @@
             <article>
 
                 <div class="demarche-icon">
-                    <a href=""><img src="./assets/icons/accueil/form.png" alt=""></a>
-                    <p>Remplir le formulaire</p>
+                    <div>
+                        <img src="./assets/icons/accueil/form.png" alt="">
+                        <h3>Remplir le formulaire</h3>
+                    </div>
                     <img src="./assets/logo/points.png" alt="">
                 </div>
                 <div class="demarche-icon">
-                    <a href=""><img src="./assets/icons/accueil/upload.png" alt=""></a>
-                    <p>Déposer vos documents</p>
+                    <div>
+                        <img src="./assets/icons/accueil/upload.png" alt="">
+                        <h3>Déposer vos documents</h3>
+                    </div>
                     <img src="./assets/logo/points.png" alt="">
                 </div>
                 <div class="demarche-icon">
-                    <a href=""><img src="./assets/icons/accueil/USER.png" alt=""></a>
-                    <p>Valider votre inscription</p>
+                    <div>
+                        <img src="./assets/icons/accueil/USER.png" alt="">
+                        <h3>Valider votre inscription</h3>
+                    </div>
                     <img src="./assets/logo/points.png" alt="">
                 </div>
                 <div class="demarche-icon">
-                    <a href=""><img src="./assets/icons/accueil/hand.png" alt=""></a>
-                    <p>Recevez les meileurs offres<br>dans votre espace personnel</p>
+
+                    <img src="./assets/icons/accueil/hand.png" alt="">
+                    <h3>Recevez les meileurs offres<br>dans votre espace personnel</h3>
+
 
                 </div>
-
-                <div class="demarche-icon"></div>
-                <div class="demarche-icon"></div>
-                <div class="demarche-icon"></div>
-                <div class="demarche-icon"></div>
 
             </article>
 
-            <article></article>
+            <article>
+                <h2>NOUVEAU PROJET<br>DANS LES CARTONS?</h2>
+                <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem magna
+                    bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
+                    Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                </p>
+                <a href="">Démarrer mon Projet</a>
+
+                <p>Déjà inscrit? Se connecter</p>
+                <a href="">Calculez votre mensualité</a>
+
+            </article>
 
 
         </section>
@@ -105,6 +119,7 @@
                     bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
                     Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
                 </p>
+                <a href=""><img src="./assets/icons/accueil/plus.png" alt="">&nbsp;En savoir plus</a>
             </article>
 
 
@@ -114,6 +129,7 @@
                     bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
                     Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
                 </p>
+                <a href=""><img src="./assets/icons/accueil/plus.png" alt="">&nbsp;En savoir plus</a>
             </article>
 
             <article class="slide">
@@ -122,6 +138,7 @@
                     bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
                     Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
                 </p>
+                <a href=""><img src="./assets/icons/accueil/plus.png" alt="">&nbsp;En savoir plus</a>
             </article>
 
             <article class="slide">
@@ -130,40 +147,14 @@
                     bibendum metus, id rutrum mi ex a urna. Duis sed diam vestibulum, mattis velit eu, maximus velit.
                     Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
                 </p>
+
+                <a href=""><img src="./assets/icons/accueil/plus.png" alt="">&nbsp;En savoir plus</a>
             </article>
             <p id="btn-left">&#8249;</p>
             <p id="btn-right">&#8250;</p>
 
         </section>
 
-
-        <script>
-
-
-
-            let x = document.getElementsByClassName("slide");
-            document.getElementById('btn-left').addEventListener('click', function () {
-                for (let i = 0; i < x.length; i++) {
-                    x[i].style.transform = 'translateX(0)';
-                }
-
-                document.getElementById('btn-right').style.visibility = 'visible';
-                document.getElementById('btn-left').style.visibility = 'hidden';
-
-            })
-
-            document.getElementById('btn-right').addEventListener('click', function () {
-                for (let i = 0; i < x.length; i++) {
-                    x[i].style.transform = 'translateX(-100%)';
-                }
-
-                document.getElementById('btn-left').style.visibility = 'visible';
-                document.getElementById('btn-right').style.visibility = 'hidden';
-
-            })
-
-
-        </script>
 
 
 
@@ -172,8 +163,51 @@
         <!-- ====================SECTION 4 STARTS HERE============================ -->
         <section>
 
+            <article>
+
+                <div class="stat-txt">
+                    <p>Pellentesque varius vehicula erat ac dignissim. Donec auctor, nibh quis lobortis feugiat, lorem
+                        magna bibendum metus, id rutrum mi ex a urna. <br> Duis sed diam vestibulum, mattis velit eu, maximus
+                        velit.</p>
+                </div>
+
+                <div class="stat-nums">
+                    <div class="txt-percentage">
+                        <h3>Rapidité</h3>
+                        <h3>90%</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Taux d’acceptation</h3>
+                        <h3>70%</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Investisseurs</h3>
+                        <h3>378</h3>
+                    </div>
+                    <div class="txt-percentage">
+                        <h3>Visiteurs par jour</h3>
+                        <h3>1736</h3>
+                    </div>
+
+                </div>
+            </article>
+
+            <article>
+                <h3>Nos Partenaires</h3>
+                <div class="logo-banque">
+                    <img src="./assets/logo/agricole.png" alt="">
+                    <img src="./assets/logo/bnp.png" alt="">
+                    <img src="./assets/logo/bp.png" alt="">
+                    <img src="./assets/logo/caisse.png" alt="">
+                    <img src="./assets/logo/cic.png" alt="">
+                    <img src="./assets/logo/creditmutuel.png" alt="">
+                    <img src="./assets/logo/hsbc.png" alt="">
+                    <img src="./assets/logo/lcl.png" alt="">
+                    <img src="./assets/logo/société.png" alt="">
 
 
+                </div>
+            </article>
         </section>
 
 
@@ -184,7 +218,70 @@
 
 
 
+        <footer>
+
+            <div id="logo">
+                <img src="./assets/logo/logoBas.png" alt="">
+            </div>
+
+            <div class="liens-footer">
+
+                <div>
+                    <a href="#">Qui Somme Nous?</a>
+                    <a href="#">Espace Banque</a>
+                    <a href="#">Espace Client</a>
+                </div>
+
+                <div>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Recrutement</a>
+                    <a href="#">Contactez-Nous</a>
+                </div>
+
+                <div>
+                    <a href="#">Plan de Site</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Mentions Legales</a>
+                </div>
+
+            </div>
+
+        </footer>
+
+
     </main>
+
+
+
+
+
+
+
+    <script>
+
+        let x = document.getElementsByClassName("slide");
+        document.getElementById('btn-left').addEventListener('click', function () {
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.transform = 'translateX(0)';
+            }
+
+            document.getElementById('btn-right').style.visibility = 'visible';
+            document.getElementById('btn-left').style.visibility = 'hidden';
+
+        })
+
+        document.getElementById('btn-right').addEventListener('click', function () {
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.transform = 'translateX(-100%)';
+            }
+
+            document.getElementById('btn-left').style.visibility = 'visible';
+            document.getElementById('btn-right').style.visibility = 'hidden';
+
+        })
+
+
+    </script>
 
 
 </body>

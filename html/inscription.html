@@ -32,14 +32,16 @@
     <main>
         <aside></aside>
         <section>
+                <h2>Inscription</h2>
             <article>
+                    
            <form action="" method="post">
 
                <div class="parti1">
                     <label for="nom">Nom *</label>
                     <input type="text" id="nom">
                     <label for="motdepasse">Mot de passe *</label>
-                    <input type="password" name="" id="motdepasse">
+                    <input type="password" name="" id="motdepasse"  pattern="[A-Za-z]{3}">
                     <label for="emaile">Email *</label>
                     <input type="email" name="" id="emaile"> 
                </div>
@@ -67,6 +69,34 @@
            
         </section>
     </main>
-    <!-- place du footer -->
+    <footer>
+
+        <div id="logo">
+            <img src="../assets/logo/logoBas.png" alt="">
+        </div>
+
+        <div class="liens-footer">
+
+            <div>
+                <a href="#">Qui Somme Nous?</a>
+                <a href="#">Espace Banque</a>
+                <a href="#">Espace Client</a>
+            </div>
+
+            <div>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Recrutement</a>
+                <a href="#">Contactez-Nous</a>
+            </div>
+
+            <div>
+                <a href="#">Plan de Site</a>
+                <a href="#">CGV</a>
+                <a href="#">Mentions Legales</a>
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 </html>
