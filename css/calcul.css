@@ -8,7 +8,9 @@
 
 html, body {
     box-sizing: border-box;
+    overflow: scroll;
 } 
+
 
 /* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
 
@@ -145,6 +147,7 @@ button{
     text-justify: auto;
     width:30vw;
     color:white;
+    background-color:green;
     
 }
 #result {
@@ -164,11 +167,38 @@ span {
     color:white;
 }
 footer {
-    height:9.4em;
-    width:100vw;
-    background-color: black;
+    width: auto;
+    height: 9.5rem;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+footer .liens-footer{
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+
+footer a {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    margin-left: 10rem;
+    padding: .3rem;
+}
+
+footer #logo {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    align-self: center;
+    width: 50%;
+}
 
 
 @media screen and (max-width:800px) {
