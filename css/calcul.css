@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Rambla&display=swap%27');
 
-
-   
-
-
 *{
     padding: 0;
     margin: 0;
@@ -11,21 +7,18 @@
 }
 
 html, body {
-    height: 100vh;
     box-sizing: border-box;
-}
+} 
 
 /* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
 
-nav {
+ nav {
     position: relative;
     width: 100vw;
     height: 12vh;
     display: flex;
     flex-flow: row;
-    align-items: center;
-    
-    
+    align-items: center;  
 }
 
 nav #logo {
@@ -66,39 +59,110 @@ ul li a img {
     width: 1rem;
     padding-right: .5em;
 }
+/* =================Fin NAVBAR ============================= */
 section {
-    display: flex;
-    height:85vh;
-    width:100vw;
-    background-color: #44566C;
-
+    display:flex;
+}
+aside {
+    height:88vh;
+    width:30vw;
 }
 #calculate {
-    height:85vh;
+    height:88vh;
+    width:30vw;
 }
-/* section:first-child {
-    width:40%;
-    height:85vh;
-    background-color:red;
+article {
+    width:70vw;
+    height: 88vh;
+    background-color: #44566C;  
 }
-section:nth-child(2) {
-    width:20%;
-    height:85vh;
-    background-color:blue;
+#title{
+    text-align: center;
+    color:white;
+    font-size:2em;
+    margin-top:2vh;
 }
-section:nth-child(3) {
-    width:20%;
-    height:85vh;
-    background-color:green;
-} */
 
-form {
+.containerForm {
     display:flex;
+    justify-content: center;
+    align-items: center;
+    width:70vw;
+    height:60vh;
+    margin-top:7vh;
+}
+#one {
+    width:53vw;
+}
+
+#container2 {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction:column;
+    width:30vw;
+    color:white;
+}
+#two {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
     flex-direction: column;
+    height:60vh;
+    width:22em;
+    background-color: #848D98;
     
 }
+span {
+    font-size:3em;
+    color:white;
+
+}
+form {
+    display:flex;
+    justify-content: space-around;
+    align-items:center; 
+    flex-direction:column;
+    height: 60vh;
+
+}
+label {
+    font-size:1.25em;
+    color:white;
+    text-align:left;
+}
+input {  
+    background-color: #C4C4C4;
+    width: 35em;
+    height: 2.5em;
+    border: none; 
+    background: none;
+    border-bottom:white 2px solid;
+    border-radius:0,4em;
+    color:white;
+    
+}
+
 footer {
     height:9.4em;
     width:100vw;
     background-color: black;
+}
+button{
+    background-color: #1B2A3D;
+    width: 16.7em;
+    height: 3em;
+    border: none;
+    color:white;
+    font-size:1.75em;
+    border-radius:.5em;
+}
+::placeholder {
+    color: white;
+    font-size: 2em;
+    text-align:right;
+  }
+
+@media screen and (max-width:800px) {
+
 }
