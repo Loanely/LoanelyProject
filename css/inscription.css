@@ -90,10 +90,11 @@ aside{
     background-image: url(../assets/images/inscription/Rectangle\ 45.jpg);
     background-size: cover;
     height: 100%;
-    width: 30vw;
+    width: 35vw;
 }
 section{
     margin-top: 2em;
+    margin-left: 7vw;
     
 }
  h2{
@@ -111,9 +112,12 @@ article{
     width: 55vw;
 }
  form{
-     display: flex; 
-     justify-content: center;
-     align-items: center;
+     
+ }
+ .champ{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
  }
 
 

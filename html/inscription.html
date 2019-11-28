@@ -36,12 +36,12 @@
             <article>
                     
            <form action="" method="post">
-
+            <div class="champ">
                <div class="parti1">
                     <label for="nom">Nom *</label>
                     <input type="text" id="nom">
                     <label for="motdepasse">Mot de passe *</label>
-                    <input type="password" name="" id="motdepasse"  pattern="[A-Za-z]{3}">
+                    <input type="password" name="" id="motdepasse"  pattern="[0-9]" title="aide de saisie">
                     <label for="emaile">Email *</label>
                     <input type="email" name="" id="emaile"> 
                </div>
@@ -53,17 +53,19 @@
                    <label for="numtel">Téléphone *</label>
                    <input type="tel" name="" id="numtel">
                </div>
+            </div>
+            <div class="boite">
+                    <input  type="checkbox" name="" id=""> 
+                     <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
+                   </div>
+                   <div class="buton">
+                           <button><p>Annuler</p></button>
+                           <button><p><strong>Soumettre</strong> </p></button>
+                   </div>
             </form>
         
         </article>
-               <div class="boite">
-                 <input  type="checkbox" name="" id=""> 
-                  <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
-                </div>
-                <div class="buton">
-                        <button><p>Annuler</p></button>
-                        <button><p><strong>Soumettre</strong> </p></button>
-                </div>
+               
                 
             
            
