@@ -8,7 +8,7 @@
 
 html, body {
     box-sizing: border-box;
-    overflow: scroll;
+    overflow: hidden;
 } 
 
 
@@ -69,11 +69,11 @@ section {
     background-color: #44566C; ;  
 }
 aside {
-    height:72.5vh;
+    height:75vh;
     width:auto;
 }
 #calculate {
-    height:72.5vh;
+    height:75vh;
     width:auto;
 }
 article {
@@ -86,6 +86,7 @@ h3{
     color:white;
     font-size:2em;
     margin-top:2vh;
+    letter-spacing: 2px;
 }
 
 .containerCalcul {
@@ -158,7 +159,8 @@ button{
     width:25vw;
     margin-left:10vw;
     background-color: #848D98;
-    /* padding:0.62rem; */
+    padding: 0 10px 0 10px;
+    
 }
 h4 {
     font-size: 1,25em;
@@ -169,7 +171,7 @@ span {
 }
 footer {
     width: auto;
-    height: 12vh;
+    height: 13vh;
     background: black;
     display: flex;
     justify-content: space-around;
@@ -179,13 +181,13 @@ footer {
 footer .liens-footer{
     width: 75%;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
 }
 
 footer a {
     color: white;
     font-family: 'Rambla', sans-serif;
-    margin-left: 10rem;
+    margin-left: 0.9rem;
     padding: .3rem;
     font-size:0.75rem;
 }
