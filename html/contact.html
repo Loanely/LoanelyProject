@@ -2,31 +2,42 @@
 <!-- saved from url=(0054)http://localhost/LoanelyProject/html/pageContact.html# -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./pageContact_files/PageContact.css">
+		<link rel="stylesheet" href="../css/contact.css">
         
-         <link href="./pageContact_files/allfont.css" rel="stylesheet" type="text/css">
         <title>  page contact </title>
 
 </head>
 <body cz-shortcut-listen="true">
     <header>
+
+        <!-- =================================NAV STARTS HERE===================================== -->
         <nav>
-            <ul>
-                  <li style="float:left"> <img src="./pageContact_files/loanelyLOGO.png" width="50%" ;="" height="5%"></li>
-                    <li style="float:right"><a href="http://localhost/LoanelyProject/html/pageContact.html#"><img src="./pageContact_files/inscription.png"> Incription</a>
-                    </li><li style="float:right"><a href="http://localhost/LoanelyProject/html/pageContact.html#"><img src="./pageContact_files/connexion.png"> Connexion</a></li>
-                    <li style="float:right"><a href="http://localhost/LoanelyProject/html/pageContact.html#"><img src="./pageContact_files/accueil.png"> Acceuil</a></li>
-             </ul>
-          </nav>
+            <div id="logo">
+                <img src="../assets/logo/loanelyLOGO.png" alt="logo">
+            </div>
+
+            <div id="menu">
+
+                <ul>
+                    <li><a href="#"> <img src="../assets/icons/accueil/contact.png" alt=""> CONTACT</a></li>
+                    <li><a href="#"> <img src="../assets/icons/accueil/connexion.png" alt=""> CONNEXION</a></li>
+                    <li><a href="#"> <img src="../assets/icons/accueil/inscription.png" alt=""> INSCRIPTION</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
     </header>
     <section>
+        <br>
+        <br>
         <article class="photo">
-        	<img src="./pageContact_files/phone.jpg" width="80%" height="100%" ;="">
+        	<img src="../assets/images/contact/phone.jpg" width="100%" height="75%";>
         </article>
         <article class="info">
             <h1> Laissez-nous votre message</h1>
              <div class="rep">
-                 <br><br>
+                 <br><br><br><br>
               <form method="Post" action="http://localhost/action_page.Js">
                    <fieldset>
                       <div class="champs1">
@@ -48,47 +59,56 @@
                                   Tel <br>
                                   <input type="text" name="tel" class="chps"><br>
                               </p>
-                          </div>
+                          </div><br><br><br>
                           <label> Votre Message</label> 
-                          <textarea name="message" id="message" class="effet" rows="15" cols="75"> 
+                          <textarea name="message" id="message" class="effet" rows="17" cols="75"> 
                           </textarea>
-                    </fieldset>
+                    </fieldset><br><br><br><br>
                     <input type="submit" value="envoyer" id="envoyer">
               </form>
               <div class="données">
                   <p class="d1"> vous pouvez nous contacter <br> du lundi au vendredi de 9h00 à 19h00 </p>
-                  <p>
-                   <img src="./pageContact_files/mail.png"> Email<br> <a href="mailto:messages@loanely.com" class="mail">message@Loanely.com</a>
-                  </p>
-                  <p> <img src="./pageContact_files/mobile.png"> teléphone   <br>05-49-93-93-93
-                  </p>
-                  <p> <span class="ques"> Vous avez une Question?</span><br> pour toutes les réponses aux<br> questions  que vous vous posez<br> sur Loanely et votre prêt.<br><br><br><br><br><br><br>
-                  Consultez notre Guide</p><br>
+                  <p><br><br>
+                   <img src="../assets/icons/contact/mail.png">Email<br> <a href="mailto:messages@loanely.com" class="mail">message@Loanely.com</a>
+                  </p><br><br><br>
+                  <p> <img src="../assets/icons/contact/mobile.png"> teléphone   <br>05-49-93-93-93
+                  </p><br>
+                  <p> <span class="ques"> Vous avez une Question?</span><br> pour toutes les réponses aux<br> questions  que vous vous posez<br> sur Loanely et votre prêt.<br><br><br><br><br>
+                  Consultez notre Guide</p><br><br><br><br><br>
                   <button> Guide</button>
               </div>
           </div></article>
     </section>
+   
+
     <footer>
-        <div class="pied">
-    		<img src="./pageContact_files/logoBas.png" width="80%" ";="" height="90%" ;="">
-    	</div>
 
-    	<div class="pied">
-    		Qui Sommes-Nous?<br>
-    		Espace-Banque<br>
-    		Espace Client<br>
+        <div id="logo">
+            <img src="../assets/logo/logoBas.png" alt="">
+        </div>
 
-    	</div>
-    	<div class="pied">
-    		Politique de Confidentialité<br>
-    		Recrutement<br>
-    		Contactez-nous?<br>
-    	</div>
-    	<div class="pied">
-    		Plan de site <br>
-    		Condition Général de Ventes<br>
-    		Mentions Légales<br>
-    	</div>
+        <div class="liens-footer">
+
+            <div>
+                <a href="#">Qui Somme Nous?</a>
+                <a href="#">Espace Banque</a>
+                <a href="#">Espace Client</a>
+            </div>
+
+            <div>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Recrutement</a>
+                <a href="#">Contactez-Nous</a>
+            </div>
+
+            <div>
+                <a href="#">Plan de Site</a>
+                <a href="#">CGV</a>
+                <a href="#">Mentions Legales</a>
+            </div>
+
+        </div>
+
     </footer>
 
 
