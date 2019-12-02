@@ -12,7 +12,7 @@ body{
 nav {
         position: relative;
         width: 100vw;
-        height: 7vh;
+        height: 10vh;
         display: flex;
         flex-flow: row;
         align-items: center;
@@ -197,7 +197,7 @@ button{
  
 footer {
         width: auto;
-        height: 12vh;
+        height: 13vh;
         background: black;
         display: flex;
         justify-content: space-around;
