@@ -207,6 +207,12 @@ section:nth-child(2) article:nth-child(2) p{
     font-family: 'Rambla', sans-serif;
     text-align: center;
 }
+section:nth-child(2) article:nth-child(2) p a {
+    color: white;
+}
+section:nth-child(2) article:nth-child(2) p a:hover {
+    color:rgb(98, 90, 104) ;
+}
 
 section:nth-child(2) article:nth-child(2) h2{
     color: white;
