@@ -252,7 +252,7 @@ section:nth-child(3){
 
 section:nth-child(3) article{
     height: 100%;
-    width: 33vw;
+    width: 33.3vw;
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
@@ -275,7 +275,7 @@ section:nth-child(3) article:nth-child(2){
     background: url(../assets/images/accueil/pourquoi.jpg);
     background-size: cover;
     position: absolute;
-    left: 33%;
+    left: 33.3vw;
     top: 0;
 }
 
@@ -283,7 +283,7 @@ section:nth-child(3) article:nth-child(3){
     background: url(../assets/images/accueil/comment.jpg);
     background-size: cover;
     position: absolute;
-    left: 66%;
+    left: 66.6vw;
     top: 0;
     
 }
@@ -292,7 +292,7 @@ section:nth-child(3) article:nth-child(4){
     background: url(../assets/images/accueil/photo\ right.jpg);
     background-size: cover;
     position: absolute;
-    left: 99%;
+    left: 99.9vw;
     top: 0;
    
 }
