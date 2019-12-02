@@ -1,0 +1,463 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
+
+/* font-family: 'Rambla', sans-serif; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Rambla', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
+
+nav {
+    position: relative;
+    width: 100vw;
+    height: 12vh;
+    /* background-color: rgb(128, 128, 128); */
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    
+    
+}
+
+nav #logo {
+    width: 50%;
+}
+
+nav img {
+    width: 15em;
+    margin-left: 3em;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 3em;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    text-decoration: none;
+    
+   
+    
+}
+li {
+
+    color: #2F435E;
+    list-style: none;
+    
+   
+}
+
+a {
+    text-decoration: none;
+    color: #2F435E;
+    display: flex;
+    align-items: center;
+   
+ 
+   
+}
+
+ul li a img {
+    width: 1rem;
+    padding-right: .5em;
+}
+
+/* ++++++++ FIN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
+
+/* ++++++++ section 1 qui contient 2 articles ++++++++++++++++++++++++++++++++++++++ */
+
+/* section:nth-child(1){
+    height: 100vh;
+    display: flex;
+
+} */
+
+/* ++++++++ Article 1 qui contient une photo ++++++++++++++++++++++++++++++++++++++ */
+/* section:nth-child(1) article:nth-child(1){
+    background: url(../assets/images/accueil/desktop.jpg);
+    background-size: cover;
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+
+
+main, section{
+    width: 100vw;
+}
+section, article{
+    background-color: #44566C;
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    flex-flow: column;
+    padding: 1em;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+
+}
+
+/*  cette partie est resérvée pour les tabs*/
+
+.tab {
+    width: 70vw;
+    margin-top: 2em;
+  }
+
+  .tablinks {
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 1.25em;
+    width: 17vw;
+    height: 3em;
+    color: white;
+    background-color: #312635;
+    margin: 0;
+  }
+
+  .tablinks:disabled{
+      opacity: .3;
+  }
+
+
+  .active, .tablinksn:hover {
+    background-color: #44566C;
+  }
+
+  .tablinks.active {
+    background-color: #44566C;
+  }
+
+  .tabcontent {
+    display: none;
+
+  }
+
+
+
+/*   fin tabs*/
+
+/* ++++++++ Article 1  "introduction" qui contient les deux questions ++++++++++++++++++++++++++++++++++++++ */
+
+article p{
+    font-size: 1.5em;
+    color: white;
+    /* margin-bottom: 1em; */
+}
+
+/* la div qui contient le texte de LOANELY*/
+.intro{
+    width: 70%;
+    background: #1B2A3D;
+    padding: 3em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+.intro p{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* des class des boutons 'annuler', 'démarrer' et 'etape suivante'*/
+.btn{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.btn button{
+    width: 15em;
+    height: 3em;
+    font-size: 1.25em;
+    background-color: #44566C;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    border: none;
+    
+}
+
+/* deux id des deux div des boutons 'annuler' et 'étape suivante'*/
+#btn1, #btn2{
+    visibility: hidden;
+}
+
+/* les deux boutons 'étape suivante' */
+#etape1, #etape2{
+    opacity: .5;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* ++++++++ la première et la deuxième question du formulaire ++++++++++++++++++++++++++++++++++++++ */
+#q1, #q2{
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    font-size: 1.25em;
+    color: white;
+    margin-bottom: 1em;
+
+    border: 1px solid white;
+    height: 12em;
+    box-sizing: border-box;
+    visibility: hidden;
+    padding: 1em;
+}
+
+#q1 p , #q2 p {
+    text-align: center;
+}
+
+#q1 input , #q2 input {
+    margin-top: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    cursor:pointer;
+}
+
+#q1 label , #q2 label {
+
+    font-size: 1.25em;
+    cursor:pointer;
+}
+
+#q1 div , #q2 div{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row;
+    margin-left: 13em;
+}
+
+
+#q2{
+    visibility: hidden;
+    
+}
+
+/* la div qui contient un message dans le cas où la promesse de vente n'est pas signée */
+#ventSign{
+    width: 60%;
+    height: 16em;
+    padding: 2em;
+    border: 1px solid white;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    /* display: none; */
+    position: absolute;
+    top: 22em;
+    display: none;
+}
+
+#ventSign p{
+    text-align: center;
+}
+
+/* bouton dans la div du message */
+#cliquer{
+    width: 15em;
+    height: 3em;
+    font-size: 1.25em;
+    background-color: #44566C;
+    color: white;
+}
+
+/* le formulaire de la société*/
+
+#introduction form{
+    display: none;
+    border: 1px solid white;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#ouiImmat:checked #siret{
+    opacity:1;
+}
+
+/* ++++++++ Article 2 --- ICI commence le formulaire à remplir ++++++++++++++++++++++++++++++++++++++ */
+
+#emprunteur form{
+    box-sizing: border-box;
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    border: 1px solid white;
+    padding: 1em;
+}
+
+
+
+
+
+#divForm, #societe{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 1em;
+    border: 1px solid blue;
+
+}
+
+#divForm div, #societe div{
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+    /* border: 1px solid green; */
+}
+
+#divForm div div, #societe div div{
+    display: flex;
+    flex-flow: row;
+    width: 95%;
+    
+}
+
+#divForm div div div, #societe div div div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+#investImmeuble, #investMaison{
+    display: none;
+}
+
+
+label{
+    color: #fff;
+    font-size: 1.25em;
+    margin-left: .5em;
+}
+
+input{
+    background-color: #c4c4c485;
+    width: 90%;
+    height: 2em;
+    border: none;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    color: #fff;
+    font-size: 1em;
+}
+
+/*  les inputs de type 'radio'  */
+.radioBtn label{
+    font-size: 1em;
+    cursor:pointer;
+    margin: 0;
+}
+
+.radioBtn input{
+    width: 1.5em;
+    height: 1.5em;
+    cursor:pointer;
+    padding: 0;
+    border: 1px red solid;
+} 
+
+.radioBtn input:checked + label{
+    font-weight: bolder;
+}
+
+
+h1{
+    color: white;
+    font-size: 3.75em;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    font-size: 2.55em;
+    text-align: center;
+}
+
+
+
+
+/* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
+
+footer {
+    width: auto;
+    height: 9.5rem;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .liens-footer{
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+
+footer a {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    margin-left: 10rem;
+    padding: .3rem;
+}
+
+footer #logo {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    align-self: center;
+    width: 50%;
+}
+
+
