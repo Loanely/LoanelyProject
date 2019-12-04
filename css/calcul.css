@@ -8,17 +8,20 @@
 
 html, body {
     box-sizing: border-box;
+    overflow: scroll;
 } 
+
 
 /* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
 
  nav {
     position: relative;
-    width: 100vw;
+    width: auto;
     height: 12vh;
     display: flex;
     flex-flow: row;
     align-items: center;  
+    
 }
 
 nav #logo {
@@ -62,18 +65,20 @@ ul li a img {
 /* =================Fin NAVBAR ============================= */
 section {
     display:flex;
+    width:auto;
+    background-color: #44566C; ;  
 }
 aside {
-    height:88vh;
-    width:30vw;
+    height:72.5vh;
+    width:auto;
 }
 #calculate {
-    height:88vh;
-    width:30vw;
+    height:72.5vh;
+    width:auto;
 }
 article {
-    width:70vw;
-    height: 88vh;
+    width:auto;
+    height: 72.5vh;
     background-color: #44566C;  
 }
 h3{
@@ -88,33 +93,29 @@ h3{
     justify-content: center;
     align-items: center;
     width:70vw;
-    height:60vh;
-    margin-top:7vh;
+    height:50vh;
+    margin-top:5vh;
+   
+    
     
 }
 /* ++++++++++++++++++++++ DEBUT FORMULAIRE +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* #containerForm {
-    width:40vw;
+
+form {
     display:flex;
-    justify-content: space-between; 
+    justify-content:space-between;
     align-items:center;
     flex-direction:column;
-} */
-form {
-    height: 60vh; 
+    height: 50vh; 
 }
-.question {
-    height: 16.5vh;
-}
+
 label {
     font-size:1,25em;
     color:white;
 }
 input {  
     background-color: #C4C4C4;
-    /* width: 35em;*/
     height: 3em; 
-    
     width:35em;
     border: none; 
     background: none;
@@ -125,7 +126,7 @@ input {
 button{
     background-color: #1B2A3D;
     width: 16.7em;
-    height: 3em;
+    height: 2.5em;
     border: none;
     color:white;
     font-size:1.75em;
@@ -146,15 +147,18 @@ button{
     width:30vw;
     color:white;
     
+    
 }
 #result {
     display:flex;
     justify-content: space-around;
     align-items:center;
     flex-direction: column;
-    height:60vh;
-    width:23em;
+    height:50vh;
+    width:25vw;
+    margin-left:10vw;
     background-color: #848D98;
+    /* padding:0.62rem; */
 }
 h4 {
     font-size: 1,25em;
@@ -164,13 +168,38 @@ span {
     color:white;
 }
 footer {
-    height:9.4em;
-    width:100vw;
-    background-color: black;
+    width: auto;
+    height: 12vh;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .liens-footer{
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+
+footer a {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    margin-left: 10rem;
+    padding: .3rem;
+    font-size:0.75rem;
+}
+
+footer #logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    align-self: center;
+    width: 50%;
 }
 
 
-
-@media screen and (max-width:800px) {
-
-}
