@@ -115,9 +115,6 @@ footer img {
     background-color: #848D98;
     display: flex;
     color: white;
-    
-    
-
         
 }
 
@@ -126,6 +123,13 @@ footer img {
     justify-content: space-between;
     
     
+    
+}
+.name{
+    padding-left: 2vw;
+}
+.numeroclient{
+    padding-right: 2vw;
 }
 
 #icons{
@@ -237,22 +241,21 @@ h2{
     padding-bottom: 5vh;
         
 }
+article{
+    position: relative;
+}
+.titreprojet img{
+    margin-right: 2vw;
+    margin-top: 0.4vw;
+    
+}
 
-#projet1{
+
+#projet1, #projet2, #projet3{
     width: 90%;
     height: 18em;
     margin-top: 8vh;
     
-}
-#projet2{
-    width: 90%;
-    height: 18em;
-    margin-top: 8vh;
-}
-#projet3{
-    width: 90%;
-    height: 18em;
-    margin-top: 8vh;
 }
 
 table tr td p{
@@ -267,6 +270,10 @@ table :nth-child(2) td{
     color: white;
 }
 
+table :nth-child(2) td img{
+    margin-left: 0.5vw;
+}
+
 table :nth-child(4) td{
     font-size: 1.6em;
 }
@@ -276,6 +283,7 @@ table :nth-child(3) td{
 
 table { 
     border-collapse: collapse;
+    text-align: center;
 }
 
 
@@ -283,3 +291,8 @@ table {
     font-size: 2.5em;
     padding-left: 2vh;
 }
+
+/* .hidden1{
+    display: none;
+} */
+
