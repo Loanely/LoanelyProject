@@ -207,6 +207,12 @@ section:nth-child(2) article:nth-child(2) p{
     font-family: 'Rambla', sans-serif;
     text-align: center;
 }
+section:nth-child(2) article:nth-child(2) p a {
+    color: white;
+}
+section:nth-child(2) article:nth-child(2) p a:hover {
+    color:rgb(98, 90, 104) ;
+}
 
 section:nth-child(2) article:nth-child(2) h2{
     color: white;
@@ -404,8 +410,9 @@ section:nth-child(4) article:nth-child(1) .stat-nums h3 {
 /* =============================article 2 ========================= */
 
 section:nth-child(4) article:nth-child(2) {
-    background: rgba(75, 94, 101, 0.5);
+    background: #4B5E65;
     display: flex;
+    align-content: center;
     flex-flow: column;
     overflow-x: hidden;
 }
@@ -424,12 +431,37 @@ section:nth-child(4) article:nth-child(2) .logo-banque {
    
 }
 
+.partenaire {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(114, 139, 148);
+}
+
+.partenaire h3 {
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+
+
+/* caroussel =======================*/
+
+.owl-carousel {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
 footer {
     width: auto;
-    height: 9.5rem;
+    height: 13vh;
     background: black;
     display: flex;
     justify-content: space-around;
@@ -439,11 +471,12 @@ footer {
 footer .liens-footer{
     width: 75%;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
 }
 
 footer a {
     color: white;
+    font-size: .9rem;
     font-family: 'Rambla', sans-serif;
     margin-left: 10rem;
     padding: .3rem;

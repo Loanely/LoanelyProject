@@ -1,0 +1,12 @@
+/*****************************
+ All rights reserved.
+ www.allfont.es (c) 2011-2015
+ *****************************/
+@font-face {
+    font-family: 'Rambla';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Rambla'), local('Rambla-Regular'),
+        url(http://www.allfont.es/cache/fonts/rambla_77cc0d49fac9f009c2dc601a651139cc.woff) format('woff'),
+        url(http://www.allfont.es/cache/fonts/rambla_77cc0d49fac9f009c2dc601a651139cc.ttf) format('truetype');
+}
