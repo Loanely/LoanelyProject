@@ -1,4 +1,3 @@
-
 // ********************* les variables du premier article "introduction"  ************************
 
 
@@ -23,6 +22,7 @@ let ouiImmat = document.querySelector('#ouiImmat'); // le bouton radio "oui" la 
 let nonImmat = document.querySelector('#nonImmat'); // le bouton radio "non" la société non immatriculée
 
 // ********************* les évènements sur les variables ci-dessus  ************************
+
 
 // démarrer un projet -- faire apparître la première question et rendre la hauteur de l'article 'auto'
 demarrer.addEventListener('click', function () {
@@ -252,3 +252,15 @@ tabs[2].disabled = false;
 tabs[3].disabled = false;
 
 
+// }
+
+
+// ====================== PARTIE Article 3 Projet à financer YOYO ================================= 
+// tabs[2].disabled = false;
+
+// let immeubleType = document.querySelector('#immeubleType') // reponse immeuble
+// let siImmeuble = document.querySelector('#siImmeuble') // div qui contient form poru les immeubles
+
+// immeubleType.addEventListener('click', function() {
+//     siImmeuble.style.display ='block'
+// })

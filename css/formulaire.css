@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
 
 /* font-family: 'Rambla', sans-serif; */
@@ -85,7 +84,6 @@ ul li a img {
 /* section:nth-child(1){
     height: 100vh;
     display: flex;
-
 } */
 
 /* ++++++++ Article 1 qui contient une photo ++++++++++++++++++++++++++++++++++++++ */
@@ -481,6 +479,57 @@ h2{
 }
 
 
+/* ======================== PARTIE PROJET A FINANCER ARTICLE 3 =================================== */
+
+#projet form {
+    width:70%;
+    border:2px solid yellow;
+}
+
+
+/* legend {
+    font-size:2rem;
+    color:white;
+}
+.rowsElts {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top:2rem;
+    border:2px solid greenyellow;
+    
+}
+.rowsElt2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    border :2px solid red;  
+    
+}
+#siImmeuble {
+    display:none; 
+ }
+#siImmeuble1 {
+    display:flex;
+    justify-content: space-between;
+    flex-flow: wrap ;
+    margin-top:2em;
+    border:2px solid blue;
+}
+
+.columnContain {
+    width:45%;
+}
+#condEstimeLoc {
+    display: none;
+}  */
+
+
+
+
+
+
+/* ======================== FIN PARTIE PROJET A FINANCER ARTICLE 3 =============================== */
 
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
