@@ -536,7 +536,7 @@ h2{
 
 footer {
     width: auto;
-    height: 9.5rem;
+    height: 12vh;
     background: black;
     display: flex;
     justify-content: space-around;
