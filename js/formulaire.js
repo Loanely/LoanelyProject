@@ -1,7 +1,8 @@
 
 // ********************* les variables du premier article "introduction"  ************************
 
-
+let btnIntro = document.querySelector('#btnIntro');
+let btnIntro1 = document.querySelector('#btnIntro1');
 let tabs = document.querySelectorAll('.tablinks');          // les 4 boutons des onglets 
 let emprunteur = document.querySelector('#emprunteur');     // un bouton pour ouvrir l'onglet "emprunteur"
 let projet = document.querySelector('#projet');             // un bouton pour ouvrir l'onglet "projet"
@@ -28,12 +29,15 @@ let nonImmat = document.querySelector('#nonImmat'); // le bouton radio "non" la 
 demarrer.addEventListener('click', function () {
     introduction.style.height = 'auto';
     question1.style.display = 'inherit';
+    btnIntro.style.display = 'none';
+    btnIntro1.style.display = 'inherit'
 });
 
 // afficher la deuxième question et masquer le formulaire de la société
 oui1.addEventListener('click', function () {
     question2.style.display = 'inherit';
     intoForme.style.display = 'none';
+    btnIntro1.style.display = 'none'
 });
 
 // afficher le message et masquer le 2e question et le formulaire
@@ -42,6 +46,7 @@ non1.addEventListener('click', function () {
     question2.style.display = 'none';
     intoForme.style.display = 'none';
     btn2.style.display = 'none';
+    btnIntro1.style.display = 'none'
 });
 
 // bouton dans le block du message - masquer le message et afficher les 2 questions et les boutons
@@ -179,11 +184,11 @@ typeInvest.addEventListener('click', function () {
         investImmeuble.style.display = 'inherit';
         investMaison.style.display = 'none';
     }
-    if ((typeInvest[2].selected) || (typeInvest[3].selected)||(typeInvest[4].selected)) {
+    if ((typeInvest[2].selected) || (typeInvest[3].selected) || (typeInvest[4].selected)) {
         investMaison.style.display = 'inherit';
         investImmeuble.style.display = 'none';
     }
-    if (typeInvest[5].selected){
+    if (typeInvest[5].selected) {
         investMaison.style.display = 'none';
         investImmeuble.style.display = 'none';
     }

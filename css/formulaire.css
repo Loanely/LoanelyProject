@@ -162,7 +162,9 @@ section, article{
     display: none;
   }
 
-
+#btnIntro1, #demarrer1{
+    display: none;
+}
 
 /*   fin tabs*/
 
