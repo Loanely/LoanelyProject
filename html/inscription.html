@@ -39,17 +39,17 @@
             <div class="champ">
                <div class="parti1">
                     <label for="nom">Nom *</label>
-                    <input type="text" id="nom">
+                    <input type="text" id="nom" required>
                     <label for="motdepasse">Mot de passe *</label>
-                    <input type="password" name="" id="motdepasse"  pattern="[A-Za-z0-9]" title="Le mot de passe doit contenir des lettres majiscules, des caracteres speciaux et des chiffres  ">
+                    <input type="password" name="" id="motdepasse" minlength="8" pattern="[A-Za-z0-9]" title="Le mot de passe doit contenir des lettres majiscules, des caracteres spéciaux et des chiffres" required>
                     <label for="emaile">Email *</label>
                     <input type="email" name="" id="emaile"> 
                </div>
                <div class="parti2">
                     <label for="Prenom">Prénom *</label>
-                    <input type="text" id="Prenom">
+                    <input type="text" id="Prenom" required>
                     <label for="cmdp">Confirmation du Mot De Passe *</label>
-                   <input type="password" name="" id="cmdp">
+                   <input type="password" name="" id="cmdp" required>
                    <label for="numtel">Téléphone *</label>
                    <input type="tel" name="" id="numtel">
                </div>
@@ -74,7 +74,7 @@
     <footer>
 
         <div id="logo">
-            <img src="../assets/logo/logoBas.png" alt="">
+            <img src="../assets/logos/logo bas.png" alt="">
         </div>
 
         <div class="liens-footer">
