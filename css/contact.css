@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
 *{
         padding:0;
         margin:0;
 }
 body{
-	width: 100%;
-        height:100%;
+	width: auto;
+        height:100vh;
         font-family: 'Rambla', sans-serif;
 }
 
 
 nav {
         position: relative;
-        width: 100vw;
-        height: 10vh;
+        width: auto;
+        height: 11vh;
         display: flex;
         flex-flow: row;
         align-items: center;
@@ -60,15 +61,21 @@ nav {
         width: 1rem;
         padding-right: .5em;
     }
+    /**************************** main ***************************** */
+
+    main{
+        height: 76vh;
+        width: auto;
+    }
 section{ 
         position:relative;
         width: 100%;
-	    height:50%;
+	    height: 100%;
 	   display:flex;
 	   flex-direction: row;
 	 
         }
-.image{ width: 25%;
+.image{ width: 40vw;
           
     }
  .photo{ 
@@ -81,7 +88,7 @@ section{
 
  .info{ 
  	width: 75%;
- 	height: 80%;
+ 	
     background: #354e6d;
         opacity:0.9;
   }
@@ -92,7 +99,8 @@ section{
         font-size:2.0em;
         font-weight: bold;
         padding:2%;
-        margin-left:31%;}
+        text-align: center;
+    }
   .rep{ 
         display: flex;
         flex-direction: row; 
@@ -104,51 +112,95 @@ section{
         }
   p{ 
      color: white;
+     font-size: 1.3rem;
+     /* margin-top: 2vh; */
      text-align: 0%; 
      margin-left:0;
    }
+   .entete{
+       display: flex;
+       margin-left: 3vw;
+       width: 40vw;
+      
+      
+    align-items: center;
+   }
 
-.champs1, .champs2{ 
-        display: flex;
-        flex-direction: row;
-        align-items: left;
-        justify-content: space-around;
-        margin:0;
-
+.champs1{ 
+    width: 23vw;
+    display: flex;
+   
+    align-items: left;
+    flex-direction: column;
     }   
-
-fieldset{ border:none ;}
-label{ margin-left:10.2%;}
-input[type=text], textarea{
+.champs2{
+        width: 23vw;
+        display: flex;
         
-        padding: 0.9em 1.3em;
+        align-items: left;
+        flex-direction: column;
+    }
+    .champ-texte{
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        margin-left: 3vw;
+    }
+    .mes-tete{
+        margin-left: 3vw;
+        margin-top: 1vh;
+    }
+
+fieldset{ border:none ;
+width: 45vw;
+}
+
+input[type=text], input[type=email],input[type=number], textarea{
+        
+        /* padding: 0.9em 1.3em; */
         margin:0;
-        border-radius: 0.1em;
+        border-radius: 0.1px;
         background-color:rgba(196, 196, 196, 0.5);
         color: white;
       }
 
-      input[type=text]{
-              width:120%;
-              height:10%;
-              border-radius:0.5em;
-              margin-left:0;
+      input[type=text], input[type=email], input[type=number]{
+              width:18vw;
+              height:5vh;
+              margin-top: 0.2vh;
+              border-radius:0.4em;
+              
               border-color: transparent;
       }
-      textarea{
-          width:85%;
-          margin-left:10%;
-          border-radius:0.5em;
-               }
-        label{ color: white;
-                margin-left:11%;}
+      
+textarea{
+  width:38vw;
+  height: 20vh;
+  margin-top: 1vh;
+  border-radius:0.5em;
+  display: flex;
+         
+}
+label{
+  color: #fff;
+  font-size: 1.25em;
+  font-family: 'Rambla';
+  font-style: normal;
+   margin-top: 1.1em;
+   letter-spacing: 0.1em;
+               
+        }
+   
 
        input[type=text]:focus{ border-color:blue;}
        textarea:focus{border-color:blue; }
 
 
 #envoyer{ 
-        width: 90%;
+        width: 38vw;
+        height: 6vh;
+        margin-top: 3vh;
+        margin-left:3vw ;
         display: inline-block;
         padding: 1em 2.7em;
         font-size: 1.1em;
@@ -159,73 +211,126 @@ input[type=text], textarea{
         color: #fff;
         background-color: #1B2A3D;
         border: none;
-        margin-left:10%;
-        
-        }  
+}  
+.données{ 
+      
+      width: 45vw ;
+  	  height:auto; 
+      margin-bottom:5%;
+      margin-top: 2vh;
+ }
+       
+.données img{
+    width:2vw; 
+    height:4vh;
+}
 
-  .données{ width:  40%;
-  	         height:100%; 
-              margin-left:5%;
-              margin-top: 2%;
-              margin-bottom:5%;
-  	 }
-  .d1{ font-size: 1.3em; }
-  .mail{ color: white;
-         font-weight: bold;}
-  .tel{ color:white;
-        font-weight: bold;}
+.phrase p{
+    width: 20vw;
+    text-align: center;
+}
 
-.ques{  font-size:1.2em;
-        font-weight:bold;}
+.adresse-contact{
+    margin-left: 3vw;
+    margin-top: 4vh;
+}
+.adresse{
+    display: flex;
+    margin-left: 3vw;
+}
+.adresse-contact a{
+    color: white;
+    font-size: 1.5em;
+}
+.adresse p, .appel p{
+    margin-left: 1vw;
+}
+.zone-num{
+    margin-top: 2vh;
+    margin-left: 6vw;
+}
+.appel{
+    display: flex;
+    margin-top: 1vh;
+    
+}
+.zone-num span{
+    color: white;
+    font-size: 1.5em;
+}
 
+
+ .fin{
+    margin-top: 2vh;
+}
+.ques{ 
+    color:white;
+     font-size:1.5em;
+    font-weight:bold;
+    margin-left: 2vw;
+}
+.fin p{
+    text-align: center;
+    
+    width: 19vw;
+    font-size: 1em;
+    margin-left: 1vw;
+}
 button{
-        width:50%;
-        height: 0%;
-	background: #1B2A3D;
-	border:none;
-	color: white;
-	text-align: center; 
-	text-decoration: none;
-	opacity:1;
-	margin: auto;
-        font-size: 1.05em;
-        padding:1.1em 1.1em;
-              
-        }
+    width:18vw;
+    height:6vh;
+    margin-top: 12vh;
+    font-size:1.5em ;
+background-color: #1B2A3D;
+border:none;
+color: white;
+text-align: center; 
+text-decoration: none;
+opacity:1;}
 
 
  
-footer {
-        width: auto;
-        height: 13vh;
-        background: black;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    footer .liens-footer{
-        width: 75%;
-        display: flex;
-        justify-content: left;
-    }
-    
-    footer a {
-        color: white;
-        font-family: 'Rambla', sans-serif;
-        margin-left: 10rem;
-        padding: .3rem;
-    }
-    
-    footer #logo {
-        width: 25%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    footer img {
-        align-self: center;
-        width: 50%;
-    }                       
+    @font-face {
+            font-family: 'Rambla';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Rambla'), local('Rambla-Regular'), url(https://fonts.gstatic.com/s/rambla/v7/snfrs0ip98hx6mrEKrgPBtg.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+          } 
+ /* ***************footer****************************** */
+ footer{
+    width: auto;
+    height: 13vh;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .liens-footer{
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+
+footer a {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    font-size: 0.75rem;
+    margin-left: 10rem;
+    padding: .3rem;
+    letter-spacing: 0.03em;
+}
+
+footer #logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    align-self: center;
+    width: 50%;
+}
 

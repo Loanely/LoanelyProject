@@ -28,58 +28,72 @@
         </nav>
 
     </header>
+    <main>
     <section>
-        <br>
-        <br>
-        <article class="image">
-        	<img src="../assets/images/contact/phone.jpg"class="photo" >
-        </article>
+      
+       <aside>
+            <img src="../assets/images/contact/phone.jpg"class="photo" >
+       </aside> 
         <article class="info">
             <h1> Laissez-nous votre message</h1>
              <div class="rep">
                  <br><br><br><br>
               <form method="Post" action="http://localhost/action_page.Js">
                    <fieldset>
-                      <div class="champs1">
-                          <p>
-                                  Nom*:<br>
-                              <input type="text" name="nom" class="chps" required=""><br>
-                          </p> 
-                          <p>
-                                  Prénom*<br>
-                                  <input type="text" name="prenom" class="chps" required=""><br>
-                             </p>
-                         </div>
-                         <div class="champs2">
-                             <p>
-                                   Email*<br>
-                                   <input type="text" name="mail" class="chps" required=""><br>
-                              </p>
-                              <p> 
-                                  Tel <br>
-                                  <input type="text" name="tel" class="chps"><br>
-                              </p>
-                          </div><br><br><br>
-                          <label> Votre Message</label> 
+                       <div class="entete">
+                           <div class="champs1">
+                              <label for="nom">Nom*:</label>
+                              <input type="text" id="nom">
+
+                              <label for="email">Email*</label>
+                              <input type="email" name="" id="email">
+                          
+                            
+                             
+                             </div>
+                             <div class="champs2">
+                                    <label for="prenom">Prénom*</label>
+                                    <input type="text" id="prenom">
+                               
+                              
+                              <label for="tel">Téléphone</label>
+                              <input type="number" name="" id="tel">
+                             </div>
+                        </div>
+                        <div class="champ-texte">    
+                          <label for="message" id="mes-tete"> Votre message</label> 
                           <textarea name="message" id="message" class="effet" rows="17" cols="75"> 
                           </textarea>
-                    </fieldset><br><br>
-                    <input type="submit" value="envoyer" id="envoyer">
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Envoyer" id="envoyer">
               </form>
-              <div class="données">
-                  <p class="d1"> vous pouvez nous contacter <br> du lundi au vendredi de 9h00 à 19h00 </p>
-                  <p><br><br>
-                   <img src="../assets/icons/contact/mail.png"width="20px" height="20px">Email<br> <a href="mailto:messages@loanely.com" class="mail">message@Loanely.com</a>
-                  </p><br><br><br>
-                  <p> <img src="../assets/icons/contact/mobile.png"width="20px" height="20px"> Téléphone   <br> <span style="font-weight:bold">05-49-93-93-93</span>
-                  </p><br>
-                  <p> <span class="ques"> Vous avez une Question?</span><br> pour toutes les réponses aux<br> questions  que vous vous posez<br> sur Loanely et votre prêt.<br><br><br><br><br>
-                  Consultez notre Guide</p><br><br><br><br><br>
-                  <button> Guide</button>
+              <div class="donnée">
+                    <div class="phrase">
+                         <p>Vous pouvez nous contacter du lundi au vendredi de 9h à 19h</p>
+                    </div>
+                  
+                    <div class="adresse-contact">
+                         <div class="adresse"><img src="../assets/icons/contact/mail.png" > <p>Email</p></div> 
+                         <a href="mailto:messages@loanely.com" class="mail">message@Loanely.com</a> 
+                    </div>
+                    <div class="zone-num">
+                        <div class="appel"><img src="../assets/icons/contact/mobile.png"> <p>Téléphone</p> </div>
+                        <span >05 49 93 93 93</span>
+                    </div>
+                    <div class="fin">
+                          <span class="ques"> Vous avez une question ?</span> 
+                          <p> pour toutes les réponses aux questions  que vous vous posez sur Loanely et votre prêt.
+                             Consultez notre Guide</p>
+                    </div>
+                    <button> Guide</button>
+
+                  
               </div>
-          </div></article>
+          </div>
+        </article>
     </section>
-   
+</main>
 
     <footer>
 
@@ -110,102 +124,19 @@
         </div>
 
     </footer>
+    
+        
+    </body>
+    </html>
 
 
-<!--
-    <!DOCTYPE html>
-<html> 
-<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet"  href="contact.css">
-        <meta charset="utf-8"/>
-         <link href="http://fr.allfont.net/allfont.css?fonts=rambla" rel="stylesheet" type="text/css" />
-        <title>  page contact </title>
-    </head>
-    <body>
-    <header>
-       <nav>
-        <ul>
- 			 <li style="float:left"> logo</li>
-  			  <li style="float:right"><a href="#news">Acceuil</a></li>
-  			  <li style="float:right"><a href="">Contact</a>
-  			  <li style="float:right"><a href="#contact">Connexion</a></li>
-  			  <li style="float:right"><a href="#about">Incription</a></li>
-         </ul>
-      </nav>
-    </header>
+
+
+
+
+
+
+
    
-   
-    <section>
-        <article class="photo">
-        	<img src="https://www.picclickimg.com/00/s/MTAyNFgxMDI0/z/G6wAAOSwxGZc3y1q/$/Telephone-fixe-avec-fil-Telephone-fixe-Numero-didentification-_1.jpg">
-        </article>
-        <article class="info">
-          <h1> Laissez-nous votre message</h1>
-           <div class="rep">
-        	<form method="Post"action="/action_page.Js">
-                 <fieldset>
-                	<div class="champs1">
-                		<p>
-   							 Nom*:<br>
-    						<input type="text" name="nom" required><br>
-    		    		</p> 
-    		    		<p>
-   							 Prénom*<br>
-   				 			<input type="text" name="prenom" required><br>
-   						</p>
-   					</div>
-   					<div class="champs2">
-   						<p>
-   				 		 	Email*<br>
-   				  			<input type="text" name="mail"required><br>
-   						 </p>
-   				 		<p> 
-   				 			Tel <br>
-   				 			<input type="text" name="tel" required><br>
-   				 		</p>
-   				 	</div>
-   				 	<label> Votre Message</label> 
-   				 	<textarea name="message" id="message" class="effet"rows="25" cols="250"> 
-   				 	</textarea>
- 				 </fieldset>
- 				 <input type="submit" value="envoyer" id=envoyer>
-			</form>
-			<div class="données">
-				<p class="d1"> vous pouvez nous contacter <br> du lundi au vendredi de 9h00 à 19h00 </p>
-				<p><br><br><br>
-					Email<br> <a href="mailto:messages@loanely.com" class ="mail">message@Loanely.com</a>
-				</p><br><br><br>
-				<p> Téléphone:<br>05-49-93-93-93
-				</p><br><br>
-				<p> Vous avez une Question?<br> pour toutes les réponses aux<br> questions  que vous vous posez<br> sur Loanely et votre prêt.<br><br>
-			    Consultez notre Guide</p><br><br><br>
-			    <button> Guide</button>
-			</div>
-        </article>
-    </section>
-
-    <footer>
-    	<div class="pied">
-    		logo
-    	</div>
-
-    	<div class="pied">
-    		Qui Sommes-Nous?<br>
-    		Espace-Banque<br>
-    		Espace Client<br>
-
-    	</div>
-    	<div class="pied">
-    		Politique de Confidentialité<br>
-    		Recrutement<br>
-    		Contactez-nous?<br>
-    	</div>
-    	<div class="pied">
-    		Plan de site <br>
-    		Condition Général de Ventes<br>
-    		Mentions Légales<br>
-    	</div>
-    </footer>
-</body>
---></body></html>
+                  
+                  
