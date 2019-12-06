@@ -160,11 +160,17 @@ section, article{
     display: none;
   }
 
-
+#btnIntro1, #demarrer1{
+    display: none;
+}
 
 /*   fin tabs*/
 
 /* ++++++++ Article 1  "introduction" qui contient les deux questions ++++++++++++++++++++++++++++++++++++++ */
+
+#introduction{
+    position: relative;
+}
 
 article p{
     font-size: 1.5em;
@@ -183,7 +189,7 @@ article p{
 
 .intro p{
     text-align: center;
-    font-size: 2em;
+    font-size: 1.25em;
 }
 
 /* des class des boutons 'annuler', 'démarrer' et 'etape suivante'*/
@@ -194,7 +200,7 @@ article p{
     margin-bottom: 1em;
 }
 
-.btn button{
+.btn button, #poursuivre{
     width: 15em;
     height: 3em;
     font-size: 1.25em;
@@ -214,10 +220,10 @@ article p{
 }
 
 /* les deux boutons 'étape suivante' */
-#etape1, #etape2{
+/* #etape1, #etape2{
     opacity: .5;
     transition: 0.3s ease-in-out;
-}
+} */
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -231,7 +237,7 @@ article p{
     width: 70%;
     display: flex;
     flex-flow: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
     font-size: 1.25em;
     color: white;
@@ -243,12 +249,19 @@ article p{
     display: none;
     padding: 1em;
 }
+ #q1 div, #q2 div{
+     width: 30%;
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+ }
 
 #q1 p , #q2 p {
     text-align: center;
 }
 
-#q1 input , #q2 input {
+#q1 div input , #q2 div input {
     margin-top: 1em;
     width: 1.5em;
     height: 1.5em;
@@ -256,46 +269,47 @@ article p{
     
 }
 
-#q1 label , #q2 label {
+#q1 div label , #q2 div label {
 
     font-size: 1.25em;
     cursor:pointer;
 }
 
-#q1 div , #q2 div{
+/* #q1 div , #q2 div{
     width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-flow: row;
     margin-left: 13em;
-}
+} */
 
 
 
 /* la div qui contient un message dans le cas où la promesse de vente n'est pas signée */
 #ventSign{
-    width: 60%;
-    height: 16em;
-    padding: 2em;
+    width: 70%;
+    height: 10em;
+    padding: 1em;
     border: 1px solid white;
     box-sizing: border-box;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 22em;
+    /* position: absolute;
+    top: 22em; */
     display: none;
-    background: black;
+    /* background: black; */
 }
 
 #ventSign p{
     text-align: center;
+    font-size: 1.25em;
 }
 
 /* bouton dans la div du message */
-#poursuivre{
+/* #poursuivre{
     width: 15em;
     height: 3em;
     font-size: 1.25em;
@@ -303,7 +317,7 @@ article p{
     color: black;
     border: none;
     cursor: pointer;
-}
+} */
 
 /* le formulaire de la société*/
 
@@ -331,38 +345,31 @@ article p{
     padding: 1em;
 }
 
+#divForm{
+    display: none;
+}
 
-#divForm, #societe, #divForm .formClass{
+#divForm, #societe, #divForm .formClass, #divForm #infoPersonnel{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    /* align-items: center; */
     justify-content: space-between;
-    /* padding: 1em; */
-    /* border: 1px solid red; */
-    padding: 1em;
 }
+
 
 /* #investImmeuble div, #investMaison div, #divForm #propr div, #divForm #mensualite div, 
 #divForm #investImmeuble div, #divForm #investMaison div */
 
-#divForm div, #societe div, #divForm .formClass div{
+#divForm div, #societe div, #divForm .formClass div, #divForm #infoPersonnel div{
     width: 45%;
     display: flex;
     flex-flow: column;
-    /* border: 1px solid green; */
 }
 
 #divForm div div, #societe div div{
     display: flex;
     flex-flow: row;
     width: 95%;
-}
-
-#divForm .formClass{
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
 }
 
 #divForm div div div, #societe div div div{
@@ -373,9 +380,22 @@ article p{
     margin-bottom: 1em;
 }
 
-#divForm #investissement{
+#divForm .formClass{
     display: none;
+    border: 1px solid white;
+    padding: 1em;
+    margin-bottom: 1em;
 }
+
+#divForm #infoPersonnel{
+    border: 1px solid white;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/* #divForm #investissement{
+    display: none;
+} */
 
 label{
     color: #fff;
@@ -421,7 +441,7 @@ option{
 
 /*  les inputs de type 'radio'  */
 .radioBtn label{
-    font-size: 1em;
+    font-size: 1.25em;
     cursor:pointer;
     margin: 0;
 }
@@ -432,38 +452,21 @@ option{
     cursor:pointer;
     padding: 0;           
 } 
+#divForm .radioBtn{
+    width: 100%;
+    border:  1px solid white;
+    margin-bottom: 1em;
+    align-items: center;
+}
 
 .radioBtn input:checked + label{
     font-weight: bolder;
 }
 
-#divForm #contrat{
-    display: none;
-}
-
-#divForm .formClass{
-    display: none;
-    border: 1px solid white;
-
-}
-
-
-    
 #divForm #independant div, #divForm #public-prive div{
     width: 45%;
     display: flex;
     flex-flow: column;
-}
-
-#divForm fieldset{
-    width: 91%;
-    margin-bottom: 1em;
-}
-legend{
-    font-size: 1.25em;
-    color: white;
-    text-align: left;
-    padding: 0.5em;
 }
 
 h1{
