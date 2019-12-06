@@ -8,9 +8,8 @@
 
 html, body {
     box-sizing: border-box;
-    overflow: scroll;
+    overflow: hidden;
 } 
-
 
 /* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
 
@@ -65,64 +64,85 @@ ul li a img {
 /* =================Fin NAVBAR ============================= */
 section {
     display:flex;
-    width:auto;
+    width:100%;
     background-color: #44566C; ;  
 }
-aside {
-    height:72.5vh;
-    width:auto;
+#photo {
+    height:75vh;
+    width:30%;
+    
 }
 #calculate {
-    height:72.5vh;
-    width:auto;
+    height:75vh;
+    width:100%;
 }
-article {
-    width:auto;
-    height: 72.5vh;
+#calcule {
+    width:70%;
+    height: 75vh;
+    
     background-color: #44566C;  
 }
 h3{
     text-align: center;
     color:white;
-    font-size:2em;
+    font-size:3rem;
     margin-top:2vh;
+    letter-spacing: 2px;
 }
 
 .containerCalcul {
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width:70vw;
+    width:100%;
     height:50vh;
-    margin-top:5vh;
-   
-    
-    
+    padding-top:5vh;
 }
 /* ++++++++++++++++++++++ DEBUT FORMULAIRE +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 form {
-    display:flex;
+    display:flex; 
     justify-content:space-between;
-    align-items:center;
-    flex-direction:column;
+    flex-direction:column; 
     height: 50vh; 
-}
-
+} 
 label {
-    font-size:1,25em;
+    font-size:1.5em;
     color:white;
 }
 input {  
     background-color: #C4C4C4;
-    height: 3em; 
-    width:35em;
+    width:90%;
+    font-size:1.5em;
     border: none; 
     background: none;
     border-bottom:white 2px solid;
-    border-radius:0,4em;
     color:white;
+    font-family: 'Rambla';
+    padding-top:0.2em;
 }
+input[value] {
+    padding-left:0.2em;
+}
+.containQuest {
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    /* border:2px solid red; */
+}
+.indic {
+    display:flex;
+    justify-content:left;
+    align-items:center;
+    width:10%;
+    border-bottom:2px solid white;
+    font-size:1.5em;
+    z-index:2;
+    position: relative;
+    color:white;
+    /* padding-left:12em; */
+}
+
 button{
     background-color: #1B2A3D;
     width: 16.7em;
@@ -132,11 +152,6 @@ button{
     font-size:1.75em;
     cursor: pointer;
 }
-::placeholder {
-    color: white;
-    font-size: 1.25em;
-    text-align:right;
-    }
 /* ++++++++++++++++++++++ FIN FORMULAIRE +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 #containerResult {
     display:flex;
@@ -148,20 +163,24 @@ button{
     color:white;
     
     
+    
 }
 #result {
     display:flex;
+    font-weight: bold;
     justify-content: space-around;
     align-items:center;
     flex-direction: column;
     height:50vh;
     width:25vw;
-    margin-left:10vw;
+    /* margin-left:10vw; */
     background-color: #848D98;
-    /* padding:0.62rem; */
+    padding: 0 2em 0 2em;
+    
 }
 h4 {
-    font-size: 1,25em;
+    font-size: 1.25em;
+    letter-spacing: .05em;
 }
 span {
     font-size:3em;
@@ -169,7 +188,7 @@ span {
 }
 footer {
     width: auto;
-    height: 12vh;
+    height: 13vh;
     background: black;
     display: flex;
     justify-content: space-around;
@@ -179,13 +198,13 @@ footer {
 footer .liens-footer{
     width: 75%;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
 }
 
 footer a {
     color: white;
     font-family: 'Rambla', sans-serif;
-    margin-left: 10rem;
+    margin-left: 0.9rem;
     padding: .3rem;
     font-size:0.75rem;
 }

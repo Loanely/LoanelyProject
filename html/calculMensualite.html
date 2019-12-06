@@ -34,50 +34,61 @@
         </header>
         <section>
 
-            <aside>
+            <article id='photo'>
                 <img id='calculate' src='../assets/images/calcul/calculatrice.png'>
-            </aside>
-            
-            <article>
-                <h3>Calculez votre mensualité</h3>
-                    <div class='containerCalcul'>
-                        <div id='containerForm'>
-                            <form method="#">
-                                <div class='question'>
-                                <label for='montant'>Montant du prêt*</label><br>
-                                <input name='montant' type='number' id='montant' placeholder='€' />
-                                </div>
-                                <div class='question'>
-                                <label for='duree'>Durée du prêt *</label><br>
-                                <input name='duree' type='number' id='duree' placeholder='Année(s)' />
-                                </div>
-                                <div class='question'>
-                                <label for='taux'>Taux*</label><br>
-                                <input name='taux' type='number' id='taux' placeholder='%' />
-                                </div>
-                                <div class='question'>
-                                <button onclick='calcul()'>Calculer</button>
-                                </div>
-                            </form>     
-                        </div>
-                    
-                        <div id='containerResult'>
-
-                            <div id='result'>
-                                <h4>Votre mensualité est à partir de : </h4>
-                                <span>123 €</span>
-                                <p>* Cette simulation est communiquée à titre informatif, elle est  établie sur la base de taux  du marché  actuelle . Cette présentation indicative ne constitue en aucun cas une offre commerciale de financement et n’a aucune valeur contractuelle.</p>
-                            </div>
-
-                        </div>
-                    </div>
             </article>
-            
+
+            <article id='calcule'>
+                <h3>Calculez votre mensualité</h3>
+                <div class='containerCalcul'>
+                    <div id='containerForm'>
+                        <form>
+                            <div>
+                                <label for='montant'>Montant du prêt*</label><br>
+                                <div class='containQuest'>
+                                    <input name='montant' value='' type='number' id='montant' step='500' pattern="[0-9]{10}" placeholder='100000'/>
+                                    <div class='indic'><p>€</p></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for='duree'>Durée du prêt *</label><br>
+                                <div class='containQuest'>
+                                    <input name='duree' value='' type='number' id='duree' placeholder="10"/>
+                                    <div class='indic anneePos'><p>An(s)</p></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for='taux'>Taux*</label><br>
+                                <div class='containQuest'>
+                                    <input name='taux' type='number' step='0.05' value='' id='taux' placeholder="1,25" />
+                                    <div class='indic'><p>%</p></div>
+                                </div>
+                            </div>
+                            
+                                <button id='calculer'>Calculer</button>
+                            
+                        </form>
+                    </div>
+
+                    <div id='containerResult'>
+
+                        <div id='result'>
+                            <h4>Votre mensualité est à partir de : </h4>
+                            <span id='result2'>€</span>
+                            <p>* Cette simulation est communiquée à titre informatif, elle est établie sur la base de
+                                taux du marché actuelle . Cette présentation indicative ne constitue en aucun cas une
+                                offre commerciale de financement et n’a aucune valeur contractuelle.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
         </section>
         <footer>
 
             <div id="logo">
-                <img src="./assets/logo/logoBas.png" alt="">
+                <img src="../assets/logo/logoBas.png" alt="">
             </div>
 
             <div class="liens-footer">
@@ -104,6 +115,17 @@
 
         </footer>
         <script>
+            console.log(document.querySelectorAll('.indic p :nth-child(2)'))
+            let calculer = document.getElementById("calculer")
+            calculer.addEventListener("click", function (e) {
+                e.preventDefault()
+                let montant = parseInt(document.getElementById('montant').value);
+                let duree = parseInt(document.getElementById('duree').value);
+                let taux = parseInt(document.getElementById('taux').value);
+                let result = (montant + (montant * (taux / 100))) / duree / 12;
+                let afficheResult = document.getElementById('result2');
+                afficheResult.textContent = result.toFixed(2) + " €";
+            })          
         </script>
     </body>
 </main>
