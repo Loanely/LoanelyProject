@@ -21,9 +21,9 @@
             <div id="menu">
 
                 <ul>
-                    <li><a href="#"> <img src="../assets/icons/inscription/accueil.png" alt=""> ACCEUIL</a></li>
+                    <li><a href="../index.html"> <img src="../assets/icons/inscription/accueil.png" alt=""> ACCUEIL</a></li>
                     <li><a href="#"> <img src="../assets/icons/inscription/connexion.png" alt=""> CONNEXION</a></li>
-                    <li><a href="#"> <img src="../assets/icons/inscription/inscription.png" alt=""> INSCRIPTION</a></li>
+                    <li><a href="inscription.html"> <img src="../assets/icons/inscription/inscription.png" alt=""> INSCRIPTION</a></li>
                 </ul>
 
             </div>
@@ -442,6 +442,7 @@
                             <label for="commImmeible">Commentaire</label>
                             <input type="text" name="commImmeible" id="commImmeible">
                         </div>
+
                         <div class="investImmeuble">
                             <label for="crMeImmeible">Crédit mensuel de l'immeuble</label>
                             <input type="text" name="crMeImmeible" id="crMeImmeible">
@@ -499,9 +500,257 @@
                     </div>
                 </form>
 
-            </article>
+                    <!-- </div> -->
 
-            <article id="projet" class="tabcontent">hello ici le projet</article>
+
+                </form>
+            </article>
+<!-- ++++++++++++++++++++++++++++++PARTI YOYO ARTICLE 3 PROJET A FINANCER +++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <article id="projet" class="tabcontent">
+                <form action='#' method='POST'>
+                    <fieldset>
+                        <legend>Type d'investissement</legend>
+                        <div class='formClass' id=typeInvest>
+                            <div>
+                                <input type='radio' name='typeProjet' id ='immeubleType'><label for=immeubleType'>Immeuble</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='appType'><label for='appType'>Appartement</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='maisonType'><label for='maisonType'>Maison</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='localType'><label for='localType'>Local commercial ou professionnel</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='autreType'><label for='autreType'>Autre</label>
+                            </div>
+                        </div>
+                <!--====== Si immeuble =======-->
+                        <div id='siImmeuble' class='formClass'>
+                            <div id='siImmeuble1'>
+                            <div class='columnContain'>
+                                <div>
+                                    <label for='nameImmeuble'>Nom Immeuble</label>
+                                        <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                                </div>
+                                <div>
+                                    <label for='adresseImmeuble'>Adresse de l'immeuble</label>
+                                        <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                                </div>
+                                <div>
+                                    <label for='presentation'>Présentation de l'immeuble</label>
+                                        <input type='text' name='presentation' id='presentation'>
+                                </div>
+                            </div>
+                            <div class='columnContain'>
+                                <label>Type Lot</label>
+                                <div class='rowsElts radioBtn'>
+                                    <div>     
+                                        <input type="checkbox" name="T1" id="T1" checked/> <label for="T1">T1</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T2" id="T2" /> <label for="T2">T2</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T3" id="T3" /> <label for="T3">T3</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T4" id="T4" /> <label for="T4">T4</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T5" id="T5" /> <label for="T5">T5</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T6" id="T6" /> <label for="T6">T6</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="maisonType" id="maisonType" /><label for="maisonType">Maison</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="localType" id="localType" /><label for="localType">Local</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="autreType" id="autreType" /><label for="autreType">Autre</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for='loyerChargesComprises'> Loyers charges comprises</label>
+                                    <input type='number' name='loyerChargesComprises' id='loyerChargesComprises'>
+                                </div>
+                                <div id='immeubleLoue'>
+                                    <label for='immeubleLoue'>L'immeuble est-il déjà loué ?</label>
+                                    <div class='rowsElt2 radioBtn'>
+                                    <input type='radio' name='immeubleLoue' id='immeubleLoueOui'><label for='immeubleLoueOui'>Oui</label>
+                                    <input type='radio' name='immeubleLoue' id='immeubleLoueNon'><label for='immeubleLoueNon'>Non</label>
+                                    </div>
+                                </div>
+                            </div>
+                                <!--====== L'immeuble est il déjà loué ? Si, non =============== -->
+                                <div id='condEstimeLoc'>
+                                    <label for='estimeLocation'>Votre loyer est estimé à ?</label>
+                                        <input type='number' name='estimeLocation' id='estimeLocation'>
+                                </div> 
+                            
+                            </div>
+                        </div> 
+                    <!-- ===Fin condition ===========================================-->
+
+                    <!-- Si appartement, maison ou local -->
+                    <div id='siApp' class='formClass'>
+                        <div>
+                            <label for='nameApp'>Nom du domicile</label>
+                                <input type='text' name='nameApp' id='nameApp'>
+                        </div>
+                        <div>
+                            <label for='adresseApp'>Adresse de domicile</label>
+                                <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                        </div>
+                        <div>
+                            <label for='presentationApp'>Présentation</label>
+                                <input type='text' name='presentationApp' id='presentationApp'>
+                        </div>
+                        <label>Type</label>
+                        <div class='rowsElts radioBtn'>
+                            <div>
+                                <input type="radio" name="T1" id="T1" checked/> <label for="T1">T1</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T2" id="T2" /> <label for="T2">T2</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T3" id="T3" /> <label for="T3">T3</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T4" id="T4" /> <label for="T4">T4</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="T5" id="T5" /> <label for="T5">T5</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="T6" id="T6" /> <label for="T6">T6</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="maisonType" id="maisonType" /><label for="maisonType">Maison</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="localType" id="localType" /><label for="localType">Local</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="autreType" id="autreType" /><label for="autreType">Autre</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for='loyerChargesComprises'> Loyers charges comprises</label>
+                            <input type='number' name='loyerChargesComprises' id='loyerChargesComprises'>
+                        </div>
+                        <div>
+                            <label for='habitLoue'>L'habitation est-elle déjà louée ?</label>
+                            <div class='rowsElt2 radioBtn'>
+                            <input type='radio' name='habitLoue' id='habitLoueOui'><label for='habitLoueOui'>Oui</label>
+                            <input type='radio' name='habitLoue' id='habitLoueNon'><label for='habitLoueNon'>Non</label>
+                            </div>
+                        </div>
+                        <!--====== L'habitation est elle déjà louée ? Si, non =============== -->
+                        <div>
+                            <label for='estimeLocation'>Votre loyer est estimé à ?</label>
+                                <input type='number' name='estimeLocation' id='estimeLocation'>
+                        </div> 
+                    </div> 
+                        
+                        <div id='autreAppart'>
+                            <div>
+                                <label for='autreAppart'>Souhaitez vous rajouter un autre bien ?</label>
+                                    <div class='rowsElt2 radioBtn'>
+                                    <input type='radio' name='autreAppart' id='autreAppartOui'><label for='autreAppartOui'>Oui</label>
+                                    <input type='radio' name='autreAppart' id='autreAppartNon'><label for='aureAppartNon'>Non</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Partie financière</legend>
+                            <div>
+                                <label for='prixNet'>Prix net vendeur</label>
+                                    <input type='number' name='pixNet' id='prixNet'>
+                            </div>
+                            <div>
+                                <label for='fraisAgence'>Frais d'agence</label>
+                                    <input type='number' name='fraisAgence' id='fraisAgence'>
+                            </div>
+                            <div>
+                                <label for='fraisNotaire'>Frais de notaire</label>
+                                    <input type='number' name='fraisNotaire' id='fraisNotaire'>
+                            </div>
+                            <div>
+                                <label for='fraisTravaux'>Frais de travaux envisagés</label>
+                                    <input type='number' name='fraisTravaux' id='fraisTravaux'>
+                            </div>
+                            <div>
+                                <label for='apportPersonnel'>Apport personnel</label>
+                                    <input type='number' name='apportPersonnel' id='apportPersonnel'>
+                            </div>
+                            <div>
+                                <label for='subvention'>Subventions</label>
+                                    <input type='number' name='subvention' id='subvention'>
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Crédit souhaité</legend>
+                            <div>
+                                <label for='dureeCredit'>Durée du prêt</label>
+                                    <input type='number' name='dureeCredit' id='dureeCredit'>
+                            </div>
+                            <div>
+                                <label for='tauxEstime'>Taux estimé</label>
+                                    <input type='number' name='tauxEstime' id='tauxEstime'>
+                            </div>
+                            
+                            <label>Taux différé</label>
+                            <div class='rowsElts radioBtn'>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereAucun'><label for='tauxDiffereAucun'>Aucun</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDifferePartiel'><label for='tauxDifferePartiel'>Partiel</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereTotal'><label for='tauxDiffereTotal'>Total</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereAnticipe'><label for='tauxDiffereAnticipe'>Anticipation</label>
+                                </div>
+                            </div>
+                    <!-- Si durée total ou partielle ==> Durée du différé ==-->
+                            <div>
+                                <label for='dureeDiffere'>Quelle est la durée du différé ?</label>
+                                    <input type='number' name='dureeDiffere' id='dureeDiffere' placeholder="1 à 36 mois">
+                            </div>
+                    <!-- fin condition ======================================-->
+                            <div>
+                                <label for='charges'>Montant des charges</label>
+                                    <input type='number' name='charges' id='charges'>
+                            </div>
+                            <div>
+                                <label for='taxeFonciere'>Montant de la taxe foncière</label>
+                                    <input type='number' name='taxeFonciere' id='taxeFonciere'> 
+                            </div>
+                            <div>
+                                <label for='avantages'>Quels sont les avantages de votre projet ?</label>
+                                    <textarea cols=100 rows="10"></textarea>
+                            </div>
+                            <div>
+                                <label for='inconvenients'>Quels sont les inconvénients et qu'avez-vous prévu pour les réduire ?</label>
+                                    <textarea cols=100 rows="10"></textarea>
+                            </div>
+                    </fieldset>
+
+
+                </form>
+            </article> 
+
+<!-- ++++++++++++++++++++++++++++ FIN PARTI YOYO ++++++++++++++++++++++++++++++++++++++++++++ -->
             <article id="piecejoint" class="tabcontent">hello ici les pièces à joindre</article>
         </section>
         <!-- <footer>

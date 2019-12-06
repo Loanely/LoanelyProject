@@ -1,0 +1,231 @@
+*{
+        padding:0;
+        margin:0;
+}
+body{
+	width: 100%;
+        height:100%;
+        font-family: 'Rambla', sans-serif;
+}
+
+
+nav {
+        position: relative;
+        width: 100vw;
+        height: 7vh;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        
+    }
+    
+    nav #logo {
+        width: 50%;
+    }
+    
+    nav img {
+        width: 15em;
+        margin-left: 3em;
+    }
+    
+    #menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        margin-right: 3em;
+    }
+    
+    ul {
+        display: flex;
+        flex-flow: row;
+        text-decoration: none;
+        
+       
+        
+    }
+    li {
+        font-family: 'Rambla', sans-serif;
+        color: #2F435E;
+        list-style: none;  
+    }
+    
+    a {
+        text-decoration: none;
+        color: #2F435E;
+        display: flex;
+        align-items: center;
+    }
+    
+    ul li a img {
+        width: 1rem;
+        padding-right: .5em;
+    }
+section{ 
+        position:relative;
+        width: 100%;
+	    height:50%;
+	   display:flex;
+	   flex-direction: row;
+	 
+        }
+.image{ width: 25%;
+          
+    }
+ .photo{ 
+ 		  width:100%; 
+         height:100%;
+         margin-top: 0%;
+         margin-bottom: 0%;
+         
+         }
+
+ .info{ 
+ 	width: 75%;
+ 	height: 80%;
+    background: #354e6d;
+        opacity:0.9;
+  }
+  h1{
+         font-size: xx-large;
+         color:white;
+        text-align: left;
+        font-size:2.0em;
+        font-weight: bold;
+        padding:2%;
+        margin-left:31%;}
+  .rep{ 
+        display: flex;
+        flex-direction: row; 
+        }
+
+  form{ width:80%;
+  	height: 80%;
+         margin: 0.5em; 
+        }
+  p{ 
+     color: white;
+     text-align: 0%; 
+     margin-left:0;
+   }
+
+.champs1, .champs2{ 
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: space-around;
+        margin:0;
+
+    }   
+
+fieldset{ border:none ;}
+label{ margin-left:10.2%;}
+input[type=text], textarea{
+        
+        padding: 0.9em 1.3em;
+        margin:0;
+        border-radius: 0.1em;
+        background-color:rgba(196, 196, 196, 0.5);
+        color: white;
+      }
+
+      input[type=text]{
+              width:120%;
+              height:10%;
+              border-radius:0.5em;
+              margin-left:0;
+              border-color: transparent;
+      }
+      textarea{
+          width:85%;
+          margin-left:10%;
+          border-radius:0.5em;
+               }
+        label{ color: white;
+                margin-left:11%;}
+
+       input[type=text]:focus{ border-color:blue;}
+       textarea:focus{border-color:blue; }
+
+
+#envoyer{ 
+        width: 90%;
+        display: inline-block;
+        padding: 1em 2.7em;
+        font-size: 1.1em;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #1B2A3D;
+        border: none;
+        margin-left:10%;
+        
+        }  
+
+  .données{ width:  40%;
+  	         height:100%; 
+              margin-left:5%;
+              margin-top: 2%;
+              margin-bottom:5%;
+  	 }
+  .d1{ font-size: 1.3em; }
+  .mail{ color: white;
+         font-weight: bold;}
+  .tel{ color:white;
+        font-weight: bold;}
+
+.ques{  font-size:1.2em;
+        font-weight:bold;}
+
+button{
+        width:50%;
+        height: 0%;
+	background: #1B2A3D;
+	border:none;
+	color: white;
+	text-align: center; 
+	text-decoration: none;
+	opacity:1;
+	margin: auto;
+        font-size: 1.05em;
+        padding:1.1em 1.1em;
+              
+        }
+
+
+ 
+footer {
+        width: auto;
+        height: 12vh;
+        background: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    footer .liens-footer{
+        width: 75%;
+        display: flex;
+        justify-content: left;
+    }
+    
+    footer a {
+        color: white;
+        font-family: 'Rambla', sans-serif;
+        margin-left: 10rem;
+        padding: .3rem;
+    }
+    
+    footer #logo {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer img {
+        align-self: center;
+        width: 50%;
+    }                       
+
