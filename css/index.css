@@ -147,48 +147,44 @@ section:nth-child(2){
 
 }
 
+
 section:nth-child(2) article:nth-child(1){
     background: url(../assets/images/accueil/desktop.jpg);
     background-size: cover;
     width: 40vw;
     height: 100vh;
     display: flex;
-    flex-flow: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
-.demarche-icon{
+.allIcons {
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allIcons .demarche-icon{
     display: flex;
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* border: 2px solid red; */
     height: 100%;
 }
 
-.demarche-icon div{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid green; */
+.allIcons .demarche-icon .pictos{
+    width: 35%;
+    padding: 4%;
 }
-
-.demarche-icon div img{
-    width: 10%;
-}
-
 
 .demarche-icon h3{
     color: white;
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-family: 'Rambla', sans-serif;
 }
-
 
 section:nth-child(2) article:nth-child(2){
     background-image: linear-gradient(to bottom left, #44566C,#312635);
@@ -207,12 +203,20 @@ section:nth-child(2) article:nth-child(2) p{
     font-family: 'Rambla', sans-serif;
     text-align: center;
 }
+section:nth-child(2) article:nth-child(2) p a {
+    color: white;
+}
+section:nth-child(2) article:nth-child(2) p a:hover {
+    color:#F8CB38 ;
+}
 
 section:nth-child(2) article:nth-child(2) h2{
     color: white;
-    font-size: 3em;
+    font-size: 2.5em;
+    letter-spacing: .3rem;
     font-family: 'Rambla', sans-serif;
     text-align: center;
+    
 }
 
 section:nth-child(2) article:nth-child(2) :nth-child(3){
@@ -298,6 +302,7 @@ section:nth-child(3) article:nth-child(4){
 }
 
 section:nth-child(3) article p{
+    width: 70%;
     padding: 2em;
     color: white;
     font-size: 1.25em;
@@ -320,12 +325,12 @@ section:nth-child(3) article img{
     width: 50%;
 }
 
-#btn-left {
+#btn-left, #btn-right {
     width: 1em;
     position: absolute;
     top: 50%;
     left: 0;
-    color: white;
+    color: rgb(255, 0, 0);
     font-size: 5em;
     visibility: hidden;
     cursor: pointer;
@@ -333,22 +338,17 @@ section:nth-child(3) article img{
 }
 
 #btn-right {
-    width: 1em;
-    position: absolute;
-    top: 50%;
+    visibility: visible;
     left: 95%;
-    color: white;
-    font-size: 5em;
-    cursor: pointer;
-    text-align: center;
 }
+
 
 
 /* ================================== section 4 ============================================= */
 
 section:nth-child(4) {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -404,8 +404,9 @@ section:nth-child(4) article:nth-child(1) .stat-nums h3 {
 /* =============================article 2 ========================= */
 
 section:nth-child(4) article:nth-child(2) {
-    background: rgba(75, 94, 101, 0.5);
+    background: #4B5E65;
     display: flex;
+    align-content: center;
     flex-flow: column;
     overflow-x: hidden;
 }
@@ -424,12 +425,36 @@ section:nth-child(4) article:nth-child(2) .logo-banque {
    
 }
 
+.partenaire {
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(114, 139, 148);
+}
+
+.partenaire h3 {
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+
+/* caroussel =======================*/
+
+.owl-carousel {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
 footer {
     width: auto;
-    height: 9.5rem;
+    height: 13vh;
     background: black;
     display: flex;
     justify-content: space-around;
@@ -439,11 +464,12 @@ footer {
 footer .liens-footer{
     width: 75%;
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
 }
 
 footer a {
     color: white;
+    font-size: .9rem;
     font-family: 'Rambla', sans-serif;
     margin-left: 10rem;
     padding: .3rem;

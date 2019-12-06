@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Rambla&display=swap');
 
 /* font-family: 'Rambla', sans-serif; */
@@ -85,7 +84,6 @@ ul li a img {
 /* section:nth-child(1){
     height: 100vh;
     display: flex;
-
 } */
 
 /* ++++++++ Article 1 qui contient une photo ++++++++++++++++++++++++++++++++++++++ */
@@ -121,21 +119,21 @@ section, article{
 /*  cette partie est resérvée pour les tabs*/
 
 .tab {
-    width: 70vw;
+    width: 70%;
     margin-top: 2em;
   }
 
   .tablinks {
-
+    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     font-size: 1.25em;
-    width: 17vw;
+    width: 25%;
     height: 3em;
     color: white;
-    background-color: #312635;
+    background-color: rgb(21, 34, 51);
     margin: 0;
   }
 
@@ -144,17 +142,22 @@ section, article{
   }
 
 
-  .active, .tablinksn:hover {
+  /* .active, .tablinksn:hover {
     background-color: #44566C;
-  }
+  } */
 
   .tablinks.active {
     background-color: #44566C;
+    text-decoration: underline;
+  }
+
+  .tablinks:checked{
+    background-color: #44566C;
+    text-decoration: underline;
   }
 
   .tabcontent {
     display: none;
-
   }
 
 
@@ -195,7 +198,7 @@ article p{
     width: 15em;
     height: 3em;
     font-size: 1.25em;
-    background-color: #44566C;
+    background-color: #1B2A3D;
     color: white;
     display: flex;
     align-items: center;
@@ -207,12 +210,13 @@ article p{
 
 /* deux id des deux div des boutons 'annuler' et 'étape suivante'*/
 #btn1, #btn2{
-    visibility: hidden;
+    display: none;
 }
 
 /* les deux boutons 'étape suivante' */
 #etape1, #etape2{
     opacity: .5;
+    transition: 0.3s ease-in-out;
 }
 
 
@@ -236,7 +240,7 @@ article p{
     border: 1px solid white;
     height: 12em;
     box-sizing: border-box;
-    visibility: hidden;
+    display: none;
     padding: 1em;
 }
 
@@ -249,6 +253,7 @@ article p{
     width: 1.5em;
     height: 1.5em;
     cursor:pointer;
+    
 }
 
 #q1 label , #q2 label {
@@ -258,7 +263,7 @@ article p{
 }
 
 #q1 div , #q2 div{
-    width: 10%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -267,10 +272,6 @@ article p{
 }
 
 
-#q2{
-    visibility: hidden;
-    
-}
 
 /* la div qui contient un message dans le cas où la promesse de vente n'est pas signée */
 #ventSign{
@@ -283,10 +284,10 @@ article p{
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
-    /* display: none; */
     position: absolute;
     top: 22em;
     display: none;
+    background: black;
 }
 
 #ventSign p{
@@ -294,12 +295,14 @@ article p{
 }
 
 /* bouton dans la div du message */
-#cliquer{
+#poursuivre{
     width: 15em;
     height: 3em;
     font-size: 1.25em;
-    background-color: #44566C;
-    color: white;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
 }
 
 /* le formulaire de la société*/
@@ -313,6 +316,8 @@ article p{
     margin-bottom: 1em;
 }
 
+
+
 #ouiImmat:checked #siret{
     opacity:1;
 }
@@ -322,29 +327,26 @@ article p{
 #emprunteur form{
     box-sizing: border-box;
     width: 70%;
-    display: flex;
-    flex-flow: column;
-    position: relative;
     border: 1px solid white;
     padding: 1em;
 }
 
 
-
-
-
-#divForm, #societe{
+#divForm, #societe, #divForm .formClass{
     width: 100%;
-    /* border: 1px solid red; */
     display: flex;
     flex-flow: row wrap;
+    /* align-items: center; */
     justify-content: space-between;
+    /* padding: 1em; */
+    /* border: 1px solid red; */
     padding: 1em;
-    border: 1px solid blue;
-
 }
 
-#divForm div, #societe div{
+/* #investImmeuble div, #investMaison div, #divForm #propr div, #divForm #mensualite div, 
+#divForm #investImmeuble div, #divForm #investMaison div */
+
+#divForm div, #societe div, #divForm .formClass div{
     width: 45%;
     display: flex;
     flex-flow: column;
@@ -355,10 +357,15 @@ article p{
     display: flex;
     flex-flow: row;
     width: 95%;
-    
 }
 
-#divForm div div div, #societe div div div {
+#divForm .formClass{
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#divForm div div div, #societe div div div{
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -366,10 +373,9 @@ article p{
     margin-bottom: 1em;
 }
 
-#investImmeuble, #investMaison{
+#divForm #investissement{
     display: none;
 }
-
 
 label{
     color: #fff;
@@ -389,6 +395,30 @@ input{
     font-size: 1em;
 }
 
+select{
+    background-color: #c4c4c485;
+    width: 92%;
+    height: 2.5em;
+    border: none;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    color: #fff;
+    font-size: 1em;
+    transition: .5s ease-in-out all;
+}
+
+select:hover{
+    background: rgb(92, 79, 100);
+}
+input[type=date]{
+    height: 2.5em;
+}
+
+option{
+    background-color: #000000;
+}
+
 /*  les inputs de type 'radio'  */
 .radioBtn label{
     font-size: 1em;
@@ -400,14 +430,41 @@ input{
     width: 1.5em;
     height: 1.5em;
     cursor:pointer;
-    padding: 0;
-    border: 1px red solid;
+    padding: 0;           
 } 
 
 .radioBtn input:checked + label{
     font-weight: bolder;
 }
 
+#divForm #contrat{
+    display: none;
+}
+
+#divForm .formClass{
+    display: none;
+    border: 1px solid white;
+
+}
+
+
+    
+#divForm #independant div, #divForm #public-prive div{
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+}
+
+#divForm fieldset{
+    width: 91%;
+    margin-bottom: 1em;
+}
+legend{
+    font-size: 1.25em;
+    color: white;
+    text-align: left;
+    padding: 0.5em;
+}
 
 h1{
     color: white;
@@ -417,18 +474,69 @@ h1{
 
 h2{
     color: white;
-    font-size: 2.55em;
+    font-size: 2em;
     text-align: center;
 }
 
 
+/* ======================== PARTIE PROJET A FINANCER ARTICLE 3 =================================== */
+
+#projet form {
+    width:70%;
+    border:2px solid yellow;
+}
+
+
+/* legend {
+    font-size:2rem;
+    color:white;
+}
+.rowsElts {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    margin-top:2rem;
+    border:2px solid greenyellow;
+    
+}
+.rowsElt2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    border :2px solid red;  
+    
+}
+#siImmeuble {
+    display:none; 
+ }
+#siImmeuble1 {
+    display:flex;
+    justify-content: space-between;
+    flex-flow: wrap ;
+    margin-top:2em;
+    border:2px solid blue;
+}
+
+.columnContain {
+    width:45%;
+}
+#condEstimeLoc {
+    display: none;
+}  */
+
+
+
+
+
+
+/* ======================== FIN PARTIE PROJET A FINANCER ARTICLE 3 =============================== */
 
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
 footer {
     width: auto;
-    height: 9.5rem;
+    height: 12vh;
     background: black;
     display: flex;
     justify-content: space-around;
