@@ -57,8 +57,8 @@
 
                 <div id="btn-intro" class="btn">
                     <button id="annuler1">Annuler</button>
-                    <button id="demarrer">Démarrer le formulaire<img
-                            src="../assets/icons/formulaire/suivant.png"></button>
+                    <a href="#oui1"><button id="demarrer">Démarrer le formulaire<img
+                                src="../assets/icons/formulaire/suivant.png"></button></a>
                 </div>
 
                 <div id="q1">
@@ -79,12 +79,12 @@
                     <p>Nous vous conseillons de signer la promesse de vente avant de commencer à monter votre
                         dossier de financement car vous aurez besoin des informations contenues dans votre promesse
                         pour déposer votre dossier.</p>
-                    <button id="cliquer">Cliquez</button>
+                    <button id="poursuivre">Poursuivre</button>
                 </div>
-                <div class="btn" id="btn1">
+                <!-- <div class="btn" id="btn1">
                     <button id="annuler2">Annuler</button>
                     <button disabled id="etape1">Etape suivante</button>
-                </div>
+                </div> -->
 
                 <div id="q2">
                     <p>Vous achetez par l'intermédiaire d'une société?</p>
@@ -145,9 +145,9 @@
             </article>
 
             <article id="emprunteur" class="tabcontent">
-                <form action="">
+                <form action="" id="divForm">
 
-                    <div id="divForm">
+                    <!-- <div id="divForm"> -->
                         <div>
                             <label for="prenom">PRENOM</label>
                             <input type="text" name="prenom" id="prenom">
@@ -192,36 +192,19 @@
                             <label for="phone">Téléphone</label>
                             <input type="text" name="phone" id="phone">
                         </div>
+
                         <div>
-                            <label>Situation familiale:</label>
-                            <div id="situation" class="radioBtn">
-                                <div>
-
-                                    <input type="radio" name="situation" id="celibataire" value="Célibataire">
-                                    <label for="celibataire">Célibataire</label>
-                                </div>
-                                <div>
-
-                                    <input type="radio" name="situation" id="marie" value="Marié">
-                                    <label for="marie"> Marié(e)</label>
-                                </div>
-                                <div>
-
-                                    <input type="radio" name="situation" id="divorce" value="Divorcé">
-                                    <label for="divorce">Divorcé(e)</label>
-                                </div>
-                                <div>
-
-                                    <input type="radio" name="situation" id="pacse" value="Pacsé">
-                                    <label for="pacse">Pacsé(e)</label>
-                                </div>
-                                <div>
-
-                                    <input type="radio" name="situation" id="veuf" value="Veuf">
-                                    <label for="veuf">Veuf(e)</label>
-                                </div>
-                            </div>
+                            <label for="situation">Situation familiale</label>
+                            <select name="situation" id="situation">
+                                <option selected hidden></option>
+                                <option value="celibataire">Célibataire</option>
+                                <option value="marie">Marié(e)</option>
+                                <option value="divorce">Divorcé(e)</option>
+                                <option value="pacse">Pacsé(e)</option>
+                                <option value="veuf">Veuf(ve)</option>
+                            </select>
                         </div>
+
 
                         <div>
                             <label for="enfant">Enfants à charge</label>
@@ -230,19 +213,14 @@
                         </div>
 
                         <div>
-                            <label>Fumeur</label>
-                            <div id="fumeur" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="fumeur" id="ouiFumeur">
-                                    <label for="ouiFumeur">Oui</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="fumeur" id="nonFumeur">
-                                    <label for="nonFumeur">Non</label>
-                                </div>
-
-                            </div>
+                            <label for="fumeur">Fumeur</label>
+                            <select name="fumeur" id="fumeur">
+                                <option selected hidden></option>
+                                <option value="non-fumeur">Non-Fumeur</option>
+                                <option value="fumeur">Fumeur</option>
+                            </select>
                         </div>
+
 
                         <div>
                             <label for="tranche">Tranche Imposition France (1 part)</label>
@@ -255,205 +233,179 @@
                         </div>
 
                         <div>
-                            <label>Profession principale</label>
-                            <div id="profession" class="radioBtn">
-                                <div>
+                            <label for="profession">Profession</label>
+                            <select name="profession" id="profession">
+                                <option selected hidden>Sélectionner votre profession</option>
+                                <option value="public" id="public">Employé public</option>
+                                <option value="prive" id="prive">Employé privé</option>
+                                <option value="indep" id="indep">Indépendant</option>
+                            </select>
+                        </div>
 
-                                    <input type="radio" name="public" id="public" value="public">
-                                    <label for="public">Employé public</label>
-                                </div>
-                                <div>
+                        <div id="contrat" >
+                            <label for="typecontrat">Type de contrat</label>
+                            <select name="typecontrat" id="typecontrat">
+                                <option selected hidden>Sélectionner votre contrat</option>
+                                <option value="cdi" id="public">CDI</option>
+                                <option value="cdd" id="prive">CDD</option>
+                                <option value="interim" id="indep">INTERIM</option>
+                                <option value="autre" id="indep">AUTRE</option>
+                            </select>
+                        </div>
 
-                                    <input type="radio" name="public" id="prive" value="prive">
-                                    <label for="prive">Employé privé</label>
-                                </div>
-                                <div>
+                        <div id="public-prive" class="formClass">
+                            <div class="public">
+                                <label for="dateContrat">Depuis le</label>
+                                <input type="date" name="dateContrat" id="dateContrat">
+                            </div>
+                            <div class="public">
+                                <label for="employeur">Nom de l'employeur</label>
+                                <input type="text" name="employeur" id="employeur">
+                            </div>
+                            <div class="public">
+                                <label for="adressEmployeur">Adresse l'employeur</label>
+                                <input type="text" name="adressEmployeur" id="adressEmployeur">
+                            </div>
+                            <div class="public">
+                                <label for="villeEmployeur">Code postal et Ville</label>
+                                <input type="text" name="villeEmployeur" id="villeEmployeur">
 
-                                    <input type="radio" name="public" id="indep" value="indep">
-                                    <label for="indep">Indépendant</label>
-                                </div>
+                            </div>
+                            <div class="public">
+                                <label for="salaire">Salaire net/mois</label>
+                                <input type="text" name="salaire" id="salaire">
+                            </div>
+                            <div class="public">
+                                <label for="prime">Prime nette/mois (proratiser si prime annuelle)</label>
+                                <input type="text" name="prime" id="prime">
+                            </div>
+                            <div class="public">
+                                <label for="autreRevenu">Autres revenus</label>
+                                <input type="text" name="autreRevenu" id="autreRevenu">
+                            </div>
 
+                        </div>
+
+                        <div id="independant" class="formClass">
+                            <div class="indep">
+                                <label for="nomEntreprise">Nom de l'entreprise</label>
+                                <input type="text" name="nomEntreprise" id="nomEntreprise">
+                            </div>
+                            <div class="indep">
+                                <label for="siretEntreprise">N° de Siret</label>
+                                <input type="text" name="siretEntreprise" id="siretEntreprise">
+                            </div>
+
+                            <div class="indep">
+                                <label for="remuneration">Rémunérations du gérant du dernier exercice clos</label>
+                                <input type="text" name="remuneration" id="remuneration">
+                            </div>
+                            <div class="indep">
+                                <label for="dividende">Dividendes perçus du dernier exercice clos</label>
+                                <input type="text" name="dividende" id="dividende">
+                            </div>
+                        </div>
+
+
+                        <!-- ************************************* -->
+
+                        <div>
+                            <label for="residence">Vous êtes</label>
+                            <select name="residence" id="residence">
+                                <option selected hidden></option>
+                                <option value="proprietaire">Propriétaire de ma résidence principale</option>
+                                <option value="locataire" id="prive">Locataire</option>
+                                <option value="heberge" id="indep">Hébergé à titre gratuit</option>
+                            </select>
+                        </div>
+
+                        <div id="propr" class="formClass">
+                            <div>
+                                <label for="creditMensuel">Crédit mensuel</label>
+                                <input type="text" name="creditMensuel" id="creditMensuel">
+                            </div>
+                            <div>
+                                <label for="valorisation">Valorisation de la résidence principale</label>
+                                <input type="text" name="valorisation" id="valorisation">
+                            </div>
+                            <div>
+                                <label for="rembourser">En cours de crédit restant à rembourser</label>
+                                <input type="text" name="rembourser" id="rembourser">
+                            </div>
+                            <div>
+                                <label for="loyer">Loyer mensuel</label>
+                                <input type="text" name="loyer" id="loyer">
                             </div>
                         </div>
 
                         <div>
-                            <label>Type de contrat</label>
-                            <div id="typecontrat" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="contrat" id="cdi">
-                                    <label for="cdi">CDI</label>
+                            <fieldset>
+                                <legend>Crédits consommation ou crédits édudiants?</legend>
+                                <div id="credit" class="radioBtn">
+                                    <div>
+                                        <input type="radio" name="ouiCredit" id="ouiCredit">
+                                        <label for="ouiCredit">Oui</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="ouiCredit" id="nonCredit">
+                                        <label for="nonCredit">Non</label>
+                                    </div>
+
                                 </div>
-                                <div>
-                                    <input type="radio" name="contrat" id="cdd">
-                                    <label for="cdd">CDD</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="contrat" id="interim">
-                                    <label for="interim">INTERIM</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="contrat" id="autre">
-                                    <label for="autre">AUTRE</label>
-                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div id="mensualite" class="formClass">
+                            <div>
+                                <label for="conso1">Crédit conso 1 mensuel</label>
+                                <input type="text" name="conso1" id="conso1">
                             </div>
-                        </div>
-                        <div>
-                            <label for="dateContrat">Depuis le</label>
-                            <input type="date" name="dateContrat" id="dateContrat">
-                        </div>
-                        <div>
-                            <label for="employeur">Nom de l'employeur</label>
-                            <input type="text" name="employeur" id="employeur">
-                        </div>
-                        <div>
-                            <label for="adressEmployeur">Adresse l'employeur</label>
-                            <input type="text" name="adressEmployeur" id="adressEmployeur">
-                        </div>
-                        <div>
-                            <label for="villeEmployeur">Code postal et Ville</label>
-                            <input type="text" name="villeEmployeur" id="villeEmployeur">
-                        </div>
-                        <div>
-                            <label for="nomEntreprise">Nom de l'entreprise</label>
-                            <input type="text" name="nomEntreprise" id="nomEntreprise">
-                        </div>
-                        <div>
-                            <label for="siretEntreprise">N° de Siret</label>
-                            <input type="text" name="siretEntreprise" id="siretEntreprise">
-                        </div>
-                        <div>
-                            <label for="salaire">Salaire net/mois</label>
-                            <input type="text" name="salaire" id="salaire">
-                        </div>
-                        <div>
-                            <label for="prime">Prime nette/mois (proratiser si prime annuelle)</label>
-                            <input type="text" name="prime" id="prime">
-                        </div>
-                        <div>
-                            <label for="autreRevenu">Autres revenus</label>
-                            <input type="text" name="autreRevenu" id="autreRevenu">
-                        </div>
-                        <div>
-                            <label for="remuneration">Rémunérations du gérant du dernier exercice clos</label>
-                            <input type="text" name="remuneration" id="remuneration">
-                        </div>
-                        <div>
-                            <label for="dividende">Dividendes perçus du dernier exercice clos</label>
-                            <input type="text" name="dividende" id="dividende">
-                        </div>
-                        <div>
-                            <label for="autreRevenu">Autres revenus</label>
-                            <input type="text" name="autreRevenu" id="autreRevenu">
-                        </div>
-                        <div>
-                            <label>Résidence</label>
-                            <div id="residence" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="proprietaire" id="proprietaire">
-                                    <label for="proprietaire">Propriétaire</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="proprietaire" id="locataire">
-                                    <label for="locataire">Locataire</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="proprietaire" id="heberge">
-                                    <label for="heberge">Hébergé gratuit</label>
-                                </div>
-
+                            <div>
+                                <label for="conso2">Crédit conso 2 mensuel</label>
+                                <input type="text" name="conso2" id="conso2">
                             </div>
-                        </div>
-                        <div>
-                            <label for="creditMensuel">Crédit mensuel</label>
-                            <input type="text" name="creditMensuel" id="creditMensuel">
-                        </div>
-                        <div>
-                            <label for="valorisation">Valorisation de la résidence principale</label>
-                            <input type="text" name="valorisation" id="valorisation">
-                        </div>
-                        <div>
-                            <label for="rembourser">En cours de crédit restant à rembourser</label>
-                            <input type="text" name="rembourser" id="rembourser">
-                        </div>
-                        <div>
-                            <label for="loyer">Loyer mensuel</label>
-                            <input type="text" name="loyer" id="loyer">
-                        </div>
-
-                        <div>
-                            <label>Avez-vous des crédits à la consommation ou crédits édudiants?</label>
-                            <div id="credit" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="ouiCredit" id="ouiCredit">
-                                    <label for="ouiCredit">Oui</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="ouiCredit" id="nonCredit">
-                                    <label for="nonCredit">Non</label>
-                                </div>
-
+                            <div>
+                                <label for="conso3">Crédit conso 3 mensuel</label>
+                                <input type="text" name="conso3" id="conso3">
+                            </div>
+                            <div>
+                                <label for="conso4">Crédit conso 4 mensuel</label>
+                                <input type="text" name="conso4" id="conso4">
                             </div>
                         </div>
 
                         <div>
-                            <label for="conso1">Crédit conso 1 mensuel</label>
-                            <input type="text" name="conso1" id="conso1">
-                        </div>
-                        <div>
-                            <label for="conso2">Crédit conso 2 mensuel</label>
-                            <input type="text" name="conso2" id="conso2">
-                        </div>
-                        <div>
-                            <label for="conso3">Crédit conso 3 mensuel</label>
-                            <input type="text" name="conso3" id="conso3">
-                        </div>
-                        <div>
-                            <label for="conso4">Crédit conso 4 mensuel</label>
-                            <input type="text" name="conso4" id="conso4">
+                            <fieldset>
+                                <legend>Avez-vous déjà des investissements locatifs?</legend>
+                                <div id="invest" class="radioBtn">
+                                    <div>
+                                        <input type="radio" name="ouiInvest" id="ouiInvest">
+                                        <label for="ouiInvest">Oui</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="ouiInvest" id="nonInvest">
+                                        <label for="nonInvest">Non</label>
+                                    </div>
+
+                                </div>
+                            </fieldset>
                         </div>
 
-                        <div>
-                            <label>Avez-vous déjà des investissements locatifs?</label>
-                            <div id="investissement" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="ouiInvest" id="ouiInvest">
-                                    <label for="ouiInvest">Oui</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="ouiInvest" id="nonInvest">
-                                    <label for="nonInvest">Non</label>
-                                </div>
-
-                            </div>
+                        <div id="investissement">
+                            <label for="typeInvest">Type d'investissement</label>
+                            <select name="typeInvest" id="typeInvest">
+                                <option selected hidden></option>
+                                <option value="Immeuble">Immeuble</option>
+                                <option value="appartement">Appartement</option>
+                                <option value="maison">Maison</option>
+                                <option value="local">Local</option>
+                                <option value="autreInvest">Autre</option>
+                            </select>
                         </div>
 
-                        <div>
-                            <label>Type d'investissement</label>
-                            <div id="typeInvest" class="radioBtn">
-                                <div>
-                                    <input type="radio" name="immeuble" id="immeuble">
-                                    <label for="immeuble">Immeuble</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="immeuble" id="appartement">
-                                    <label for="appartement">Appartement</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="immeuble" id="maison">
-                                    <label for="maison">Maison</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="immeuble" id="local">
-                                    <label for="local">Local</label>
-                                </div>
-                                <div>
-                                    <input type="radio" name="immeuble" id="autreInvest">
-                                    <label for="autreInvest">Autre</label>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div id="investImmeuble">
+
+                        <div id="investImmeuble" class="formClass">
                             <div class="investImmeuble">
                                 <label for="nomImmeuble">Nom de l'immeuble</label>
                                 <input type="text" name="nomImmeuble" id="nomImmeuble">
@@ -503,7 +455,7 @@
                                 <input type="text" name="comm1Immeible" id="comm1Immeible">
                             </div>
                         </div>
-                        <div id="investMaison">
+                        <div id="investMaison" class="formClass">
                             <div class="investMaison">
                                 <label for="nomMaison">Nom du bien</label>
                                 <input type="text" name="nomMaison" id="nomMaison">
@@ -541,14 +493,256 @@
                                 <input type="text" name="encoursMaison" id="encoursMaison">
                             </div>
                         </div>
-
-                    </div>
+                    <!-- </div> -->
 
                 </form>
-
             </article>
+<!-- ++++++++++++++++++++++++++++++PARTI YOYO ARTICLE 3 PROJET A FINANCER +++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <article id="projet" class="tabcontent">
+                <form action='#' method='POST'>
+                    <fieldset>
+                        <legend>Type d'investissement</legend>
+                        <div class='formClass' id=typeInvest>
+                            <div>
+                                <input type='radio' name='typeProjet' id ='immeubleType'><label for=immeubleType'>Immeuble</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='appType'><label for='appType'>Appartement</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='maisonType'><label for='maisonType'>Maison</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='localType'><label for='localType'>Local commercial ou professionnel</label>
+                            </div>
+                            <div>
+                                <input type='radio' name='typeProjet' id='autreType'><label for='autreType'>Autre</label>
+                            </div>
+                        </div>
+                <!--====== Si immeuble =======-->
+                        <div id='siImmeuble' class='formClass'>
+                            <div id='siImmeuble1'>
+                            <div class='columnContain'>
+                                <div>
+                                    <label for='nameImmeuble'>Nom Immeuble</label>
+                                        <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                                </div>
+                                <div>
+                                    <label for='adresseImmeuble'>Adresse de l'immeuble</label>
+                                        <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                                </div>
+                                <div>
+                                    <label for='presentation'>Présentation de l'immeuble</label>
+                                        <input type='text' name='presentation' id='presentation'>
+                                </div>
+                            </div>
+                            <div class='columnContain'>
+                                <label>Type Lot</label>
+                                <div class='rowsElts radioBtn'>
+                                    <div>     
+                                        <input type="checkbox" name="T1" id="T1" checked/> <label for="T1">T1</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T2" id="T2" /> <label for="T2">T2</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T3" id="T3" /> <label for="T3">T3</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T4" id="T4" /> <label for="T4">T4</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T5" id="T5" /> <label for="T5">T5</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="T6" id="T6" /> <label for="T6">T6</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="maisonType" id="maisonType" /><label for="maisonType">Maison</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="localType" id="localType" /><label for="localType">Local</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="autreType" id="autreType" /><label for="autreType">Autre</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for='loyerChargesComprises'> Loyers charges comprises</label>
+                                    <input type='number' name='loyerChargesComprises' id='loyerChargesComprises'>
+                                </div>
+                                <div id='immeubleLoue'>
+                                    <label for='immeubleLoue'>L'immeuble est-il déjà loué ?</label>
+                                    <div class='rowsElt2 radioBtn'>
+                                    <input type='radio' name='immeubleLoue' id='immeubleLoueOui'><label for='immeubleLoueOui'>Oui</label>
+                                    <input type='radio' name='immeubleLoue' id='immeubleLoueNon'><label for='immeubleLoueNon'>Non</label>
+                                    </div>
+                                </div>
+                            </div>
+                                <!--====== L'immeuble est il déjà loué ? Si, non =============== -->
+                                <div id='condEstimeLoc'>
+                                    <label for='estimeLocation'>Votre loyer est estimé à ?</label>
+                                        <input type='number' name='estimeLocation' id='estimeLocation'>
+                                </div> 
+                            
+                            </div>
+                        </div> 
+                    <!-- ===Fin condition ===========================================-->
 
-            <article id="projet" class="tabcontent">hello ici le projet</article>
+                    <!-- Si appartement, maison ou local -->
+                    <div id='siApp' class='formClass'>
+                        <div>
+                            <label for='nameApp'>Nom du domicile</label>
+                                <input type='text' name='nameApp' id='nameApp'>
+                        </div>
+                        <div>
+                            <label for='adresseApp'>Adresse de domicile</label>
+                                <input type='text' name='nameImmeuble' id='nameImmeuble'>
+                        </div>
+                        <div>
+                            <label for='presentationApp'>Présentation</label>
+                                <input type='text' name='presentationApp' id='presentationApp'>
+                        </div>
+                        <label>Type</label>
+                        <div class='rowsElts radioBtn'>
+                            <div>
+                                <input type="radio" name="T1" id="T1" checked/> <label for="T1">T1</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T2" id="T2" /> <label for="T2">T2</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T3" id="T3" /> <label for="T3">T3</label> 
+                            </div>
+                            <div>
+                                <input type="radio" name="T4" id="T4" /> <label for="T4">T4</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="T5" id="T5" /> <label for="T5">T5</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="T6" id="T6" /> <label for="T6">T6</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="maisonType" id="maisonType" /><label for="maisonType">Maison</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="localType" id="localType" /><label for="localType">Local</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="autreType" id="autreType" /><label for="autreType">Autre</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for='loyerChargesComprises'> Loyers charges comprises</label>
+                            <input type='number' name='loyerChargesComprises' id='loyerChargesComprises'>
+                        </div>
+                        <div>
+                            <label for='habitLoue'>L'habitation est-elle déjà louée ?</label>
+                            <div class='rowsElt2 radioBtn'>
+                            <input type='radio' name='habitLoue' id='habitLoueOui'><label for='habitLoueOui'>Oui</label>
+                            <input type='radio' name='habitLoue' id='habitLoueNon'><label for='habitLoueNon'>Non</label>
+                            </div>
+                        </div>
+                        <!--====== L'habitation est elle déjà louée ? Si, non =============== -->
+                        <div>
+                            <label for='estimeLocation'>Votre loyer est estimé à ?</label>
+                                <input type='number' name='estimeLocation' id='estimeLocation'>
+                        </div> 
+                    </div> 
+                        
+                        <div id='autreAppart'>
+                            <div>
+                                <label for='autreAppart'>Souhaitez vous rajouter un autre bien ?</label>
+                                    <div class='rowsElt2 radioBtn'>
+                                    <input type='radio' name='autreAppart' id='autreAppartOui'><label for='autreAppartOui'>Oui</label>
+                                    <input type='radio' name='autreAppart' id='autreAppartNon'><label for='aureAppartNon'>Non</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Partie financière</legend>
+                            <div>
+                                <label for='prixNet'>Prix net vendeur</label>
+                                    <input type='number' name='pixNet' id='prixNet'>
+                            </div>
+                            <div>
+                                <label for='fraisAgence'>Frais d'agence</label>
+                                    <input type='number' name='fraisAgence' id='fraisAgence'>
+                            </div>
+                            <div>
+                                <label for='fraisNotaire'>Frais de notaire</label>
+                                    <input type='number' name='fraisNotaire' id='fraisNotaire'>
+                            </div>
+                            <div>
+                                <label for='fraisTravaux'>Frais de travaux envisagés</label>
+                                    <input type='number' name='fraisTravaux' id='fraisTravaux'>
+                            </div>
+                            <div>
+                                <label for='apportPersonnel'>Apport personnel</label>
+                                    <input type='number' name='apportPersonnel' id='apportPersonnel'>
+                            </div>
+                            <div>
+                                <label for='subvention'>Subventions</label>
+                                    <input type='number' name='subvention' id='subvention'>
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Crédit souhaité</legend>
+                            <div>
+                                <label for='dureeCredit'>Durée du prêt</label>
+                                    <input type='number' name='dureeCredit' id='dureeCredit'>
+                            </div>
+                            <div>
+                                <label for='tauxEstime'>Taux estimé</label>
+                                    <input type='number' name='tauxEstime' id='tauxEstime'>
+                            </div>
+                            
+                            <label>Taux différé</label>
+                            <div class='rowsElts radioBtn'>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereAucun'><label for='tauxDiffereAucun'>Aucun</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDifferePartiel'><label for='tauxDifferePartiel'>Partiel</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereTotal'><label for='tauxDiffereTotal'>Total</label>
+                                </div>
+                                <div>
+                                    <input type='radio' name='tauxDiffere' id='tauxDiffereAnticipe'><label for='tauxDiffereAnticipe'>Anticipation</label>
+                                </div>
+                            </div>
+                    <!-- Si durée total ou partielle ==> Durée du différé ==-->
+                            <div>
+                                <label for='dureeDiffere'>Quelle est la durée du différé ?</label>
+                                    <input type='number' name='dureeDiffere' id='dureeDiffere' placeholder="1 à 36 mois">
+                            </div>
+                    <!-- fin condition ======================================-->
+                            <div>
+                                <label for='charges'>Montant des charges</label>
+                                    <input type='number' name='charges' id='charges'>
+                            </div>
+                            <div>
+                                <label for='taxeFonciere'>Montant de la taxe foncière</label>
+                                    <input type='number' name='taxeFonciere' id='taxeFonciere'> 
+                            </div>
+                            <div>
+                                <label for='avantages'>Quels sont les avantages de votre projet ?</label>
+                                    <textarea cols=100 rows="10"></textarea>
+                            </div>
+                            <div>
+                                <label for='inconvenients'>Quels sont les inconvénients et qu'avez-vous prévu pour les réduire ?</label>
+                                    <textarea cols=100 rows="10"></textarea>
+                            </div>
+                    </fieldset>
+
+
+                </form>
+            </article> 
+
+<!-- ++++++++++++++++++++++++++++ FIN PARTI YOYO ++++++++++++++++++++++++++++++++++++++++++++ -->
             <article id="piecejoint" class="tabcontent">hello ici les pièces à joindre</article>
         </section>
         <footer>
