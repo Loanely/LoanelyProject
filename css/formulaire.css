@@ -593,6 +593,11 @@ h2{
 
 /* ======================== FIN PARTIE PROJET A FINANCER ARTICLE 3 =============================== */
 
+/* ======================== PARTIE 4 PIECES JOINTES ==============================================*/
+.blockJoint {
+    border:1px solid white;
+    margin:2em;
+}
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
