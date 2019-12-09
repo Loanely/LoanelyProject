@@ -145,6 +145,10 @@ footer img {
     
 }
 
+#icons p{
+    margin-top: 10px;
+}
+
 .btntbl{
     width: 10em;
     height: 10em;
@@ -244,9 +248,11 @@ h2{
 article{
     position: relative;
 }
-.titreprojet img{
+.titreprojet a{
     margin-right: 2vw;
     margin-top: 0.4vw;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
     
 }
 
@@ -256,6 +262,10 @@ article{
     height: 18em;
     margin-top: 8vh;
     
+}
+
+.titreprojet{
+    ;   
 }
 
 table tr td p{
@@ -292,7 +302,5 @@ table {
     padding-left: 2vh;
 }
 
-/* .hidden1{
-    display: none;
-} */
+
 
