@@ -79,26 +79,6 @@ ul li a img {
 
 /* ++++++++ FIN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
 
-/* ++++++++ section 1 qui contient 2 articles ++++++++++++++++++++++++++++++++++++++ */
-
-/* section:nth-child(1){
-    height: 100vh;
-    display: flex;
-} */
-
-/* ++++++++ Article 1 qui contient une photo ++++++++++++++++++++++++++++++++++++++ */
-/* section:nth-child(1) article:nth-child(1){
-    background: url(../assets/images/accueil/desktop.jpg);
-    background-size: cover;
-    width: 30vw;
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-} */
-
-
 
 main, section{
     width: 100vw;
@@ -113,7 +93,6 @@ section, article{
     box-sizing: border-box;
     align-items: center;
     position: relative;
-
 }
 
 /*  cette partie est resérvée pour les tabs*/
@@ -121,9 +100,9 @@ section, article{
 .tab {
     width: 70%;
     margin-top: 2em;
-  }
+}
 
-  .tablinks {
+.tablinks {
     float: left;
     border: none;
     outline: none;
@@ -135,30 +114,26 @@ section, article{
     color: white;
     background-color: rgb(21, 34, 51);
     margin: 0;
-  }
+}
 
-  .tablinks:disabled{
+.tablinks:disabled{
       opacity: .3;
-  }
+}
 
 
-  /* .active, .tablinksn:hover {
+
+.tablinks.active {
     background-color: #44566C;
-  } */
+    /* text-decoration: underline; */
+}
 
-  .tablinks.active {
+.tablinks:checked{
     background-color: #44566C;
-    text-decoration: underline;
-  }
-
-  .tablinks:checked{
-    background-color: #44566C;
-    text-decoration: underline;
-  }
+}
 
   .tabcontent {
     display: none;
-  }
+}
 
 
 
@@ -363,14 +338,15 @@ article p{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: .5em;
+    padding: .1em;
 }
+
 
 
 /* #investImmeuble div, #investMaison div, #divForm #propr div, #divForm #mensualite div, 
 #divForm #investImmeuble div, #divForm #investMaison div */
 
-#divForm div, #societe div, #divForm .formClass div, #divForm .infoPersonnel div, #divForm .infoProfessionnel div{
+#divForm div, #societe div, #divForm .formClass div, #divForm .infoPersonnel div, #divForm{
     width: 45%;
     display: flex;
     flex-flow: column;
@@ -398,6 +374,8 @@ article p{
 }
 
 
+
+
 label{
     color: #fff;
     font-size: 1.25em;
@@ -414,8 +392,20 @@ input{
 
     padding: 0.3em;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.25em;
     box-sizing: border-box;
+}
+
+textarea{
+    background-color: #c4c4c485;
+    width: 100%;
+    border: none;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    color: #fff;
+    font-size: 1.25em;
+    box-sizing: border-box;  
 }
 
 select{
@@ -427,7 +417,7 @@ select{
     margin-bottom: 1em;
     padding: 0.3em;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.25em;
     transition: .5s ease-in-out all;
 }
 
@@ -467,13 +457,13 @@ option{
     margin: 0;
 }
 
-.radioBtn label{
+.radioBtn label, #appartLouer label{
     font-size: 1.25em;
     cursor:pointer;
     width: 60%;
 }
 
-.radioBtn input, #immat input{
+.radioBtn input, #immat input, #appartLouer input{
     width: 1.5em;
     height: 1.5em;
     cursor:pointer; 
@@ -509,6 +499,25 @@ option{
     margin-bottom: 1em;
 }
 
+/* ================)))))))))))))))))) TEST TEST TEST TEST )))))))))))))))çççççççççççççàààààààààààààààààààà */
+
+
+/* #showHide, #divForm #typeProfession, #divForm #contrat, #divForm #proprietaire, 
+#divForm #creditMensuelImm, #divForm #creditConsommation, #divForm #investLocatif, #divForm #investissement{
+    display: none;
+}
+
+#divForm #precedentSuivant{
+    border: 1px solid red;
+    height: 5em;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+} */
+
+/* ================)))))))))))))))))) TEST TEST TEST TEST )))))))))))))))çççççççççççççàààààààààààààààààààà */
+
 h1{
     color: white;
     font-size: 3.75em;
@@ -520,6 +529,13 @@ h2{
     font-size: 2em;
     text-align: center;
     margin-top: 1em;
+}
+
+h3{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 
@@ -585,6 +601,33 @@ h2{
 }
 
 #projeFinancer #addLot1{
+    display: none;
+}
+
+#appartLouer label{
+    font-size: 1.25em;
+    cursor:pointer;
+    width: 60%;
+}
+
+#appartLouer input{
+    width: 1.5em;
+    height: 1.5em;
+    cursor:pointer; 
+    margin: 0;       
+} 
+
+
+#projeFinancer #appartLouer div{
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#projeFinancer #appartLouer div div{
+    width: 20%;
+}
+
+.estimationLocative:nth-child(2){
     display: none;
 }
 

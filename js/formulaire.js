@@ -230,6 +230,7 @@ let nonAddLot = document.querySelector('#nonAddLot');
 let addLot = document.querySelector('#addLot');
 let creditMensuelImm = document.querySelector('#creditMensuelImm');
 let nomImmeuble = document.querySelector('#nomImmeuble');
+let unAutreLot = document.querySelector('#unAutreLot');
 
 
 hideBtn.addEventListener('click', function () {
@@ -307,7 +308,7 @@ function hide2(investImmeuble, nomImmeuble, creditMensuelImm, investMaison, addL
     document.getElementById(nonAddLot).checked = false;
 }
 
-function hide3(investImmeuble, nomImmeuble,creditMensuelImm, investMaison, addLot) {
+function hide3(investImmeuble, nomImmeuble, creditMensuelImm, investMaison, addLot) {
     document.getElementById(investImmeuble).style.display = 'none';
     document.getElementById(nomImmeuble).style.display = 'none';
     document.getElementById(creditMensuelImm).style.display = 'none';
@@ -321,11 +322,11 @@ typeInvest.addEventListener('click', function () {
     }
 
     if ((typeInvest[2].selected) || (typeInvest[3].selected) || (typeInvest[4].selected)) {
-        hide2('investImmeuble', 'nomImmeuble', 'creditMensuelImm','investMaison', 'addLot', 'nonAddLot');
+        hide2('investImmeuble', 'nomImmeuble', 'creditMensuelImm', 'investMaison', 'addLot', 'nonAddLot');
     }
 
     if (typeInvest[5].selected) {
-        hide3('investImmeuble', 'nomImmeuble','creditMensuelImm', 'investMaison', 'addLot');
+        hide3('investImmeuble', 'nomImmeuble', 'creditMensuelImm', 'investMaison', 'addLot');
     }
 });
 
@@ -387,10 +388,7 @@ nonInvest.addEventListener('click', function () {
     $('#nomImmeuble').slideUp('slow');
     $('#creditMensuelImm').slideUp('slow');
     nonAddLot.checked = false;
-    // $('#investissement').slideUp('slow');
-    // investissement.style.display = 'none';
-    // investMaison.style.display = 'none';
-    // investImmeuble.style.display = 'none';
+    $('#unAutreLot').slideUp('slow');
 });
 
 
@@ -472,7 +470,9 @@ function lot(e) {
 }
 
 ouiAddLot.addEventListener('click', function () {
-    lot('investImmeuble');
+    lot('unAutreLot');
+    $('#unAutreLot').slideDown('slow');
+    unAutreLot.style.display='inherit'
     ouiAddLot.checked = false;
 });
 
@@ -488,14 +488,22 @@ nonAddLot.addEventListener('click', function () {
 
 // ********************* DEBUT du TROISIEME Article 'Projet'  ************************
 
-let typeInvest1=document.querySelector('#typeInvest1');
-let nomImmeuble1=document.querySelector('#nomImmeuble1');
-let investImmeuble1=document.querySelector('#investImmeuble1');
-let creditMensuelImm1=document.querySelector('#creditMensuelImm1');
-let investMaison1=document.querySelector('#investMaison1');
-let addLot1=document.querySelector('#addLot1');
-let nonAddLot1=document.querySelector('#nonAddLot1');
-let ouiAddLot1=document.querySelector('#ouiAddLot1');
+let typeInvest1 = document.querySelector('#typeInvest1');
+let nomImmeuble1 = document.querySelector('#nomImmeuble1');
+let investImmeuble1 = document.querySelector('#investImmeuble1');
+let creditMensuelImm1 = document.querySelector('#creditMensuelImm1');
+let investMaison1 = document.querySelector('#investMaison1');
+let addLot1 = document.querySelector('#addLot1');
+let nonAddLot1 = document.querySelector('#nonAddLot1');
+let ouiAddLot1 = document.querySelector('#ouiAddLot1');
+let unAutreLot1= document.querySelector('#unAutreLot1');
+let ouiLouer=document.querySelector('#ouiLouer');
+let nonLouer=document.querySelector('#nonLouer');
+let appartLouerBail=document.querySelector('#appartLouerBail');
+let ouiAppLouer=document.querySelector('#ouiAppLouer');
+let nonAppLouer=document.querySelector('#nonAppLouer');
+let appartLouerBail1=document.querySelector('#appartLouerBail1');
+let estimationLocative=document.querySelectorAll('.estimationLocative');
 
 
 typeInvest1.addEventListener('click', function () {
@@ -504,24 +512,51 @@ typeInvest1.addEventListener('click', function () {
     }
 
     if ((typeInvest1[2].selected) || (typeInvest1[3].selected) || (typeInvest1[4].selected)) {
-        hide2('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1','investMaison1', 'addLot1', 'nonAddLot1');
+        hide2('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1', 'nonAddLot1');
     }
 
     if (typeInvest1[5].selected) {
-        hide3('investImmeuble1', 'nomImmeuble1','creditMensuelImm1', 'investMaison1', 'addLot1');
+        hide3('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1');
     }
 });
 
 ouiAddLot1.addEventListener('click', function () {
-    lot('investImmeuble1');
+    lot('unAutreLot1');
+    $('#unAutreLot1').slideDown('slow');
+    unAutreLot1.style.display='inherit';
     ouiAddLot1.checked = false;
 });
 
 nonAddLot1.addEventListener('click', function () {
-    $('#creditMensuelImm1').slideDown('slow');
-    creditMensuelImm1.style.display = 'inherit';
+    // $('#creditMensuelImm1').slideDown('slow');
+    // creditMensuelImm1.style.display = 'inherit';
     addLot1.style.display = 'none';
 });
+
+
+ouiLouer.addEventListener('click',function(){
+    appartLouerBail.disabled=false;
+});
+
+nonLouer.addEventListener('click',function(){
+    appartLouerBail.disabled=true;
+});
+
+ouiAppLouer.addEventListener('click',function(){
+    appartLouerBail1.disabled=false;
+    estimationLocative[1].style.display='none';
+    estimationLocative[0].style.display='inherit';
+});
+
+nonAppLouer.addEventListener('click',function(){
+    appartLouerBail1.disabled=false;
+    estimationLocative[0].style.display='none';
+    estimationLocative[1].style.display='inherit';
+});
+
+
+
+
 
 // ********************* FIN du TROISIEME Article 'Projet'  ************************
 
