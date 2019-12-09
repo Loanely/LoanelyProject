@@ -238,9 +238,9 @@ label {
 }  
 .données{ 
       
-      width: 50vw ;
-  	  height:80%; 
-      margin-bottom:5%;
+      width: 51vw ;
+  	  height:48vh; 
+      /* margin-bottom:5%; */
       margin-top: 3vh;
  }
        
@@ -249,12 +249,53 @@ label {
     height:3vh;
 }
 
+
+.phrase p{
+    width: 15vw;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.adresse-contact{
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
 input[type="text"]:focus {
   border-color: blue;
+
 }
 textarea:focus {
   border-color: blue;
 }
+
+.adresse img{
+    width: 2vw;
+    height: 3vh;
+    
+}
+.adresse-contact a{
+    color: white;
+    font-size: 1.3em;
+    margin-top: 0.7vh;
+}
+.adresse p, .appel p{
+    margin-left: 0.3vw;
+    margin-top: 0.5vh;
+}
+.appel img{
+    width: 1vw;
+    height: 3vh;
+}
+.zone-num{
+    margin-top: 1vh;
+    margin-left: 4vw;
+}
+.appel{
+    display: flex;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    
+
 
 #envoyer {
   font-family: "Rambla";
@@ -274,6 +315,7 @@ textarea:focus {
   color: #fff;
   background-color: #1b2a3d;
   border: none;
+
 }
 .données {
   width: 50vw;
@@ -304,17 +346,24 @@ textarea:focus {
     font-size: 1em;
     margin-left: 1vw;
 }
-button{
-    width:13vw;
+.guide  a {
+    width:12vw;
     height:6vh;
-    margin-top: 2vh;
+    margin-top: 5vh;
+    margin-left: 1.5vw;
+    margin-right: auto;
     font-size:1.5em ;
 background-color: #1B2A3D;
 border:none;
 color: white;
-text-align: center; 
+
 text-decoration: none;
 opacity:1;}
+.guide a p{
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+}
 
 
 
