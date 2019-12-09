@@ -79,7 +79,7 @@ ul li a img {
 main section:nth-child(1){
     height: 90vh;
     position: relative;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../assets/images/accueil/people.jpg) ;
+    background: linear-gradient( rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0.822) ), url(../assets/images/accueil/people.jpg) ;
     display: flex;
     justify-content: center;
 }

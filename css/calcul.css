@@ -20,7 +20,6 @@ html, body {
     display: flex;
     flex-flow: row;
     align-items: center;  
-    
 }
 
 nav #logo {
@@ -85,7 +84,7 @@ section {
 h3{
     text-align: center;
     color:white;
-    font-size:3rem;
+    font-size:2rem;
     margin-top:2vh;
     letter-spacing: 2px;
 }
@@ -107,19 +106,19 @@ form {
     height: 50vh; 
 } 
 label {
-    font-size:1.5em;
+    font-size:1.25em;
     color:white;
 }
 input {  
     background-color: #C4C4C4;
     width:90%;
-    font-size:1.5em;
+    font-size:1.25em;
     border: none; 
     background: none;
     border-bottom:white 2px solid;
     color:white;
     font-family: 'Rambla';
-    padding-top:0.2em;
+    padding-top:0.3em;
 }
 input[value] {
     padding-left:0.2em;
@@ -128,21 +127,16 @@ input[value] {
     display:flex;
     flex-direction:row;
     width:100%;
-    /* border:2px solid red; */
 }
 .indic {
     display:flex;
-    justify-content:left;
+    justify-content:flex-end;
     align-items:center;
     width:10%;
     border-bottom:2px solid white;
-    font-size:1.5em;
-    z-index:2;
-    position: relative;
+    font-size:1.25em;
     color:white;
-    /* padding-left:12em; */
 }
-
 button{
     background-color: #1B2A3D;
     width: 16.7em;
@@ -160,10 +154,7 @@ button{
     flex-direction:column;
     text-justify: auto;
     width:30vw;
-    color:white;
-    
-    
-    
+    color:white;  
 }
 #result {
     display:flex;
@@ -178,14 +169,22 @@ button{
     padding: 0 2em 0 2em;
     
 }
+#result2 {
+    letter-spacing: 0.1em;
+    font-size:3em;
+}
+#flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 4px solid white; 
+    width:13em;
+}
 h4 {
     font-size: 1.25em;
     letter-spacing: .05em;
 }
-span {
-    font-size:3em;
-    color:white;
-}
+
 footer {
     width: auto;
     height: 13vh;
