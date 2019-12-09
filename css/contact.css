@@ -108,7 +108,7 @@ section{
         flex-direction: row; 
         }
 
-  form{ width:80%;
+  form{ width:48vw;
   	height: 80%;
          margin: 0.5em; 
         }
@@ -216,49 +216,63 @@ label{
 }  
 .données{ 
       
-      width: 45vw ;
-  	  height:auto; 
+      width: 50vw ;
+  	  height:80%; 
       margin-bottom:5%;
-      margin-top: 2vh;
+      margin-top: 10vh;
  }
        
 .données img{
     width:2vw; 
-    height:4vh;
+    height:3vh;
 }
 
 .phrase p{
-    width: 20vw;
+    width: 15vw;
     text-align: center;
+    margin-top: 4vh;
 }
 
 .adresse-contact{
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-top: 4vh;
 }
 .adresse{
     display: flex;
     margin-left: 3vw;
 }
+.adresse img{
+    width: 2vw;
+    height: 3vh;
+    
+}
 .adresse-contact a{
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    margin-top: 0.7vh;
 }
 .adresse p, .appel p{
-    margin-left: 1vw;
+    margin-left: 0.3vw;
+    margin-top: 0.5vh;
+}
+.appel img{
+    width: 1vw;
+    height: 3vh;
 }
 .zone-num{
     margin-top: 2vh;
-    margin-left: 6vw;
+    margin-left: 4vw;
 }
 .appel{
     display: flex;
     margin-top: 1vh;
+    margin-left: 1vw;
     
 }
 .zone-num span{
     color: white;
     font-size: 1.5em;
+    
 }
 
 
@@ -274,14 +288,14 @@ label{
 .fin p{
     text-align: center;
     
-    width: 19vw;
+    width: 15vw;
     font-size: 1em;
     margin-left: 1vw;
 }
 button{
     width:18vw;
     height:6vh;
-    margin-top: 12vh;
+    margin-top: 11vh;
     font-size:1.5em ;
 background-color: #1B2A3D;
 border:none;
