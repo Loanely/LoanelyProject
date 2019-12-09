@@ -14,7 +14,7 @@ body{
 
 nav {
         position: relative;
-        width: 100vw;
+        width: auto;
         height: 12vh;
         display: flex;
         flex-flow: row;
@@ -66,7 +66,7 @@ nav {
     /**************************** main ***************************** */
 
     main{
-        height: 76vh;
+        height: 75vh;
         width: auto;
     }
 section{ 
@@ -219,7 +219,7 @@ label{
       width: 50vw ;
   	  height:80%; 
       margin-bottom:5%;
-      margin-top: 10vh;
+      margin-top: 3vh;
  }
        
 .données img{
@@ -283,7 +283,7 @@ label{
     color:white;
      font-size:1.5em;
     font-weight:bold;
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 .fin p{
     text-align: center;
@@ -293,9 +293,9 @@ label{
     margin-left: 1vw;
 }
 button{
-    width:18vw;
+    width:13vw;
     height:6vh;
-    margin-top: 11vh;
+    margin-top: 2vh;
     font-size:1.5em ;
 background-color: #1B2A3D;
 border:none;
