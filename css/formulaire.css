@@ -160,9 +160,7 @@ section, article{
     display: none;
   }
 
-#btnIntro1, #demarrer1{
-    display: none;
-}
+
 
 /*   fin tabs*/
 
@@ -200,7 +198,7 @@ article p{
     margin-bottom: 1em;
 }
 
-.btn button, #poursuivre{
+.btn button {
     width: 15em;
     height: 3em;
     font-size: 1.25em;
@@ -214,16 +212,21 @@ article p{
     
 }
 
+#poursuivre{
+    width: 15em;
+    height: 3em;
+    font-size: 1.25em;
+    background-color: white;
+    color: #1B2A3D;
+    cursor:pointer;
+    border: none;  
+}
+
 /* deux id des deux div des boutons 'annuler' et 'étape suivante'*/
-#btn1, #btn2{
+#btn2, #btnIntro1, #btnIntro2{
     display: none;
 }
 
-/* les deux boutons 'étape suivante' */
-/* #etape1, #etape2{
-    opacity: .5;
-    transition: 0.3s ease-in-out;
-} */
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -233,48 +236,53 @@ article p{
 
 
 /* ++++++++ la première et la deuxième question du formulaire ++++++++++++++++++++++++++++++++++++++ */
-#q1, #q2{
+.question{
     width: 70%;
+
     display: flex;
-    flex-flow: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 1.25em;
     color: white;
     margin-bottom: 1em;
-
+    background-color: #1B2A3D;
     border: 1px solid white;
-    height: 12em;
     box-sizing: border-box;
-    display: none;
-    padding: 1em;
+    /* display: none; */
+
 }
- #q1 div, #q2 div{
-     width: 30%;
-    border: 1px solid red;
+.question > div{
+    width: 40%;
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+ }
+ .question > div > div{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
  }
 
-#q1 p , #q2 p {
+.question div p{
     text-align: center;
+    font-size: 1em;
 }
 
-#q1 div input , #q2 div input {
+.question input{
     margin-top: 1em;
     width: 1.5em;
     height: 1.5em;
     cursor:pointer;
-    
 }
 
-#q1 div label , #q2 div label {
-
-    font-size: 1.25em;
+.question div label {
+    font-size: 1em;
     cursor:pointer;
+    margin: 1em;
 }
 
+.question{
+    display: none;
+}
 /* #q1 div , #q2 div{
     width: 15%;
     display: flex;
@@ -297,6 +305,7 @@ article p{
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    background-color: #1B2A3D;
     /* position: absolute;
     top: 22em; */
     display: none;
@@ -328,13 +337,15 @@ article p{
     width: 70%;
     padding: 1em;
     margin-bottom: 1em;
+    background-color: #1B2A3D;
 }
-
-
 
 #ouiImmat:checked #siret{
     opacity:1;
 }
+
+
+
 
 /* ++++++++ Article 2 --- ICI commence le formulaire à remplir ++++++++++++++++++++++++++++++++++++++ */
 
@@ -345,22 +356,21 @@ article p{
     padding: 1em;
 }
 
-#divForm{
-    display: none;
-}
 
-#divForm, #societe, #divForm .formClass, #divForm #infoPersonnel{
+
+#divForm, #societe, #divForm .formClass, #divForm .infoPersonnel{
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding: .5em;
 }
 
 
 /* #investImmeuble div, #investMaison div, #divForm #propr div, #divForm #mensualite div, 
 #divForm #investImmeuble div, #divForm #investMaison div */
 
-#divForm div, #societe div, #divForm .formClass div, #divForm #infoPersonnel div{
+#divForm div, #societe div, #divForm .formClass div, #divForm .infoPersonnel div, #divForm .infoProfessionnel div{
     width: 45%;
     display: flex;
     flex-flow: column;
@@ -382,20 +392,11 @@ article p{
 
 #divForm .formClass{
     display: none;
-    border: 1px solid white;
-    padding: 1em;
     margin-bottom: 1em;
+    background-color: #1B2A3D;
+    box-sizing: border-box;
 }
 
-#divForm #infoPersonnel{
-    border: 1px solid white;
-    padding: 1em;
-    margin-bottom: 1em;
-}
-
-/* #divForm #investissement{
-    display: none;
-} */
 
 label{
     color: #fff;
@@ -405,20 +406,22 @@ label{
 
 input{
     background-color: #c4c4c485;
-    width: 90%;
+    width: 100%;
     height: 2em;
     border: none;
     border-radius: 0.3em;
     margin-bottom: 1em;
+
     padding: 0.3em;
     color: #fff;
     font-size: 1em;
+    box-sizing: border-box;
 }
 
 select{
     background-color: #c4c4c485;
-    width: 92%;
-    height: 2.5em;
+    width: 100%;
+    height: 2em;
     border: none;
     border-radius: 0.3em;
     margin-bottom: 1em;
@@ -440,33 +443,70 @@ option{
 }
 
 /*  les inputs de type 'radio'  */
-.radioBtn label{
-    font-size: 1.25em;
-    cursor:pointer;
-    margin: 0;
-}
 
-.radioBtn input{
-    width: 1.5em;
-    height: 1.5em;
-    cursor:pointer;
-    padding: 0;           
-} 
 #divForm .radioBtn{
     width: 100%;
+    height: 3em;
     border:  1px solid white;
     margin-bottom: 1em;
     align-items: center;
+    flex-flow: row;
+    align-items: center;
+    
 }
+
+#divForm .radioBtn div, #societe #immat div{
+    width: 40%;
+    flex-flow: row;
+}
+
+#divForm .radioBtn div div, #societe #immat div div{
+    width: 40%;
+    flex-flow: row;
+    align-items: center;
+    margin: 0;
+}
+
+.radioBtn label{
+    font-size: 1.25em;
+    cursor:pointer;
+    width: 60%;
+}
+
+.radioBtn input, #immat input{
+    width: 1.5em;
+    height: 1.5em;
+    cursor:pointer; 
+    margin: 0;       
+} 
 
 .radioBtn input:checked + label{
     font-weight: bolder;
 }
 
-#divForm #independant div, #divForm #public-prive div{
-    width: 45%;
+/* #divForm #independant div, #divForm #public-prive div{
     display: flex;
     flex-flow: column;
+
+} */
+
+#hideBtn, #showBtn{
+    /* width: 100%; */
+    height: 2em;
+    color: white;
+    font-size: 1em;
+}
+
+#showBtn, #divForm #addLot{
+    display: none;
+}
+
+#showHide, #lot{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B2A3D;
+    margin-bottom: 1em;
 }
 
 h1{
@@ -479,55 +519,74 @@ h2{
     color: white;
     font-size: 2em;
     text-align: center;
+    margin-top: 1em;
 }
 
 
 /* ======================== PARTIE PROJET A FINANCER ARTICLE 3 =================================== */
 
-#projet form {
-    width:70%;
-    border:2px solid yellow;
+#projet form{
+    box-sizing: border-box;
+    width: 70%;
+    border: 1px solid white;
+    padding: 1em;
 }
 
 
-/* legend {
-    font-size:2rem;
-    color:white;
-}
-.rowsElts {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-    margin-top:2rem;
-    border:2px solid greenyellow;
-    
-}
-.rowsElt2 {
+#projeFinancer .formClass, #projeFinancer{
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around; 
-    border :2px solid red;  
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+
+#projeFinancer div, #projeFinancer .formClass div{
+    width: 45%;
+    display: flex;
+    flex-flow: column;
+}
+
+#projeFinancer div div, #projeFinancer .formClass div div{
+    display: flex;
+    flex-flow: row;
+    width: 95%;
+}
+
+#projeFinancer .formClass {
+    display: none;
+    margin-bottom: 1em;
+    background-color: #1B2A3D;
+    box-sizing: border-box;
+}
+
+#projeFinancer .radioBtn {
+    width: 100%;
+    height: 3em;
+    border:  1px solid white;
+    margin-bottom: 1em;
+    align-items: center;
+    flex-flow: row;
+    align-items: center;
     
 }
-#siImmeuble {
-    display:none; 
- }
-#siImmeuble1 {
-    display:flex;
-    justify-content: space-between;
-    flex-flow: wrap ;
-    margin-top:2em;
-    border:2px solid blue;
+
+#projeFinancer .radioBtn div{
+    width: 40%;
+    flex-flow: row;
 }
 
-.columnContain {
-    width:45%;
+#projeFinancer .radioBtn div div{
+    width: 40%;
+    flex-flow: row;
+    align-items: center;
+    margin: 0;
 }
-#condEstimeLoc {
+
+#projeFinancer #addLot1{
     display: none;
-}  */
-
-
+}
 
 
 
