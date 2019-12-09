@@ -68,13 +68,88 @@ p {
   display: flex;
   margin-left: 3vw;
   width: 40vw;
-
   align-items: center;
 }
 
 .champs1 {
   width: 23vw;
   display: flex;
+}
+nav {
+        position: relative;
+        width: auto;
+        height: 12vh;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        
+    }
+    
+    nav #logo {
+        width: 50%;
+    }
+    
+    nav img {
+        width: 15em;
+        margin-left: 3em;
+    }
+    
+    #menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        margin-right: 3em;
+    }
+    
+    ul {
+        display: flex;
+        flex-flow: row;
+        text-decoration: none;
+        
+       
+        
+    }
+    li {
+        font-family: 'Rambla', sans-serif;
+        color: #2F435E;
+        list-style: none;  
+    }
+    
+    a {
+        text-decoration: none;
+        color: #2F435E;
+        display: flex;
+        align-items: center;
+    }
+    
+    ul li a img {
+        width: 1rem;
+        padding-right: .5em;
+    }
+    /**************************** main ***************************** */
+
+    main{
+        height: 75vh;
+        width: auto;
+    }
+section{ 
+        position:relative;
+        width: 100%;
+	    height: 100%;
+	   display:flex;
+	   flex-direction: row;
+	 
+        }
+.image{ width: 40vw;
+          
+    }
+ .photo{ 
+ 		  width:100%; 
+         height:100%;
+         margin-top: 0%;
+         margin-bottom: 0%;
+         
+         }
 
   align-items: left;
   flex-direction: column;
@@ -137,7 +212,41 @@ label {
   font-family: "Rambla";
   font-style: normal;
   margin-top: 1.1em;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1em;          
+        }
+   
+
+       input[type=text]:focus{ border-color:blue;}
+       textarea:focus{border-color:blue; }
+
+
+#envoyer{ 
+        width: 38vw;
+        height: 6vh;
+        margin-top: 3vh;
+        margin-left:3vw ;
+        display: inline-block;
+        padding: 1em 2.7em;
+        font-size: 1.1em;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #1B2A3D;
+        border: none;
+}  
+.données{ 
+      
+      width: 50vw ;
+  	  height:80%; 
+      margin-bottom:5%;
+      margin-top: 3vh;
+ }
+       
+.données img{
+    width:2vw; 
+    height:3vh;
 }
 
 input[type="text"]:focus {
@@ -173,10 +282,41 @@ textarea:focus {
   margin-top: 10vh;
 }
 
+
 .données img {
   width: 2vw;
   height: 3vh;
 }
+
+ .fin{
+    margin-top: 2vh;
+}
+.ques{ 
+    color:white;
+     font-size:1.5em;
+    font-weight:bold;
+    margin-left: 1vw;
+}
+.fin p{
+    text-align: center;
+    
+    width: 15vw;
+    font-size: 1em;
+    margin-left: 1vw;
+}
+button{
+    width:13vw;
+    height:6vh;
+    margin-top: 2vh;
+    font-size:1.5em ;
+background-color: #1B2A3D;
+border:none;
+color: white;
+text-align: center; 
+text-decoration: none;
+opacity:1;}
+
+
 
 .phrase p {
   width: 15vw;

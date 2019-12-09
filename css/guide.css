@@ -8,7 +8,7 @@ body{
     height:100vh;
     font-family: 'Rambla', sans-serif;
     background-color: #44566C; 
-    }
+    overflow-x: hidden;}
 
 
 nav {background-color: white;
@@ -62,28 +62,28 @@ ul li a img {
     width: 1rem;
     padding-right: .5em;
 }
-
+section{ width: 100vw}
 .intro{
 	text-align: center;
 	color:white;
 	font-weight: bold;
     font-size: 1.3em;
     margin-top: 1.5em;
-    margin-left: 5em;
+    margin-left: 2.5em;
 }
-section{ margin-top: 0.5em;}
+article{ margin-top: 0.5em;}
 .firstp{ display:flex;
         flex-direction: row; 
         justify-content: left;
     	align-items: start;
-        margin-left:12.5em;
+        margin-left:3em;
         padding: 1.5em;}
         
 .vide1{ margin-top: 5em;
         margin-left: 1em;}
 
 .img1{ padding: 1.3em; 
-       margin: 1em;
+       margin: 0.75em;
       
     }
 
@@ -91,10 +91,11 @@ h1{ color: white;
     font-size: 2.0em;
     font-weight: bold;
     width: 14em;
-    height:2%;
+    height:50em;
     background: linear-gradient(to right, #312625, #2F435E);
     text-align: center;
     margin-bottom:.5em;
+    
     
 }
 
@@ -115,11 +116,18 @@ h2{color: white;
    
 }
  /*partie2*/
+ .firstp2{ 
+     display:flex;
+     flex-direction: row; 
+     justify-content: left;
+     align-items: start;
+     margin-left:12em;
+     padding: 1.5em;}
  .ques{
-     margin-left: 1.25em;
+     margin-left: -3.3em;
  }
  .vide2{ margin-top: 5em;
-         margin-left: -4.5em;}
+         margin-left: -13em}
  .separation{
  	display:flex;
  	flex-direction: row;
@@ -133,7 +141,7 @@ h2{color: white;
     flex-direction: row;
     justify-content: space-around;
     align-items:start;
-    margin-left:0.5em;}
+    margin-left:5em;}
  .cercle{  
  	width: 7.5em;
     height:7.5em;
@@ -159,7 +167,8 @@ h2{color: white;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
+    justify-content: space-around;
+    margin-left: -1em;
  }
  .cas1{ 
      margin: 0.1em;
@@ -208,12 +217,12 @@ h2{color: white;
 .sst{ 
     text-align: center;
     margin-top: 0.5em;
-    margin-left: -2.5em;
+    margin-left: -3.5em;
 }
  .carre1{ 
  	color:white;
- 	width: 12.5em;
- 	height:12.5em;
+ 	width: 11em;
+ 	height:11em;
  	background: #1B2A3D;
  	display: flex;
  	align-items: center;
@@ -221,18 +230,18 @@ h2{color: white;
  	 }
 
   .carre2{ 
- 	color:white;
- 	width: 12.5em;
- 	height:12.5em;
+ 	width: 11em;
+ 	height:11em;
  	background: #1B2A3D;
  	display: flex;
  	align-items: center;
- 	justify-content: space-around;	
+    justify-content: space-around;
+    color:white	
   }
    .carre3 { 
  	color:white;
- 	width: 12.5em;
- 	height:12.5em;
+ 	width: 11em;
+ 	height:11em;
  	background: #1B2A3D;
  	display: flex;
  	align-items: center;
@@ -242,23 +251,26 @@ h2{color: white;
    .carre4
    { 
  	color:white;
- 	width: 12.5em;
- 	height:12.5em;
+ 	width: 11em;
+ 	height:11em;
  	background: #1B2A3D;
  	display: flex;
  	align-items: center;
  	justify-content: space-around;	
   }
 .esp{ padding-left: 20%;
-      padding-right: 10%; 
+      padding-right: 10%;
+      font-size: medium; 
     }
           
 .esp1{ padding-left: 20%;
        padding-right: 20%;
+       font-size: medium;
      }
 .esp2{ 
-       padding-left: 20%;
+       padding-left: 30%;
        padding-right: 20%;
+       font-size: medium;
     }
 
 
@@ -280,7 +292,7 @@ footer .liens-footer{
 footer a {
     color: white;
     font-family: 'Rambla', sans-serif;
-    margin-left: 10rem;
+    margin-left: 8rem;
     padding: .3rem;
 }
 
