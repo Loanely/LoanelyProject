@@ -216,9 +216,9 @@ label{
 }  
 .données{ 
       
-      width: 50vw ;
-  	  height:80%; 
-      margin-bottom:5%;
+      width: 51vw ;
+  	  height:48vh; 
+      /* margin-bottom:5%; */
       margin-top: 3vh;
  }
        
@@ -235,7 +235,7 @@ label{
 
 .adresse-contact{
     margin-left: 2vw;
-    margin-top: 4vh;
+    margin-top: 2vh;
 }
 .adresse{
     display: flex;
@@ -260,7 +260,7 @@ label{
     height: 3vh;
 }
 .zone-num{
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-left: 4vw;
 }
 .appel{
@@ -292,17 +292,24 @@ label{
     font-size: 1em;
     margin-left: 1vw;
 }
-button{
-    width:13vw;
+.guide  a {
+    width:12vw;
     height:6vh;
-    margin-top: 2vh;
+    margin-top: 5vh;
+    margin-left: 1.5vw;
+    margin-right: auto;
     font-size:1.5em ;
 background-color: #1B2A3D;
 border:none;
 color: white;
-text-align: center; 
+
 text-decoration: none;
 opacity:1;}
+.guide a p{
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+}
 
 
  
