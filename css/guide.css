@@ -62,7 +62,7 @@ ul li a img {
     width: 1rem;
     padding-right: .5em;
 }
-
+section{ width: 100vw}
 .intro{
 	text-align: center;
 	color:white;
@@ -71,7 +71,7 @@ ul li a img {
     margin-top: 1.5em;
     margin-left: 2.5em;
 }
-section{ margin-top: 0.5em;}
+article{ margin-top: 0.5em;}
 .firstp{ display:flex;
         flex-direction: row; 
         justify-content: left;
@@ -91,7 +91,7 @@ h1{ color: white;
     font-size: 2.0em;
     font-weight: bold;
     width: 14em;
-    height:2%;
+    height:50em;
     background: linear-gradient(to right, #312625, #2F435E);
     text-align: center;
     margin-bottom:.5em;
@@ -292,7 +292,7 @@ footer .liens-footer{
 footer a {
     color: white;
     font-family: 'Rambla', sans-serif;
-    margin-left: 13rem;
+    margin-left: 8rem;
     padding: .3rem;
 }
 
