@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/calcul.css">
     <title>Calculez votre mensualité</title>
-
 </head>
 
 <main>
@@ -46,22 +45,22 @@
                             <div>
                                 <label for='montant'>Montant du prêt*</label><br>
                                 <div class='containQuest'>
-                                    <input name='montant' value='' type='number' id='montant' step='500' pattern="[0-9]{10}" placeholder='100000'/>
-                                    <div class='indic'><p>€</p></div>
+                                    <input name='montant' value='' type='text' id='montant' step='500' pattern="[0-9]{10}" placeholder='100000'/>
+                                    <div class='indic'>€</div>
                                 </div>
                             </div>
                             <div>
                                 <label for='duree'>Durée du prêt *</label><br>
                                 <div class='containQuest'>
-                                    <input name='duree' value='' type='number' id='duree' placeholder="10"/>
-                                    <div class='indic anneePos'><p>an(s)</p></div>
+                                    <input name='duree' value='' type='text' id='duree' placeholder="10"/>
+                                    <div class='indic anneePos'>an(s)</div>
                                 </div>
                             </div>
                             <div>
                                 <label for='taux'>Taux*</label><br>
                                 <div class='containQuest'>
-                                    <input name='taux' type='number' step='0.05' value='' id='taux' placeholder="1,25" />
-                                    <div class='indic'><p>%</p></div>
+                                    <input name='taux' type='text' step='0.05' value='' id='taux' placeholder="1,25" />
+                                    <div class='indic'>%</div>
                                 </div>
                             </div>
                             
@@ -74,12 +73,13 @@
 
                         <div id='result'>
                             <h4>Votre mensualité est à partir de : </h4>
-                            <span id='result2'>€</span>
+                            <div id="flex">
+                                <span id='result2'></span>
+                            </div>
                             <p>* Cette simulation est communiquée à titre informatif, elle est établie sur la base de
                                 taux du marché actuelle . Cette présentation indicative ne constitue en aucun cas une
                                 offre commerciale de financement et n’a aucune valeur contractuelle.</p>
                         </div>
-
                     </div>
                 </div>
             </article>
@@ -124,7 +124,7 @@
                 let taux = parseInt(document.getElementById('taux').value);
                 let result = (montant + (montant * (taux / 100))) / duree / 12;
                 let afficheResult = document.getElementById('result2');
-                afficheResult.textContent = result.toFixed(2) + " €";
+                afficheResult.textContent = result.toFixed(2) + '€';
             })          
         </script>
     </body>
