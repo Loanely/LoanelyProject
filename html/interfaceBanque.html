@@ -85,6 +85,16 @@
               <tr>
                 <td>1</td>
                 <td>#259986357</td>
+                <td>Marie-Laure</td>
+                <td>08/09/2019</td>
+                <td>Complet</td>
+                <td>En cours</td>
+                <td><a class="portfolio-client" href=""><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></a></td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>#259986357</td>
                 <td>Jean Michel</td>
                 <td>08/09/2019</td>
                 <td>Complet</td>
@@ -95,13 +105,12 @@
               <tr>
                 <td>2</td>
                 <td>#259986357</td>
-                <td>Sandra</td>
+                <td>Gérald</td>
                 <td>08/09/2019</td>
                 <td>Complet</td>
-                <td>En cours</td>
+                <td>Recu</td>
                 <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
               </tr>
-
               <tr>
                 <td>3</td>
                 <td>#259986357</td>
@@ -133,34 +142,34 @@
               </tr>
 
               <tr>
-                  <td>6</td>
-                  <td>#259986357</td>
-                  <td>Cssandra</td>
-                  <td>08/09/2019</td>
-                  <td>Incomplet</td>
-                  <td>En cours</td>
-                  <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
-                </tr>
+                <td>6</td>
+                <td>#259986357</td>
+                <td>Cssandra</td>
+                <td>08/09/2019</td>
+                <td>Incomplet</td>
+                <td>En cours</td>
+                <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
+              </tr>
 
-                <tr>
-                    <td>7</td>
-                    <td>#259986357</td>
-                    <td>Mathilde</td>
-                    <td>08/09/2019</td>
-                    <td>Incomplet</td>
-                    <td>En cours</td>
-                    <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
-                  </tr>
+              <tr>
+                <td>7</td>
+                <td>#259986357</td>
+                <td>Mathilde</td>
+                <td>08/09/2019</td>
+                <td>Incomplet</td>
+                <td>En cours</td>
+                <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
+              </tr>
 
-                  <tr>
-                      <td>8</td>
-                      <td>#259986357</td>
-                      <td>Catrine</td>
-                      <td>08/09/2019</td>
-                      <td>Incomplet</td>
-                      <td>En cours</td>
-                      <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
-                    </tr>
+              <tr>
+                <td>8</td>
+                <td>#259986357</td>
+                <td>Catrine</td>
+                <td>08/09/2019</td>
+                <td>Incomplet</td>
+                <td>En cours</td>
+                <td><img src="../assets/icons/interfaceBanque/consulter.png" alt=""></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -295,29 +304,25 @@
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
-        // tablinks = document.getElementsByClassName("tablink");
-        // for (i = 0; i < tablinks.length; i++) {
-        //   tablinks[i].style.backgroundColor = "";
-        // }
+
         document.getElementById(pageName).style.display = "block";
         elmnt.style.backgroundColor = color;
       }
 
-      // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
     </script>
 
 
 
-<script>
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
+    <script>
+      $(window).on("load resize ", function () {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({ 'padding-right': scrollWidth });
+      }).resize();
 
 
 
-</script>
+    </script>
 </body>
 
 </html>

@@ -143,39 +143,53 @@ table{
 
 #bord article .tbl-header table thead tr {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
 }
-
 
 #bord article .tbl-content table tbody tr {
+  margin: auto;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   border-bottom: solid 1px rgba(255,255,255,0.1);
-
 }
 
-th{
+#bord article .tbl-header table thead tr th {
+  text-align: center;
   padding: 1rem 0rem;
   font-family: "Rambla";
   font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
+  width: 6vw;
 }
 
-td{
+#bord article .tbl-content table tbody tr td{
   padding: 1rem 0rem;
   text-align: center;
-  vertical-align:middle;
   font-family: "Rambla";
   font-size: 1rem;
   color: #fff;
-  
+  width: 6vw;
 }
 
-#bord article .tbl-content table tbody tr td img{
-  width: 35%;
+#bord article .tbl-content table tbody tr td a {
+  all: unset; 
+}
+
+#bord article .tbl-content table tbody tr td a img{
+  width: 40%;
+  align-self: center;
   cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+#bord article .tbl-content table tbody tr td a img:hover{
+  transform: rotate(360deg);
 }
 
 
