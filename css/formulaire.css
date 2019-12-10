@@ -600,7 +600,7 @@ h3{
     margin: 0;
 }
 
-#projeFinancer #addLot1{
+#projeFinancer #addLot1, #projeFinancer #unAutreBien{
     display: none;
 }
 
@@ -635,8 +635,19 @@ h3{
 
 
 /* ======================== FIN PARTIE PROJET A FINANCER ARTICLE 3 =============================== */
+#piecejoint form{
+    box-sizing: border-box;
+    width: 70%;
+    border: 1px solid white;
+    padding: 1em;
+}
 
+.blockJoint div{
+    width: 48%;
+    
+}
 /* ======================== PARTIE 4 PIECES JOINTES ==============================================*/
+
 #tabs {
     width: 40vw;
     height: 30vh;
@@ -778,6 +789,7 @@ h3{
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
       border-radius: 100px;
   }
+
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
