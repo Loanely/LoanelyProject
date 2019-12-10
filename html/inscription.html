@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+
     <title>Inscription</title>
 </head>
 
@@ -37,15 +41,20 @@
         <aside></aside>
         <section>
             <h2>Inscription</h2>
+            <div class="message"></div>
             <article>
 
                 <form action="" onsubmit="return checkForm(this);" method="post">
                     <div class="champ">
                         <div class="parti1">
                             <label for="nom">Nom *</label>
-                            <input type="text" id="nom" name="nom"  required>
+                            <input type="text" id="nom" name="nom" required>
                             <label for="motdepasse">Mot de passe *</label>
-                            <input type="password" name="motdepasse"  id="motdepasse" pattern="[A-Za-z0-9]+"minlength="8" title=""  required>
+                            <div class="mot-de-passe1">
+                                <input type="password" name="motdepasse" id="motdepasse" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"
+                                    minlength="8" title="" required>
+                                <i id="icon" class="fas fa-eye-slash" onclick="togglePassword()"></i>
+                            </div>
                             <label for="emaile">Email *</label>
                             <input type="email" name="" id="emaile">
                         </div>
@@ -53,13 +62,17 @@
                             <label for="Prenom">Prénom *</label>
                             <input type="text" id="Prenom">
                             <label name="conf" for="cmdp">Confirmation du Mot De Passe *</label>
-                            <input type="password" name="cmdp" id="cmdp" required>
-                            <label for="numtel">Téléphone *</label>
+                            <div class="mot-de-passe1">
+                                <input type="password" name="cmdp" id="cmdp" title=" " required>
+                                <i id="icon1" class="fas fa-eye-slash"
+                                onclick="togglePassword1()"></i>
+                            </div>
+                            <label for="numtel">Téléphone </label>
                             <input type="tel" name="" id="numtel">
                         </div>
                     </div>
                     <div class="boite">
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" name="" id="" required>
                         <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
                     </div>
                     <div class="buton">
@@ -109,6 +122,8 @@
 
     </footer>
     <script src="../js/inscription.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 </body>
 
 </html>
