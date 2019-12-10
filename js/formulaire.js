@@ -406,7 +406,11 @@ tabs[1].addEventListener('click', function () {
     $('#divForm').slideDown('slow');
 });
 tabs[2].addEventListener('click', function () { opentab(event, 'projet') });
-tabs[3].addEventListener('click', function () { opentab(event, 'piecejoint') });
+tabs[3].addEventListener('click', function () { 
+    opentab(event, 'piecejoint');
+    $('#situationPerso').hide();
+    $('#situationPerso').slideDown('slow'); 
+});
 
 
 
@@ -504,19 +508,42 @@ let ouiAppLouer=document.querySelector('#ouiAppLouer');
 let nonAppLouer=document.querySelector('#nonAppLouer');
 let appartLouerBail1=document.querySelector('#appartLouerBail1');
 let estimationLocative=document.querySelectorAll('.estimationLocative');
+let unAutreBien=document.querySelector('#unAutreBien');
+let ouiUnautreBien=document.querySelector('#ouiUnautreBien');
+let nonUnautreBien=document.querySelector('#nonUnautreBien');
+let frais=document.querySelector('#frais');
 
 
 typeInvest1.addEventListener('click', function () {
     if (typeInvest1[1].selected) {
         hide1('investImmeuble1', 'nomImmeuble1', 'investMaison1', 'addLot1');
+        unAutreBien.style.display = 'none';
+        ouiAddLot1.checked = false;
+        nonAddLot1.checked = false;
+        frais.style.display = 'none';
+        ouiUnautreBien.checked = false;
+        nonUnautreBien.checked = false;
     }
 
     if ((typeInvest1[2].selected) || (typeInvest1[3].selected) || (typeInvest1[4].selected)) {
         hide2('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1', 'nonAddLot1');
+        unAutreBien.style.display = 'inherit';
+        ouiAddLot1.checked = false;
+        nonAddLot1.checked = false;
+        frais.style.display = 'none';
+        ouiUnautreBien.checked = false;
+        nonUnautreBien.checked = false;
     }
 
     if (typeInvest1[5].selected) {
         hide3('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1');
+        unAutreBien.style.display = 'none';
+        frais.style.display = 'none';
+        ouiUnautreBien.checked = false;
+        nonUnautreBien.checked = false;
+        ouiAddLot1.checked = false;
+        nonAddLot1.checked = false;
+        
     }
 });
 
@@ -531,8 +558,16 @@ nonAddLot1.addEventListener('click', function () {
     // $('#creditMensuelImm1').slideDown('slow');
     // creditMensuelImm1.style.display = 'inherit';
     addLot1.style.display = 'none';
+    $('unAutreBien').slideDown('slow');
+    unAutreBien.style.display = 'inherit';
 });
 
+ouiUnautreBien.addEventListener('click', function(){})
+
+nonUnautreBien.addEventListener('click',function(){
+    $('#frais').slideDown('slow');
+    frais.style.display = 'inherit';
+})
 
 ouiLouer.addEventListener('click',function(){
     appartLouerBail.disabled=false;
