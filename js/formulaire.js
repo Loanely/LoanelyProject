@@ -633,3 +633,26 @@ tabs[3].disabled = false;
 // immeubleType.addEventListener('click', function() {
 //     siImmeuble.style.display ='block'
 // })
+
+// ==================== Partie 4 Pièce jointe ============================++//
+
+function openPage(pageName, elmnt, color) {
+    var i, tabcontente, tablinks;
+    tabcontente = document.getElementsByClassName("tabcontente");
+    for (i = 0; i < tabcontente.length; i++) {
+      tabcontente[i].style.display = "none";
+    }
+    // tablinks = document.getElementsByClassName("tablink");
+    // for (i = 0; i < tablinks.length; i++) {
+    //   tablinks[i].style.backgroundColor = "";
+    // }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+
+
+
+
