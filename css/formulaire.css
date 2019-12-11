@@ -32,7 +32,7 @@ section, article{
     position: relative;
 }
 
-/*  cette partie est resérvée pour les tabs*/
+/*  cette partie est resérvée pour les tabs (onglets)*/
 
 .tab {
     width: 70%;
@@ -57,11 +57,8 @@ section, article{
       opacity: .3;
 }
 
-
-
 .tablinks.active {
     background-color: #44566C;
-    /* text-decoration: underline; */
 }
 
 .tablinks:checked{
@@ -72,20 +69,13 @@ section, article{
     display: none;
 }
 
-
-
 /*   fin tabs*/
 
 /* ++++++++ Article 1  "introduction" qui contient les deux questions ++++++++++++++++++++++++++++++++++++++ */
 
-#introduction{
-    position: relative;
-}
-
 article p{
     font-size: 1.5em;
     color: white;
-    /* margin-bottom: 1em; */
 }
 
 /* la div qui contient le texte de LOANELY*/
@@ -102,7 +92,7 @@ article p{
     font-size: 1.25em;
 }
 
-/* des class des boutons 'annuler', 'démarrer' et 'etape suivante'*/
+/* des class des boutons 'annuler', 'démarrer' et 'etape suivante et précédente'*/
 .btn{
     width: 70%;
     display: flex;
@@ -122,7 +112,6 @@ article p{
     justify-content: center;
     cursor:pointer;
     border: none;
-    
 }
 
 #poursuivre{
@@ -140,18 +129,11 @@ article p{
     display: none;
 }
 
-
-
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
 
 /* ++++++++ la première et la deuxième question du formulaire ++++++++++++++++++++++++++++++++++++++ */
 .question{
     width: 70%;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -161,15 +143,14 @@ article p{
     background-color: #1B2A3D;
     border: 1px solid white;
     box-sizing: border-box;
-    /* display: none; */
-
 }
+
 .question > div{
     width: 40%;
     display: flex;
  }
- .question > div > div{
 
+ .question > div > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -196,16 +177,6 @@ article p{
 .question{
     display: none;
 }
-/* #q1 div , #q2 div{
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row;
-    margin-left: 13em;
-} */
-
-
 
 /* la div qui contient un message dans le cas où la promesse de vente n'est pas signée */
 #ventSign{
@@ -219,10 +190,7 @@ article p{
     align-items: center;
     justify-content: space-between;
     background-color: #1B2A3D;
-    /* position: absolute;
-    top: 22em; */
     display: none;
-    /* background: black; */
 }
 
 #ventSign p{
@@ -230,19 +198,8 @@ article p{
     font-size: 1.25em;
 }
 
-/* bouton dans la div du message */
-/* #poursuivre{
-    width: 15em;
-    height: 3em;
-    font-size: 1.25em;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-} */
 
-/* le formulaire de la société*/
-
+/* ++++++++++++++++++++++++++++le formulaire de la société ++++++++++++++++++++++++++++++++++++++++ */
 #introduction form{
     display: none;
     border: 1px solid white;
@@ -258,9 +215,7 @@ article p{
 }
 
 
-
-
-/* ++++++++ Article 2 --- ICI commence le formulaire à remplir ++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++ Article 2 --- ICI commence le formulaire à remplir // partie Emprunteur // +++++++++++++++++++++++++++++ */
 
 #emprunteur form{
     box-sizing: border-box;
@@ -269,8 +224,7 @@ article p{
     padding: 1em;
 }
 
-
-
+/* id du formulaire emprunteur et société et les class dans le formulaire */
 #divForm, #societe, #divForm .formClass, #divForm .infoPersonnel{
     width: 100%;
     display: flex;
@@ -279,23 +233,21 @@ article p{
     padding: .1em;
 }
 
-
-
-/* #investImmeuble div, #investMaison div, #divForm #propr div, #divForm #mensualite div, 
-#divForm #investImmeuble div, #divForm #investMaison div */
-
+/* cibler la div premier enfant */
 #divForm div, #societe div, #divForm .formClass div, #divForm .infoPersonnel div, #divForm{
     width: 45%;
     display: flex;
     flex-flow: column;
 }
 
+/* cibler la div deuxième enfant */
 #divForm div div, #societe div div{
     display: flex;
     flex-flow: row;
     width: 95%;
 }
 
+/* cibler la div troisème enfant */
 #divForm div div div, #societe div div div{
     display: flex;
     flex-flow: column;
@@ -304,15 +256,13 @@ article p{
     margin-bottom: 1em;
 }
 
+/* styliser les class .formClass */
 #divForm .formClass{
     display: none;
     margin-bottom: 1em;
     background-color: #1B2A3D;
     box-sizing: border-box;
 }
-
-
-
 
 label{
     color: #fff;
@@ -344,6 +294,7 @@ textarea{
     color: #fff;
     font-size: 1.25em;
     box-sizing: border-box;  
+    resize: none;
 }
 
 select{
@@ -370,8 +321,7 @@ option{
     background-color: #000000;
 }
 
-/*  les inputs de type 'radio'  */
-
+/* styliser les class .radioBtn pour les inputs radios */
 #divForm .radioBtn{
     width: 100%;
     height: 3em;
@@ -412,19 +362,14 @@ option{
     font-weight: bolder;
 }
 
-/* #divForm #independant div, #divForm #public-prive div{
-    display: flex;
-    flex-flow: column;
-
-} */
-
+/* deux boutons pour masquer et afficher les infos personnelles */
 #hideBtn, #showBtn{
-    /* width: 100%; */
     height: 2em;
     color: white;
     font-size: 1em;
 }
 
+/* masquer des boutons et radios selon la condition */
 #showBtn, #divForm #addLot, #divForm #unAutreBien{
     display: none;
 }
@@ -436,25 +381,6 @@ option{
     background-color: #1B2A3D;
     margin-bottom: 1em;
 }
-
-/* ================)))))))))))))))))) TEST TEST TEST TEST )))))))))))))))çççççççççççççàààààààààààààààààààà */
-
-
-/* #showHide, #divForm #typeProfession, #divForm #contrat, #divForm #proprietaire, 
-#divForm #creditMensuelImm, #divForm #creditConsommation, #divForm #investLocatif, #divForm #investissement{
-    display: none;
-}
-
-#divForm #precedentSuivant{
-    border: 1px solid red;
-    height: 5em;
-    width: 100%;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-} */
-
-/* ================)))))))))))))))))) TEST TEST TEST TEST )))))))))))))))çççççççççççççàààààààààààààààààààà */
 
 h1{
     color: white;
@@ -486,7 +412,7 @@ h3{
     padding: 1em;
 }
 
-
+/* id du formulaire du projet */
 #projeFinancer .formClass, #projeFinancer{
     width: 100%;
     display: flex;
@@ -495,19 +421,21 @@ h3{
     padding: .5em;
 }
 
-
+/* cibler la div 1er enfant */
 #projeFinancer div, #projeFinancer .formClass div{
     width: 45%;
     display: flex;
     flex-flow: column;
 }
 
+/* cibler la div 2em enfant */ 
 #projeFinancer div div, #projeFinancer .formClass div div{
     display: flex;
     flex-flow: row;
     width: 95%;
 }
 
+/* syliser les class .formClass */
 #projeFinancer .formClass {
     display: none;
     margin-bottom: 1em;
@@ -515,6 +443,7 @@ h3{
     box-sizing: border-box;
 }
 
+/* styliser les radio bouton dans le formulaire du projet */
 #projeFinancer .radioBtn {
     width: 100%;
     height: 3em;
@@ -538,6 +467,7 @@ h3{
     margin: 0;
 }
 
+/* masquer les question ajouter un bien et un lot */
 #projeFinancer #addLot1, #projeFinancer #unAutreBien1{
     display: none;
 }
@@ -555,7 +485,6 @@ h3{
     margin: 0;       
 } 
 
-
 #projeFinancer #appartLouer div{
     width: 100%;
     justify-content: flex-end;
@@ -565,11 +494,10 @@ h3{
     width: 20%;
 }
 
+/* si l'appart n'est pas loué */
 .estimationLocative:nth-child(2){
     display: none;
 }
-
-
 
 
 /* ======================== FIN PARTIE PROJET A FINANCER ARTICLE 3 =============================== */

@@ -236,16 +236,14 @@ let ouiUnautreBien = document.querySelector('#ouiUnautreBien');
 let nonUnautreBien = document.querySelector('#nonUnautreBien');
 let ouiautreRevenu = document.querySelector('#ouiautreRevenu');
 let nonautreRevenu = document.querySelector('#nonautreRevenu');
-let unAutreRevenu=document.querySelector('#unAutreRevenu');
-let allocations=document.querySelector('#allocations');
-let epargne=document.querySelector('#epargne');
-let ouiEpargne=document.querySelector('#ouiEpargne');
-let nonEpargne=document.querySelector('#nonEpargne');
-let allEpargne=document.querySelector('#allEpargne');
-let etapePrecedent=document.querySelector('#etapePrecedent');
-let etapesuivant=document.querySelector('#etapesuivant');
-
-
+let unAutreRevenu = document.querySelector('#unAutreRevenu');
+let allocations = document.querySelector('#allocations');
+let epargne = document.querySelector('#epargne');
+let ouiEpargne = document.querySelector('#ouiEpargne');
+let nonEpargne = document.querySelector('#nonEpargne');
+let allEpargne = document.querySelector('#allEpargne');
+let etapePrecedent = document.querySelector('#etapePrecedent');
+let etapesuivant = document.querySelector('#etapesuivant');
 
 hideBtn.addEventListener('click', function () {
     $('#infoPersonnel').slideUp('slow');
@@ -333,7 +331,7 @@ function hide3(investImmeuble, nomImmeuble, creditMensuelImm, investMaison, addL
 typeInvest.addEventListener('click', function () {
     if (typeInvest[1].selected) {
         hide1('investImmeuble', 'nomImmeuble', 'investMaison', 'addLot');
-        
+
     }
 
     if ((typeInvest[2].selected) || (typeInvest[3].selected) || (typeInvest[4].selected)) {
@@ -359,14 +357,18 @@ ouiCredit.addEventListener('click', function () {
 nonCredit.addEventListener('click', function () {
     $('#mensualite').slideUp('slow');
     // mensualite.style.display = "none";
-    revenu.style.display='block';
+    revenu.style.display = 'block';
 })
 
 // réponse oui - il y a un investissement et afficher les radio button 'type d'investissement
 ouiInvest.addEventListener('click', function () {
     typeInvest.disabled = false;
     typeInvest.focus();
+    $('#typeInvest').css("background-color", "rgb(92, 79, 100)");
 });
+
+$("#typeInvest").mouseleave(function(){
+    $(this).css("background-color", "#c4c4c485");})
 
 // réponse non investissement et masquer les radio button et les inputs liés
 nonInvest.addEventListener('click', function () {
@@ -380,7 +382,9 @@ nonInvest.addEventListener('click', function () {
     nonAddLot.checked = false;
     $('#unAutreLot').slideUp('slow');
     unAutreBien.style.display = 'none';
-   
+    $('#typeInvest').css("background-color", "#c4c4c485");
+    
+
 });
 
 ouiAddLot.addEventListener('click', function () {
@@ -405,30 +409,30 @@ nonUnautreBien.addEventListener('click', function () {
 
 });
 
-ouiautreRevenu.addEventListener('click',function(){
+ouiautreRevenu.addEventListener('click', function () {
     $('#allocations').slideDown('slow');
-    allocations.style.display='inherit';
+    allocations.style.display = 'inherit';
 });
 
-nonautreRevenu.addEventListener('click',function(){
+nonautreRevenu.addEventListener('click', function () {
     $('#allocations').slideUp('slow');
 });
 
-ouiEpargne.addEventListener('click',function(){
+ouiEpargne.addEventListener('click', function () {
     $('#allEpargne').slideDown('slow');
-    allEpargne.style.display='inherit';
+    allEpargne.style.display = 'inherit';
 });
 
-nonEpargne.addEventListener('click',function(){
+nonEpargne.addEventListener('click', function () {
     $('#allEpargne').slideUp('slow');
 });
 
-etapePrecedent.addEventListener('click',function(){
+etapePrecedent.addEventListener('click', function () {
     opentab(event, 'introduction');
     tabs[0].className += ' active';
 });
 
-etapeSuivant.addEventListener('click',function(){
+etapeSuivant.addEventListener('click', function () {
     opentab(event, 'projet');
     tabs[2].className += ' active';
 });
@@ -540,8 +544,9 @@ let unAutreBien1 = document.querySelector('#unAutreBien1');
 let ouiUnautreBien1 = document.querySelector('#ouiUnautreBien1');
 let nonUnautreBien1 = document.querySelector('#nonUnautreBien1');
 let frais = document.querySelector('#frais');
-let etapePrecedent1=document.querySelector('#etapePrecedent1');
-let etapesuivant1=document.querySelector('#etapesuivant1');
+let etapePrecedent1 = document.querySelector('#etapePrecedent1');
+let etapesuivant1 = document.querySelector('#etapesuivant1');
+let creditSouhaite = document.querySelector('#creditSouhaite');
 
 
 typeInvest1.addEventListener('click', function () {
@@ -551,6 +556,7 @@ typeInvest1.addEventListener('click', function () {
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
         frais.style.display = 'none';
+        creditSouhaite.style.display = 'none';
         ouiUnautreBien1.checked = false;
         nonUnautreBien1.checked = false;
     }
@@ -561,6 +567,7 @@ typeInvest1.addEventListener('click', function () {
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
         frais.style.display = 'none';
+        creditSouhaite.style.display = 'none';
         ouiUnautreBien1.checked = false;
         nonUnautreBien1.checked = false;
     }
@@ -573,6 +580,10 @@ typeInvest1.addEventListener('click', function () {
         nonUnautreBien1.checked = false;
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
+        $('#frais').slideDown('slow');
+        frais.style.display = 'inherit';
+        $('#creditSouhaite').slideDown('slow');
+        creditSouhaite.style.display = 'inherit';
 
     }
 });
@@ -597,6 +608,8 @@ ouiUnautreBien1.addEventListener('click', function () { })
 nonUnautreBien1.addEventListener('click', function () {
     $('#frais').slideDown('slow');
     frais.style.display = 'inherit';
+    $('#creditSouhaite').slideDown('slow');
+    creditSouhaite.style.display = 'inherit';
 })
 
 ouiLouer.addEventListener('click', function () {
@@ -620,12 +633,12 @@ nonAppLouer.addEventListener('click', function () {
 });
 
 
-etapePrecedent1.addEventListener('click',function(){
+etapePrecedent1.addEventListener('click', function () {
     opentab(event, 'emprunteur');
     tabs[1].className += ' active';
 });
 
-etapeSuivant1.addEventListener('click',function(){
+etapeSuivant1.addEventListener('click', function () {
     opentab(event, 'piecejoint');
     tabs[3].className += ' active';
 });
@@ -678,7 +691,7 @@ function openPage(pageName, elmnt, color) {
     var i, tabcontente, tablinks;
     tabcontente = document.getElementsByClassName("tabcontente");
     for (i = 0; i < tabcontente.length; i++) {
-      tabcontente[i].style.display = "none";
+        tabcontente[i].style.display = "none";
     }
     // tablinks = document.getElementsByClassName("tablink");
     // for (i = 0; i < tablinks.length; i++) {
@@ -686,9 +699,9 @@ function openPage(pageName, elmnt, color) {
     // }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-  }
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
 
