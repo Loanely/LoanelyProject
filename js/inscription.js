@@ -37,10 +37,11 @@ function checkForm(form) {
 
     } else {
         form.cmdp.style.color = "red";
-        form.cmdp.title = "La confirmation de mot de passe ne correspond pas ";
-
-        form.cmdp.focus();
+        messageEchec();
+         form.cmdp.focus();
+         
         return false;
+       
     }
     form.motdepasse.backgroundColor = "green";
     form.cmdp.style.color = "green";
@@ -65,6 +66,21 @@ function togglePassword1() {
         $('#icon1').attr('class', 'fas fa-eye');
         $('#cmdp').attr('type', 'text');
     }
+}
+
+function messageEchec() {
+    let message = document.createElement("h4");
+    let laDiv= document.querySelector('#message-erreur');
+    let titre = document.getElementById("titre");
+   
+    message.innerHTML =" La confirmation du mot de passe n'est pas correcte";
+    message.style.color = "red";
+    laDiv.appendChild(message);
+    // titre.after(message);
+    message.style.marginLeft = "2vw";
+    message.style.marginTop = "0.5vh";
+    
+
 }
 
 

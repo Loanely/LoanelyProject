@@ -41,36 +41,55 @@
         <aside></aside>
         <section>
             <h2>Inscription</h2>
-            <div class="message"></div>
+            <div id="message-erreur"></div>
             <article>
 
                 <form action="" onsubmit="return checkForm(this);" method="post">
-                    <div class="champ">
-                        <div class="parti1">
+                   
+                    <div class="row">
+                        <div class="lesnoms">
                             <label for="nom">Nom *</label>
                             <input type="text" id="nom" name="nom" required>
-                            <label for="motdepasse">Mot de passe *</label>
-                            <div class="mot-de-passe1">
-                                <input type="password" name="motdepasse" id="motdepasse" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"
-                                    minlength="8" title="" required>
-                                <i id="icon" class="fas fa-eye-slash" onclick="togglePassword()"></i>
-                            </div>
-                            <label for="emaile">Email *</label>
-                            <input type="email" name="" id="emaile">
                         </div>
-                        <div class="parti2">
-                            <label for="Prenom">Prénom *</label>
+                        <div class="les-entrees">
+                            <label class="deux" for="Prenom">Prénom *</label>
                             <input type="text" id="Prenom">
-                            <label name="conf" for="cmdp">Confirmation du Mot De Passe *</label>
-                            <div class="mot-de-passe1">
-                                <input type="password" name="cmdp" id="cmdp" title=" " required>
-                                <i id="icon1" class="fas fa-eye-slash"
-                                onclick="togglePassword1()"></i>
-                            </div>
-                            <label for="numtel">Téléphone </label>
-                            <input type="tel" name="" id="numtel">
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="lesnoms">
+                            <label for="motdepasse">Mot de passe *</label>
+                            <div class="mot-de-passe1"> 
+                                <input type="password" name="motdepasse" id="motdepasse"
+                                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"
+                                    minlength="8" title="" required>
+                                <i id="icon1" class="fas fa-eye-slash" onclick="togglePassword()"></i>
+                            </div>
+                        </div>
+                        <div class="les-entrees">
+                            <label class="deux" name="conf" for="cmdp">Confirmation du Mot De Passe *</label>
+                            <div class="mot-de-passe1">
+                                <input type="password" name="cmdp" id="cmdp" title=" " required>
+                                <i id="icon1" class="fas fa-eye-slash" onclick="togglePassword1()"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="lesnoms">
+                            <label for="emaile">Email *</label>
+                            <input type="email" name="" id="emaile">
+
+
+                        </div>
+                        <div class="les-entrees">
+                            <label class="deux" for="numtel">Téléphone </label>
+                            <input type="tel" name="" id="numtel">
+
+
+                        </div>
+                    </div>
+
                     <div class="boite">
                         <input type="checkbox" name="" id="" required>
                         <p>J'ai lu et j'accepte les Conditions d'utilisation. </p>
@@ -84,7 +103,6 @@
                         </button>
                     </div>
                 </form>
-
             </article>
 
 

@@ -107,8 +107,7 @@ section{
  }
 article{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
     width: 55vw;
 }
 .message{
@@ -116,26 +115,11 @@ article{
    height: 1vh;
 }
 
- .champ{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
- }
-
-
-.parti1{
-    width: 25vw;
+ 
+.row{
     display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
-}
-.parti2{
-    width: 25vw;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 
@@ -146,12 +130,14 @@ label{
     font-style: normal;
     margin-top: 1.3em;
     letter-spacing: 0.1em;
+    display: block;
     
   
 }
+
 input{
     background-color: #c4c4c485;
-     width: 27em;
+     width: 26em;
      padding-left: 2%;
      color: white;
     height: 3em;
@@ -204,6 +190,11 @@ button{
 button p{
     font-size: 1.5em; 
     letter-spacing: 0.1em;
+}
+
+/* ******************message d'erreur***************** */
+#message-erreur{
+    height: 3vh;
 }
 
 /******************** Icon oeil de mot de passe *************/
