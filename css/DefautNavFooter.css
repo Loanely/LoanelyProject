@@ -79,7 +79,7 @@ footer {
 }
 
 footer .liens-footer {
-  width: 75%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
@@ -88,7 +88,6 @@ footer a {
   color: white;
   font-size: 0.9rem;
   font-family: "Rambla", sans-serif;
-  margin-left: 10rem;
   padding: 0.3rem;
 }
 

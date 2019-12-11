@@ -129,6 +129,11 @@ h3 {
 
 }
 
+.contain-info p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
 
 .txt .guide { /*linkGuide CSS*/
   display: flex;
