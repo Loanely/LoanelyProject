@@ -585,14 +585,149 @@ h3{
     
 }
 /* ======================== PARTIE 4 PIECES JOINTES ==============================================*/
-.blockJoint {
+
+#tabs {
+    width: 40vw;
+    height: 30vh;
+    margin: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
+    background-color: #44566C;
+  }
+  
+  /* Style tab inks */
+  .tablink {
+    background-color: #848d98;
+    margin: auto;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column;
+    cursor: pointer;
+    width: 10vw;
+    height: 20vh;
+    font-family: "Rambla", sans-serif;
+    font-size: 1.1rem;
+  }
+  
+  .tablink img:nth-child(1) {
+    width: 50%;
+  }
+  
+  .tablink:nth-child(2) img {
+    width: 70%;
+  }
+  
+  .tablink:nth-child(3) img {
+    width: 40%;
+  }
+  
+  .tablink:hover {
+    background-color: rgb(21, 34, 51);
+  }
+  
+  .tablink:focus {
+    background-color: rgb(21, 34, 51);
+  }
+  
+  .tabcontente {
+    display: none;
+    width: 70vw;
+    height: 60vh;
+  }
+  
+  #situationPerso {
+    background-color: #44566C;
+  }
+  #parcLoc {
+    background-color: #44566C;
+  }
+  #projetFinancer {
+    background-color: #44566C;
+  }
+
+  /* ================STYLING TABLES ===================== */
+  
+  #situationPerso, #parcLoc, #projetFinancer article {
+    width: 70vw;
+    overflow-y: auto;
+    background-color: rgb(50, 61, 61);
+    margin: auto;
+  }
+  
+  table{
+    margin: auto;
+    width: 65vw;
+    
+  }
+  .tbl-header{
+    background-color: #17111998;
+    table-layout: fixed; 
+  }
+  
+  .tbl-content{
+    height:50vh;
+    overflow-x:auto;
+  
+  }
+  
+  #situationPerso article .tbl-header table thead tr {
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;
-    padding: .5em;
-    background-color: #1B2A3D;
-}
+  }
+  
+  
+  #situationPerso article .tbl-content table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  
+  }
+  
+  th{
+    padding: 1rem 0rem;
+    font-family: "Rambla";
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  td{
+    padding: 1rem 0rem;
+    text-align: center;
+    vertical-align:middle;
+    font-family: "Rambla";
+    font-size: 1rem;
+    color: #fff;
+    
+  }
+  
+  #situationPerso article .tbl-content table tbody tr td img{
+    width: 35%;
+    cursor: pointer;
+  }
+  
+  
+  /* ==============STYLING SCROLLBAR ======================= */
+  
+  
+  ::-webkit-scrollbar {
+      width: 13px;
+      
+  } 
+  ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); 
+      
+      
+  } 
+  ::-webkit-scrollbar-thumb {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+      border-radius: 100px;
+  }
+
 
 /* ======================== JE SUIS UN FOOTER MIGNON ============================================= */
 
