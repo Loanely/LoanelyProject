@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/DefautNavFooter.css">
     <link rel="stylesheet" href="../css/formulaire.css">
-    <link rel="stylesheet" href="../css/DefautNavFooter">
+
     <title>Formulaire</title>
 </head>
 
@@ -34,13 +35,15 @@
 
     </header>
 
-    <main>
+    <!-- =================================DEBUT du formulaire ===================================== -->
 
+    <main>
         <section>
             <header>
                 <h2>Bienvenu sur loanely<br>le courtier en ligne des investisseurs immobiliers </h2>
             </header>
 
+            <!-- ================================= les quatres onglets ================================ -->
 
             <div class="tab" id="tab">
                 <button class="tablinks active">Introduction</button>
@@ -49,7 +52,7 @@
                 <button disabled class="tablinks">Pièces jointes</button>
             </div>
 
-
+            <!-- ================================= 1er ARTICLE de l'introduction ===================================== -->
 
             <article id="introduction" class="tabcontent">
                 <div class="intro">
@@ -58,16 +61,23 @@
                         l’onglet “Mes dossiers”</p>
                 </div>
 
+                <!-- ================================ button pour démarrer le formulaire ========================= -->
+
                 <div id="btnIntro" class="btn">
                     <button id="demarrer">Démarrer le formulaire<img
                             src="../assets/icons/formulaire/suivant.png"></button>
                 </div>
+
+                <!-- ================================ Message dans le cas de ne pas signer la promesse ================ -->
+
                 <div id="ventSign">
                     <p>Nous vous conseillons de signer la promesse de vente avant de commencer à monter votre
                         dossier de financement car vous aurez besoin des informations contenues dans votre promesse
                         pour déposer votre dossier.</p>
                     <button id="poursuivre">Poursuivre</button>
                 </div>
+
+                <!-- ================================ la question 1 ========================= -->
 
                 <div id="question1" class="question">
                     <div>
@@ -85,13 +95,15 @@
                             <label for="non1">Non</label>
                         </div>
                     </div>
-
                 </div>
+
+                <!-- ================================ Bouton pour annuler ========================= -->
 
                 <div id="btnIntro1" class="btn">
                     <button id="annuler1">Annuler</button>
                 </div>
 
+                <!-- ================================ la question 2 ========================= -->
 
                 <div id="question2" class="question">
                     <div>
@@ -108,11 +120,14 @@
 
                         </div>
                     </div>
-
                 </div>
+
+                <!-- ================================ Bouton pour annuler ========================= -->
                 <div id="btnIntro2" class="btn">
                     <button id="annuler3">Annuler</button>
                 </div>
+
+                <!-- ================================ Si l'achat via une société ========================= -->
                 <form>
                     <div id="societe">
                         <div>
@@ -130,11 +145,9 @@
                                 <div>
                                     <input type="radio" name="ouiImmat" id="nonImmat">
                                     <label for="nonImmat">Non</label>
-
                                 </div>
-
                             </div>
-                            <!-- <label for="nonImmat">"en cours de création"</label> -->
+
                         </div>
                         <div class="ouiImmat">
                             <label for="siret" style="opacity: .3;">N° de Siret</label>
@@ -154,19 +167,23 @@
                         </div>
                     </div>
                 </form>
+                <!-- ================================ Fin si ========================= -->
 
+                <!-- =============== Bouton pour annuler ou pour passer à l'étape suivant (emprunteur) ========== -->
                 <div class="btn" id="btn2">
                     <button id="annuler2">Annuler</button>
                     <button id="etape2">Etape suivante</button>
                 </div>
             </article>
 
+            <!-- ================================= 2er ARTICLE de lemprunteur ===================================== -->
+
             <article id="emprunteur" class="tabcontent">
                 <form action="" id="divForm">
+
+                    <!-- ====================== Info personnelles de l'emprunteur =================== -->
                     <h3>Info Personnel</h3>
                     <div id="infoPersonnel" class="infoPersonnel">
-
-
                         <div>
                             <label for="prenom">PRENOM</label>
                             <input type="text" name="prenom" id="prenom">
@@ -252,16 +269,14 @@
                         </div>
 
                     </div>
+
+                    <!-- ================ bouton pour masquer ou afficher les info personnelles ============ -->
                     <p id="showHide">
                         <a id="hideBtn" href="#infoPersonnel">▲ Masquer les cases des info personnelles</a>
                         <a id="showBtn" href="#infoPersonnel">▼ Afficher les cases des info personnelles</a>
                     </p>
 
-                    <!-- <div id="precedentSuivant">
-                        <button id="precedent">Précedent</button>
-                        <button id="suivant">Suivant</button>
-                    </div> -->
-
+                    <!-- ====================== Chois de profession =================== -->
                     <div class="infoPersonnel">
                         <div id="typeProfession">
                             <label for="profession">Profession</label>
@@ -273,7 +288,7 @@
                             </select>
                         </div>
 
-
+                        <!-- ====================== Chois de contrat =================== -->
                         <div id="contrat">
                             <label for="typecontrat">Type de contrat</label>
                             <select name="typecontrat" id="typecontrat" disabled>
@@ -286,6 +301,7 @@
                         </div>
                     </div>
 
+                    <!-- ====================== Si profession employé =================== -->
                     <div id="public-prive" class="formClass">
                         <div class="public">
                             <label for="dateContrat">Depuis le</label>
@@ -316,8 +332,9 @@
                             <input type="text" name="autreRevenu" id="autreRevenu">
                         </div>
                     </div>
+                    <!-- ====================== fin si =================== -->
 
-
+                    <!-- ====================== Si profession indépendant =================== -->
                     <div id="independant" class="formClass">
                         <div class="indep">
                             <label for="nomEntreprise">Nom de l'entreprise</label>
@@ -337,9 +354,10 @@
                             <input type="text" name="dividende" id="dividende">
                         </div>
                     </div>
+                    <!-- ====================== fin si =================== -->
 
 
-                    <!-- ************************************* -->
+                    <!-- ====================== choix propritaire ou locataire =================== -->
                     <div class="infoPersonnel" id="proprietaire">
                         <div>
                             <label for="residence">Vous êtes</label>
@@ -351,6 +369,8 @@
                             </select>
                         </div>
                     </div>
+
+                    <!-- ====================== Si propriétaire =================== -->
                     <div id="propr" class="formClass">
                         <div>
                             <label for="creditMensuel">Crédit mensuel</label>
@@ -364,12 +384,14 @@
                             <label for="rembourser">En cours de crédit restant à rembourser</label>
                             <input type="text" name="rembourser" id="rembourser">
                         </div>
+                        <!-- ====================== Si locataire =================== -->
                         <div>
                             <label for="loyer">Loyer mensuel</label>
                             <input type="text" name="loyer" id="loyer">
                         </div>
                     </div>
 
+                    <!-- ====================== question s'il a un crédit =================== -->
                     <div class="radioBtn" id="creditConsommation">
                         <label>Avez-vous des crédits à la consommation ou crédits étudiants?</label>
                         <div id="credit">
@@ -386,6 +408,7 @@
                         </div>
                     </div>
 
+                    <!-- ====================== Si oui il un crédit =================== -->
                     <div id="mensualite" class="formClass">
                         <div>
                             <label for="conso1">Crédit conso 1 mensuel</label>
@@ -404,7 +427,9 @@
                             <input type="text" name="conso4" id="conso4">
                         </div>
                     </div>
+                    <!-- ====================== fin si crédit =================== -->
 
+                    <!-- =================== question s'il a un investissement locatif =============== -->
                     <div class="radioBtn" id="investLocatif">
                         <label>Avez-vous déjà des investissements locatifs?</label>
                         <div id="invest">
@@ -419,6 +444,8 @@
 
                         </div>
                     </div>
+
+                    <!-- ====================== si oui, choix de l'investissement =================== -->
                     <div class="infoPersonnel">
                         <div id="investissement" class="investissement">
                             <label for="typeInvest">Type d'investissement</label>
@@ -433,6 +460,7 @@
                         </div>
                     </div>
 
+                    <!-- ====================== si investissement "immeuble" =================== -->
                     <div id='nomImmeuble' class="formClass">
                         <div class="investImmeuble">
                             <label for="nomImmeuble">Nom de l'immeuble</label>
@@ -452,7 +480,6 @@
                         </div>
 
                     </div>
-
 
                     <div id="investImmeuble" class="formClass">
                         <div class="investImmeuble">
@@ -505,6 +532,7 @@
                         </div>
                     </div>
 
+                    <!-- ====================== question pour ajouter un autre lot =================== -->
                     <div class="radioBtn" id="addLot">
                         <label>Ajouter un autre lot?</label>
                         <div>
@@ -519,10 +547,8 @@
 
                         </div>
                     </div>
-                    <!-- <p id="lot">
-                        <a id="addLot" href="#">Ajouter un autre Lot</a>
-                    </p> -->
 
+                    <!-- =============== si investissement "maison ou appart ou local" ============== -->
                     <div id="investMaison" class="formClass">
                         <div class="investMaison">
                             <label for="nomMaison">Nom du bien</label>
@@ -578,18 +604,118 @@
                         </div>
                     </div>
 
+                    <!-- ====================== question pour ajouter un autre bien =================== -->
+                    <div id="unAutreBien" class="radioBtn">
+                        <label>Souhaitez-vous rajouter un autre bien?</label>
+                        <div>
+                            <div>
+                                <input type="radio" name="ouiUnautreBien" id="ouiUnautreBien">
+                                <label for="ouiUnautreBien">Oui</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="ouiUnautreBien" id="nonUnautreBien">
+                                <label for="nonUnautreBien">Non</label>
+                            </div>
 
-                    <!-- </div> -->
+                        </div>
+                    </div>
 
+                    <!-- ====================== question pour ajouter un autre revenu =================== -->
+                    <div id="unAutreRevenu" class="radioBtn">
+                        <label>Avez-vous d'autres revenus? Retraites, pensions, allocations,….?</label>
+                        <div>
+                            <div>
+                                <input type="radio" name="ouiautreRevenu" id="ouiautreRevenu">
+                                <label for="ouiautreRevenu">Oui</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="ouiautreRevenu" id="nonautreRevenu">
+                                <label for="nonautreRevenu">Non</label>
+                            </div>
 
+                        </div>
+                    </div>
+
+                    <!-- ====================== question pour ajouter un autre bien =================== -->
+                    <div id="allocations" class="formClass">
+                        <div>
+                            <label for="typeRevenu">D'autre revenu</label>
+                            <select name="typeRevenu" id="typeRevenu">
+                                <option selected hidden></option>
+                                <option value="retraites">Retraites</option>
+                                <option value="pensions">Pensions</option>
+                                <option value="allocations">Allocations</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="titreRevenu">Montant</label>
+                            <input type="text" name="titreRevenu" id="titreRevenu">
+                        </div>
+                    </div>
+
+                    <!-- ====================== question pour ajouter un épargne =================== -->
+                    <div id="epargne" class="radioBtn">
+                        <label>Avez-vous de l'épargne (livret, assurance vie, placements,…)?</label>
+                        <div>
+                            <div>
+                                <input type="radio" name="ouiEpargne" id="ouiEpargne">
+                                <label for="ouiEpargne">Oui</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="ouiEpargne" id="nonEpargne">
+                                <label for="nonEpargne">Non</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="allEpargne" class="formClass">
+                        <div>
+                            <label for="typeEpargne">L'epargne</label>
+                            <select name="typeEpargne" id="typeEpargne">
+                                <option selected hidden></option>
+                                <option value="livret">livret</option>
+                                <option value="assurance vie">assurance vie</option>
+                                <option value="placements">placements</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="titreRevenu">Montant</label>
+                            <input type="text" name="titreRevenu" id="titreRevenu">
+                        </div>
+                    </div>
+
+                    <!-- ====================== question pour ajouter un autre emprunteur =================== -->
+                    <div id="unAutreEmpr" class="radioBtn">
+                        <label>Y a-t-il un autre emprunteur?</label>
+                        <div>
+                            <div>
+                                <input type="radio" name="ouiEmpr" id="ouiEmpr">
+                                <label for="ouiEmpr">Oui</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="ouiEmpr" id="nonEmpr">
+                                <label for="nonEmpr">Non</label>
+                            </div>
+
+                        </div>
+                    </div>
                 </form>
+
+                <!-- == bouton pour passer à l'onglet suivant 'projet' ou pour revenir au précédent 'introduction' === -->
+                <div class="btn" id="btn3">
+                    <button id="etapePrecedent">Etape précédent</button>
+                    <button id="etapeSuivant">Etape suivante</button>
+                </div>
             </article>
 
 
-            <!-- ++++++++++++++++++++++++++++++PARTI YOYO ARTICLE 3 PROJET A FINANCER +++++++++++++++++++++++++++++++++++++++++++++++++-->
+            <!-- ================================= 3er ARTICLE du projet ===================================== -->
+
             <article id="projet" class="tabcontent">
                 <form id=projeFinancer>
 
+                    <!-- ========================= choix du type d'investissement ===================== -->
                     <div id="investissement1" class="investissement">
                         <label for="typeInvest1">Type d'investissement</label>
                         <select name="typeInvest1" id="typeInvest1">
@@ -602,7 +728,7 @@
                         </select>
                     </div>
 
-
+                    <!-- ========================= Si investissement Immeuble ===================== -->
                     <div id='nomImmeuble1' class="formClass">
                         <div class="investImmeuble">
                             <label for="nomImmeuble">Nom de l'immeuble</label>
@@ -626,7 +752,6 @@
                         </div>
 
                     </div>
-
 
                     <div id="investImmeuble1" class="formClass">
                         <div class="investImmeuble">
@@ -673,11 +798,15 @@
                         </div>
 
                     </div>
+
+                    <!-- ================== div dans laquelle on va générer un autre lot ================= -->
                     <div id="unAutreLot1" class="formClass"></div>
+
                     <div id="creditMensuelImm1" class="formClass">
 
                     </div>
 
+                    <!-- ========================= question pour ajouter un autre lot ===================== -->
                     <div class="radioBtn" id="addLot1">
                         <label>Ajouter un autre lot?</label>
                         <div>
@@ -693,6 +822,7 @@
                         </div>
                     </div>
 
+                    <!-- ========================= Si investissement maison, local , appart ===================== -->
                     <div id="investMaison1" class="formClass">
                         <div class="investMaison">
                             <label for="nomMaison">Nom du bien</label>
@@ -736,6 +866,7 @@
                             <input type="text" name="loyeMaison" id="loyeMaison">
                         </div>
 
+                        <!-- ================= question si l'appart est loué ===================== -->
                         <div id="appartLouer">
                             <label>L'appartement est-il déjà loué?</label>
                             <div>
@@ -762,16 +893,17 @@
                         </div>
                     </div>
 
-                    <div id="unAutreBien" class="radioBtn">
+                    <!-- ================= question pour ajouter un autre bien ===================== -->
+                    <div id="unAutreBien1" class="radioBtn">
                         <label>Souhaitez-vous rajouter un autre bien?</label>
                         <div>
                             <div>
-                                <input type="radio" name="ouiUnautreBien" id="ouiUnautreBien">
-                                <label for="ouiUnautreBien">Oui</label>
+                                <input type="radio" name="ouiUnautreBien1" id="ouiUnautreBien1">
+                                <label for="ouiUnautreBien1">Oui</label>
                             </div>
                             <div>
-                                <input type="radio" name="ouiUnautreBien" id="nonUnautreBien">
-                                <label for="nonUnautreBien">Non</label>
+                                <input type="radio" name="ouiUnautreBien1" id="nonUnautreBien1">
+                                <label for="nonUnautreBien1">Non</label>
                             </div>
 
                         </div>
@@ -805,15 +937,19 @@
 
                     </div>
 
-
-
-
-
                 </form>
+
+                <!-- == bouton pour passer à l'onglet suivant 'pièces jointes' ou pour revenir au précédent 'projet' === -->
+                <div class="btn" id="btn4">
+                    <button id="etapePrecedent1">Etape précédent</button>
+                    <button id="etapeSuivant1">Etape suivante</button>
+                </div>
             </article>
+
 
             <!-- ++++++++++++++++++++++++++++ FIN PARTI YOYO ++++++++++++++++++++++++++++++++++++++++++++ -->
             <!--- ================= PARTIE 4 PIECE JOINTE ============================================-->
+
             <article id="piecejoint" class="tabcontent">
                     <div id="tabs">
                             <button class="tablink" onclick="openPage('situationPerso', this)" id="defaultOpen">
