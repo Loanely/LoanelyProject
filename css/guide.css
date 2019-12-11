@@ -95,7 +95,8 @@ h1{ color: white;
     background: linear-gradient(to right, #312625, #2F435E);
     text-align: center;
     margin-bottom:.5em;
-    border-radius:0.1em;    
+    border-radius:0.1em; 
+    padding-top: 0.4em;   
 }
 
 .text1{
