@@ -1,121 +1,150 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)http://localhost/LoanelyProject/html/pageContact.html# -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="../css/contact.css">
-        <link href="http://fr.allfont.net/allfont.css?fonts=rambla" rel="stylesheet" type="text/css" />
-        <title>  page contact </title>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/DefautNavFooter.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <title>Contact</title>
 </head>
-<body cz-shortcut-listen="true">
-    <header>
 
-        <!-- =================================NAV STARTS HERE===================================== -->
+<body>
+    <!-- =================================NAV STARTS HERE===================================== -->
+    <header>
         <nav>
             <div id="logo">
-                <img src="../assets/logos/loanelyLogoSlogan.png" alt="logo">
+                <img src="../assets/logos/loanelyLogoSlogan.png" alt="logo" />
             </div>
 
             <div id="menu">
-
                 <ul>
-                    <li><a href="../index.html"> <img src="../assets/icons/contact/accueil.png" alt=""> ACCUEIL</a></li>
-                    <li><a href="#"> <img src="../assets/icons/accueil/connexion.png" alt=""> CONNEXION</a></li>
-                    <li><a href="inscription.html"> <img src="../assets/icons/accueil/inscription.png" alt=""> INSCRIPTION</a></li>
-                </ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../assets/icons/contact/accueil.png" alt="" />
+                            Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../html/contact.html">
+                            <img src="../assets/icons/accueil/contact.png" alt="" />
+                            CONTACT</a>
+                    </li>
 
+                    <li>
+                        <a href="../html/inscription.html">
+                            <img src="../assets/icons/accueil/inscription.png" alt="" />
+                            INSCRIPTION</a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="../assets/icons/accueil/connexion.png" alt="" />
+                            CONNEXION</a>
+                    </li>
+                </ul>
             </div>
         </nav>
-
     </header>
+
+    <!-- =================================MAIN STARTS HERE===================================== -->
+
     <main>
-    <section>
-      
-       <aside>
-            <img src="../assets/images/contact/phone.jpg"class="photo" >
-       </aside> 
-        <article class="info">
-            <h1> Laissez-nous votre message</h1>
-             <div class="rep">
-                
-              <form method="Post" action="http://localhost/action_page.Js">
-                   <fieldset>
-                       <div class="entete">
-                           <div class="champs1">
-                              <label for="nom">Nom*:</label>
-                              <input type="text" id="nom">
+        <section>
 
-                              <label for="email">Email*</label>
-                              <input type="email" name="" id="email">
-                          
-                            
-                             
-                             </div>
-                             <div class="champs2">
-                                    <label for="prenom">Prénom*</label>
-                                    <input type="text" id="prenom">
-                               
-                              
-                              <label for="tel">Téléphone</label>
-                              <input type="number" name="" id="tel">
-                             </div>
-                        </div>
-                        <div class="champ-texte">    
-                          <label for="message" id="mes-tete"> Votre message</label> 
-                          <textarea name="message" id="message" class="effet" rows="17" cols="75"> 
-                          </textarea>
-                        </div>
-                    </fieldset>
-                    <input type="submit" value="Envoyer" id="envoyer">
-              </form>
-              <div class="donnée">
-                    <div class="phrase">
-                         <p>Vous pouvez nous contacter du lundi au vendredi de 9h à 19h</p>
-                    </div>
-                  
-                    <div class="adresse-contact">
-                         <div class="adresse"><img src="../assets/icons/contact/mail.png" > <p>Email</p></div> 
-                         <a href="mailto:messages@loanely.com" class="mail">message@Loanely.com</a> 
-                    </div>
-                    <div class="zone-num">
-                        <div class="appel"><img src="../assets/icons/contact/mobile.png"> <p>Téléphone</p> </div>
-                        <span >05 49 93 93 93</span>
-                    </div>
-                    <div class="fin">
-                          <span class="ques"> Vous avez une question ?</span> 
-                          <p> pour toutes les réponses aux questions  que vous vous posez sur Loanely et votre prêt.
-                             Consultez notre Guide</p>
-                    </div>
-                    <div class="guide">
-                    <a href=""><p>Guide</p></a>
-                    </div>
-                    
-              </div>
-          </div>
-        </article>
-    </section>
-</main>
+            <article class="img-left">
+                <!-- <img src="../assets/images/contact/phone.jpg" alt="" /> -->
+            </article>
 
+            <article class="info-contact">
+                <form name="message" method="post">
+                    <div class="lineOne">
+
+                        <div class="nom">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Votre Nom" />
+                        </div>
+
+                        <div class="prenom">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" />
+                        </div>
+                    </div>
+
+                    <div class="lineOne">
+
+                        <div class="email">
+                            <label for="mail">Email</label>
+                            <input type="text" id="email" name="emil" placeholder="Votre Email" />
+                        </div>
+                        <div class="tel">
+                            <label for="telephone">Téléphone</label>
+                            <input type="text" id="telephone" name="telephone" placeholder="Votre Téléphone" />
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <label for="message">Votre Message</label>
+                        <textarea id="message" name="message" placeholder="Votre Message"></textarea>
+                        <input type="submit" value="Envoyer">
+                    </div>
+
+                </form>
+
+                <div class="txt">
+                    <p>
+                        Vous pouvez nous contacter <br />
+                        du lundi au vendredi de 9h à 19h
+                    </p>
+                    <div class="contain-info">
+                        <div class="adresse-mail">
+                            <img src="../assets/icons/contact/mail.png" alt="" />
+                            <h3>Email</h3>
+                        </div>
+                        <p>messages@loanely.com</p>
+                    </div>
+
+                    <div class="contain-info">
+                        <div class="phone">
+                            <img src="../assets/icons/contact/mobile.png" alt="" />
+                            <h3> Téléphone</h3>
+                        </div>
+                        <p>05 49 93 93 93</p>
+                    </div>
+
+                    <p>
+                        <strong>Vous avez une question?</strong> <br />
+                        pour toutes les réponses aux questions <br> que vous vous posez sur Loanely<br>
+                        et votre prêt<br> Consulter notre Guide
+                    </p>
+                    <a class="guide" href="../html/guide.html" style="align-self: center;">GUIDE</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- =================================FOOTER HERE===================================== -->
     <footer>
-
         <div id="logo">
 
+
             <img src="../assets/logos/logo bas.png" alt="logo">
+
+
+            <img src="../assets/logos/logo bas.png" alt="" />
 
         </div>
 
         <div class="liens-footer">
-
             <div>
                 <a href="#">Qui Somme Nous?</a>
-                <a href="#">Espace Banque</a>
+                <a href="../html/interfaceBanque.html">Espace Banque</a>
                 <a href="#">Espace Client</a>
             </div>
 
             <div>
                 <a href="#">Politique de confidentialité</a>
                 <a href="#">Recrutement</a>
-                <a href="#">Contactez-Nous</a>
+                <a href="../html/contact.html">Contactez-Nous</a>
             </div>
 
             <div>
@@ -123,23 +152,8 @@
                 <a href="#">CGV</a>
                 <a href="#">Mentions Legales</a>
             </div>
-
         </div>
-
     </footer>
-    
-        
-    </body>
-    </html>
+</body>
 
-
-
-
-
-
-
-
-
-   
-                  
-                  
+</html>
