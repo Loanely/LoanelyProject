@@ -185,39 +185,6 @@ h4 {
     letter-spacing: .05em;
 }
 
-footer {
-    width: auto;
-    height: 13vh;
-    background: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#containerResult #result p {
+    text-align: center;
 }
-
-footer .liens-footer{
-    width: 75%;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer a {
-    color: white;
-    font-family: 'Rambla', sans-serif;
-    margin-left: 0.9rem;
-    padding: .3rem;
-    font-size:0.75rem;
-}
-
-footer #logo {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer img {
-    align-self: center;
-    width: 50%;
-}
-
-

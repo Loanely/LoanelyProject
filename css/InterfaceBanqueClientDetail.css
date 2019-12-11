@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Rambla&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Rambla", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  background-color: #312635;
+}
+
+#banque-client {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: space-between;
+  background: #848d98;
+}
+
+#banque-client h2 {
+  font-size: 1.2rem;
+  color: white;
+  align-self: center;
+  font-weight: 600;
+}
+
+#banque-client h2:nth-child(1) {
+  margin-left: 4vw;
+}
+#banque-client h2:nth-child(2) {
+  margin-right: 4vw;
+}
+
+section {
+  width: 75%;
+  height: 100vh;
+  background-color: #848d98;
+  margin: 8vh auto 0vh auto;
+}
+
+section article:nth-child(1) {
+  width: 100%;
+  height: 8vh;
+  background-color: #4b5e65;
+}
+
+section article:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section article:nth-child(1) .bar {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem;
+}
+
+section article:nth-child(1) .bar h2 {
+  font-size: 1.2rem;
+  color: white;
+  align-self: center;
+}
+
+/* ==============STYLING SCROLLBAR ======================= */
+
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+}
