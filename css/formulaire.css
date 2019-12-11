@@ -16,69 +16,6 @@ html, body {
 }
 
 
-/* ++++++++ ICI JE SUIS UN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
-
-nav {
-    position: relative;
-    width: 100vw;
-    height: 12vh;
-    /* background-color: rgb(128, 128, 128); */
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    
-    
-}
-
-nav #logo {
-    width: 50%;
-}
-
-nav img {
-    width: 15em;
-    margin-left: 3em;
-}
-
-#menu {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    margin-right: 3em;
-}
-
-ul {
-    display: flex;
-    flex-flow: row;
-    text-decoration: none;
-    
-   
-    
-}
-li {
-
-    color: #2F435E;
-    list-style: none;
-    
-   
-}
-
-a {
-    text-decoration: none;
-    color: #2F435E;
-    display: flex;
-    align-items: center;
-   
- 
-   
-}
-
-ul li a img {
-    width: 1rem;
-    padding-right: .5em;
-}
-
-/* ++++++++ FIN NAVBAR ++++++++++++++++++++++++++++++++++++++ */
-
 
 main, section{
     width: 100vw;
@@ -171,6 +108,7 @@ article p{
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 .btn button {
@@ -487,7 +425,7 @@ option{
     font-size: 1em;
 }
 
-#showBtn, #divForm #addLot{
+#showBtn, #divForm #addLot, #divForm #unAutreBien{
     display: none;
 }
 
@@ -600,7 +538,7 @@ h3{
     margin: 0;
 }
 
-#projeFinancer #addLot1, #projeFinancer #unAutreBien{
+#projeFinancer #addLot1, #projeFinancer #unAutreBien1{
     display: none;
 }
 
