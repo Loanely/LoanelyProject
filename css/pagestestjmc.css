@@ -248,29 +248,35 @@ h2{
 article{
     position: relative;
 }
+
+/*-----CSS TABLEAU-------*/
+
 .titreprojet{
     background: #C4C4C4;
     width: 90%;
-    
+    height: 50px;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+       
+}
+.titreprojet img{
+    margin-right: 5vh;
 }
 .titreprojet p{
-    display: flex;
-    
-}
-.titreprojet a{
-    margin-right: 2vw;
-    margin-top: 0.4vw;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    align-items: center;
-    
+    margin-left: 5vh;
+    font-weight: bold;
+    font-size: 1.875em;
+    text-align: left;
+    margin-left: 2vw;
+    font-style: italic;
 }
 
 
-#projet2, #projet3{
+
+#projet1, #projet2, #projet3{
     width: 90%;
-    height: 18em;
-    margin-top: 8vh;
     
 }
 
@@ -286,17 +292,22 @@ table tr td p{
 
 table :nth-child(1) td{
     color: white;
+    height: 5vh;
+}
+table :nth-child(1) img{
+    margin-left: 1.5vh;
 }
 
-table :nth-child(2) td img{
-    margin-left: 0.5vw;
-}
-
-table :nth-child(4) td{
+table :nth-child(2) td {
     font-size: 1.6em;
+    color: black;
+    height: 10vh;
 }
+
 table :nth-child(3) td{
     font-size: 1.6em;
+    color: black;
+    height: 10vh;
 }
 
 table { 
@@ -317,7 +328,7 @@ table {
     height: auto;
     width: 100vw;
     background-color: #44566C;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-flow: column;
     align-items: center;
