@@ -172,7 +172,8 @@
                 <!-- =============== Bouton pour annuler ou pour passer à l'étape suivant (emprunteur) ========== -->
                 <div class="btn" id="btn2">
                     <button id="annuler2">Annuler</button>
-                    <button id="etape2">Etape suivante</button>
+                    <button id="etape2">Etape suivante<img
+                        src="../assets/icons/formulaire/suivant.png"></button>
                 </div>
             </article>
 
@@ -185,16 +186,16 @@
                     <h3>Info Personnel</h3>
                     <div id="infoPersonnel" class="infoPersonnel">
                         <div>
-                            <label for="prenom">PRENOM</label>
-                            <input type="text" name="prenom" id="prenom">
+                            <label for="prenom">PRENOM *</label>
+                            <input type="text" name="prenom" id="prenom" required pattern="[A-Za-z]">
                         </div>
                         <div>
-                            <label for="nom">NOM</label>
-                            <input type="text" name="nom" id="nom">
+                            <label for="nom">NOM *</label>
+                            <input type="text" name="nom" id="nom" required pattern="[A-Za-z]">
                         </div>
                         <div>
-                            <label for="date">Date de naissance</label>
-                            <input type="date" name="date" id="date">
+                            <label for="date">Date de naissance *</label>
+                            <input type="date" name="date" id="date" required>
                         </div>
                         <div>
                             <label for="lieu">Lieu de naissance</label>
@@ -205,11 +206,11 @@
                             <input type="text" name="nationalite" id="nationalite">
                         </div>
                         <div>
-                            <label for="adresse">Adresse</label>
+                            <label for="adresse">Adresse *</label>
                             <input type="text" name="adresse" id="adresse">
                         </div>
                         <div>
-                            <label for="poste">Code Postal</label>
+                            <label for="poste">Code Postal *</label>
                             <input type="text" name="poste" id="poste">
                         </div>
                         <div>
@@ -221,12 +222,12 @@
                             <input type="text" name="pays" id="pays">
                         </div>
                         <div>
-                            <label for="mail">Mail</label>
-                            <input type="email" name="mail" id="mail">
+                            <label for="mail">Mail *</label>
+                            <input type="email" name="mail" id="mail" required>
                         </div>
                         <div>
-                            <label for="phone">Téléphone</label>
-                            <input type="text" name="phone" id="phone">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" name="phone" id="phone" required pattern="[0-9]">
                         </div>
 
                         <div>
@@ -704,8 +705,10 @@
 
                 <!-- == bouton pour passer à l'onglet suivant 'projet' ou pour revenir au précédent 'introduction' === -->
                 <div class="btn" id="btn3">
-                    <button id="etapePrecedent">Etape précédent</button>
-                    <button id="etapeSuivant">Etape suivante</button>
+                    <button id="etapePrecedent"><img
+                        src="../assets/icons/formulaire/precedent.png">Etape précédent</button>
+                    <button id="etapeSuivant">Etape suivante<img
+                        src="../assets/icons/formulaire/suivant.png"></button>
                 </div>
             </article>
 
@@ -909,6 +912,7 @@
                         </div>
                     </div>
 
+                    <!-- ================= frais d'agence et notaire et prix net ===================== -->
                     <div id='frais' class="formClass">
                         <div>
                             <label for="prixNet">Prix net vendeur</label>
@@ -937,12 +941,48 @@
 
                     </div>
 
+                    <!-- ================= crédit souhaité ===================== -->
+                    <div id='creditSouhaite' class="formClass">
+                        <label><br>Crédit souhaité</label>
+                        <div>
+                            <label for="creditDuree">Durée de crédit</label>
+                            <input type="text" name="creditDuree" id="creditDuree">
+                        </div>
+                        <div>
+                            <label for="creditDiffere">Différé</label>
+                            <input type="text" name="creditDiffere" id="creditDiffere">
+                        </div>
+                        <div>
+                            <label for="dureeDiffere">Durée du différé</label>
+                            <input type="text" name="dureeDiffere" id="dureeDiffere">
+                        </div>
+                        <div>
+                            <label for="creditCharge">Charges</label>
+                            <input type="text" name="creditCharge" id="creditCharge">
+                        </div>
+                        <div>
+                            <label for="taxeFonciere">Apport personnel</label>
+                            <input type="text" name="taxeFonciere" id="taxeFonciere">
+                        </div>
+                        <div>
+                            <label for="avantageProjet"><br>Quels sont les avantages de votre projet?</label>
+                            <textarea name="avantageProjet" id="avantageProjet" cols="30" rows="5"></textarea>
+                        </div>
+                        <div>
+                            <label for="inconvenientProjet">Quels sont les inconvénients et qu'avez-vous prévu pour les réduire?</label>
+                            <textarea name="inconvenientProjet" id="inconvenientProjet" cols="30" rows="5"></textarea>
+                        </div>
+
+                    </div>
+
                 </form>
 
                 <!-- == bouton pour passer à l'onglet suivant 'pièces jointes' ou pour revenir au précédent 'projet' === -->
                 <div class="btn" id="btn4">
-                    <button id="etapePrecedent1">Etape précédent</button>
-                    <button id="etapeSuivant1">Etape suivante</button>
+                    <button id="etapePrecedent1"><img
+                        src="../assets/icons/formulaire/precedent.png">Etape précédent</button>
+                    <button id="etapeSuivant1">Etape suivante<img
+                        src="../assets/icons/formulaire/suivant.png"></button>
                 </div>
             </article>
 
@@ -960,8 +1000,7 @@
                         </button>
                         <button class="tablink" onclick="openPage('projetFinancer', this)">
                         <img src="../assets/icons/formulaire/Vector-2.png" alt="Projet à financer" /> Projet <br>à financer 
-                        </button>
-                    
+                        </button>  
                 </div>
 
             <!-- ===Situation personnelle===-->  
@@ -1087,23 +1126,9 @@
                             <!-- <div>
                                     <label for='compteCourant1'>Relevé bancaire compte courant 1 (trois derniers mois)</label>
                                     <input type='file' multiple name='compteCourant1' id='compteCourant1'>
+
                             </div>
-                            <div>
-                                    <label for='compteCourant2'>Relevé bancaire compte courant 2 (trois derniers mois)</label>
-                                    <input type='file' name='compteCourant2' id='compteCourant2'>
-                            </div>
-                            <div>
-                                    <label for='livret1'>Relevé Livret 1</label>
-                                    <input type='file' name='livret1' id='livret1'>
-                            </div>
-                            <div>
-                                    <label for='livret2'>Relevé livret 2</label>
-                                    <input type='file' name='livret2' id='livret2'>
-                            </div>
-                            <div>
-                                    <label for='assuranceVie'>Relevé assurance vie</label>
-                                    <input type='file' name='assuranceVie' id='assuranceVie'>
-                            </div> -->
+                          
                         <!-- </section> -->
 
                         <!--====== Pièce jointe Parc Locatif =========-->
@@ -1217,6 +1242,7 @@
                                     </div>   
                                 </div>     -->
 
+
                 <!-- </form> -->
             </article>
         </section>
@@ -1250,9 +1276,10 @@
 
         </footer> -->
     </main>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="../js/formulaire.js"></script>
-    
+
 </body>
 
 </html>
