@@ -2,444 +2,162 @@
 * {
   padding: 0;
   margin: 0;
-}
-body {
-  width: auto;
-  height: 100vh;
   font-family: "Rambla", sans-serif;
 }
-
-/**************************** main ***************************** */
+body {
+  width: 100vw;
+  height: 100vh;
+}
 
 main {
-  height: 76vh;
-  width: auto;
+  width: 100vw;
+  height: calc(100vh - 12vh - 13vh);
+  background-color: #44566c;
 }
+
 section {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
   display: flex;
-  flex-direction: row;
-}
-.image {
-  width: 40vw;
-}
-.photo {
-  width: 100%;
-  height: 100%;
-  margin-top: 0%;
-  margin-bottom: 0%;
+  flex-flow: row;
 }
 
-.info {
-  width: 75%;
-
-  background: #354e6d;
-  opacity: 0.9;
-}
-h1 {
-  font-size: xx-large;
-  color: white;
-  text-align: left;
-  font-size: 2em;
-  font-weight: bold;
-  padding: 2%;
-  text-align: center;
-}
-.rep {
-  display: flex;
-  flex-direction: row;
+.img-left {
+  width: 30vw;
+  height: calc(100vh - 12vh - 13vh);
+  background-image: url(../assets/images/contact/phone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-form {
-  width: 48vw;
-  height: 80%;
-  margin: 0.5em;
+.img-left img {
+  width: 30vw;
 }
-p {
-  color: white;
-  font-size: 1.3rem;
-  /* margin-top: 2vh; */
-  text-align: 0%;
-  margin-left: 0;
-}
-.entete {
+
+.info-contact {
+  width: 70vw;
+  height: calc(90vh - 12vh - 13vh);
+  margin: auto;
   display: flex;
-  margin-left: 3vw;
-  width: 40vw;
+  flex-flow: row;
+  justify-content: space-around;
   align-items: center;
 }
 
-.champs1 {
-  width: 23vw;
-  display: flex;
-}
-nav {
-        position: relative;
-        width: auto;
-        height: 12vh;
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        
-    }
-    
-    nav #logo {
-        width: 50%;
-    }
-    
-    nav img {
-        width: 15em;
-        margin-left: 3em;
-    }
-    
-    #menu {
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
-        margin-right: 3em;
-    }
-    
-    ul {
-        display: flex;
-        flex-flow: row;
-        text-decoration: none;
-        
-       
-        
-    }
-    li {
-        font-family: 'Rambla', sans-serif;
-        color: #2F435E;
-        list-style: none;  
-    }
-    
-    a {
-        text-decoration: none;
-        color: #2F435E;
-        display: flex;
-        align-items: center;
-    }
-    
-    ul li a img {
-        width: 1rem;
-        padding-right: .5em;
-    }
-    /**************************** main ***************************** */
-
-    main{
-        height: 75vh;
-        width: auto;
-    }
-section{ 
-        position:relative;
-        width: 100%;
-	    height: 100%;
-	   display:flex;
-	   flex-direction: row;
-	 
-        }
-.image{ width: 40vw;
-          
-    }
- .photo{ 
- 		  width:100%; 
-         height:100%;
-         margin-top: 0%;
-         margin-bottom: 0%;
-         
-         }
-
-  align-items: left;
-  flex-direction: column;
-}
-.champs2 {
-  width: 23vw;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-}
-
-.champ-texte {
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  margin-left: 3vw;
-}
-.mes-tete {
-  margin-left: 3vw;
-  margin-top: 1vh;
-}
-
-fieldset {
-  border: none;
-  width: 45vw;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-textarea {
-  /* padding: 0.9em 1.3em; */
-  margin: 0;
-  border-radius: 0.1em;
-  background-color: rgba(199, 199, 199, 0.5);
-  color: white;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"] {
-  width: 18vw;
-  height: 5vh;
-  margin-top: 0.2vh;
-  border-radius: 0.4em;
-
-  border-color: transparent;
-}
-
-textarea {
-  width: 38vw;
-  height: 20vh;
-  margin-top: 1vh;
-  border-radius: 0.5em;
-  display: flex;
-}
 label {
-  color: #fff;
-  font-size: 1.25em;
-  font-family: "Rambla";
-  font-style: normal;
-  margin-top: 1.1em;
-  letter-spacing: 0.1em;          
-        }
-   
-
-       input[type=text]:focus{ border-color:blue;}
-       textarea:focus{border-color:blue; }
-
-
-#envoyer{ 
-        width: 38vw;
-        height: 6vh;
-        margin-top: 3vh;
-        margin-left:3vw ;
-        display: inline-block;
-        padding: 1em 2.7em;
-        font-size: 1.1em;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: #1B2A3D;
-        border: none;
-}  
-.données{ 
-      
-      width: 51vw ;
-  	  height:48vh; 
-      /* margin-bottom:5%; */
-      margin-top: 3vh;
- }
-       
-.données img{
-    width:2vw; 
-    height:3vh;
+  color: white;
 }
 
-
-.phrase p{
-    width: 15vw;
-    text-align: center;
-    margin-top: 4vh;
-}
-
-.adresse-contact{
-    margin-left: 2vw;
-    margin-top: 2vh;
-}
-input[type="text"]:focus {
-  border-color: blue;
-
-}
-textarea:focus {
-  border-color: blue;
-}
-
-.adresse img{
-    width: 2vw;
-    height: 3vh;
-    
-}
-.adresse-contact a{
-    color: white;
-    font-size: 1.3em;
-    margin-top: 0.7vh;
-}
-.adresse p, .appel p{
-    margin-left: 0.3vw;
-    margin-top: 0.5vh;
-}
-.appel img{
-    width: 1vw;
-    height: 3vh;
-}
-.zone-num{
-    margin-top: 1vh;
-    margin-left: 4vw;
-}
-.appel{
-    display: flex;
-    margin-top: 1vh;
-    margin-left: 1vw;
-    
-
-
-#envoyer {
-  font-family: "Rambla";
-  width: 38vw;
-  height: 6vh;
-  margin-top: 3vh;
-  margin-left: 3vw;
+.lineOne {
   display: flex;
-  align-content: center;
+  flex-flow: row;
   justify-content: center;
-  padding: 1em 2.7em;
-  font-size: 1.1em;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  background-color: #c4c4c4;
+}
+
+input[type="submit"] {
+  width: 34vw;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1b2a3d;
+  color: white;
+  font-size: 1.25rem;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #1b2a3d;
-  border: none;
-
-}
-.données {
-  width: 50vw;
-  height: 80%;
-  margin-bottom: 5%;
-  margin-top: 10vh;
 }
 
-
-.données img {
-  width: 2vw;
-  height: 3vh;
+textarea {
+  width: 33vw;
+  height: 20vh;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #c4c4c4;
+  font-size: 1rem;
+  resize: none;
 }
 
- .fin{
-    margin-top: 2vh;
-}
-.ques{ 
-    color:white;
-     font-size:1.5em;
-    font-weight:bold;
-    margin-left: 1vw;
-}
-.fin p{
-    text-align: center;
-    
-    width: 15vw;
-    font-size: 1em;
-    margin-left: 1vw;
-}
-.guide  a {
-    width:12vw;
-    height:6vh;
-    margin-top: 5vh;
-    margin-left: 1.5vw;
-    margin-right: auto;
-    font-size:1.5em ;
-background-color: #1B2A3D;
-border:none;
-color: white;
-
-text-decoration: none;
-opacity:1;}
-.guide a p{
-     text-align: center;
-     margin-left: auto;
-     margin-right: auto;
-}
-
-
-
-.phrase p {
+.nom,
+.prenom,
+.email,
+.tel,
+.msg {
   width: 15vw;
-  text-align: center;
-  margin-top: 4vh;
-}
-
-.adresse-contact {
-  margin-left: 2vw;
-  margin-top: 4vh;
-}
-.adresse {
+  margin: 1rem;
   display: flex;
-  margin-left: 3vw;
+  flex-flow: column;
 }
-.adresse img {
-  width: 2vw;
-  height: 3vh;
-}
-.adresse-contact a {
-  color: white;
-  font-size: 1.3em;
-  margin-top: 0.7vh;
-}
-.adresse p,
-.appel p {
-  margin-left: 0.3vw;
-  margin-top: 0.5vh;
-}
-.appel img {
-  width: 1vw;
-  height: 3vh;
-}
-.zone-num {
-  margin-top: 2vh;
-  margin-left: 4vw;
-}
-.appel {
+
+/* ==============STYLING TEXT DROITE=============== */
+
+.txt {
+  width: 20vw;
+  height: calc(88vh - 12vh - 13vh);
   display: flex;
-  margin-top: 1vh;
-  margin-left: 1vw;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.zone-num span {
+
+p,
+h3 {
   color: white;
-  font-size: 1.5em;
-}
-
-.fin {
-  margin-top: 2vh;
-}
-
-.ques {
-  color: white;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-left: 2vw;
-}
-
-.fin p {
+  font-size: 1rem;
   text-align: center;
-  width: 15vw;
-  font-size: 1em;
-  margin-left: 1vw;
+  line-height: 1.5rem;
 }
 
-button {
-  width: 18vw;
-  height: 6vh;
-  margin-top: 11vh;
-  font-size: 1.5em;
-  background-color: #1b2a3d;
-  border: none;
-  color: white;
-  text-align: center;
+h3 {
+  font-size: 1.1rem;
+  padding: .5rem;
+}
+
+.contain-info{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+
+}
+
+
+.txt .guide { /*linkGuide CSS*/
+  display: flex;
+  justify-content: center;
   text-decoration: none;
-  opacity: 1;
+  color: white;
+  border-radius: 5px;
+  background-color: #1b2a3d;
+  width: 10vw;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+
+.adresse-mail,
+.phone {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contain-info .adresse-mail img {
+  width: 15%;
+}
+
+.contain-info .phone img {
+  width: 15%;
 }

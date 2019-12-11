@@ -992,323 +992,258 @@
 
             <article id="piecejoint" class="tabcontent">
                 <div id="tabs">
-                    <button class="tablink" onclick="openPage('situationPerso', this)" id="defaultOpen">
-                        <img src="../assets/icons/formulaire/Vector-1.png" alt="Situation personnelle" />Situation<br>
-                        personnelle
-                    </button>
-                    <button class="tablink" onclick="openPage('parcLoc', this)">
-                        <img src="../assets/icons/formulaire/Group.png" alt="Parc locatif" />Parc locatif
-                    </button>
-                    <button class="tablink" onclick="openPage('projetFinancer', this)">
-                        <img src="../assets/icons/formulaire/Vector-2.png" alt="Projet à financer" /> Projet à financer
-                    </button>
-
+                        <button class="tablink" onclick="openPage('situationPerso', this)" id="defaultOpen">
+                        <img src="../assets/icons/formulaire/Vector-1.png" alt="Situation personnelle" />Situation<br> personnelle
+                        </button>
+                        <button class="tablink" onclick="openPage('parcLoc', this)">
+                        <img src="../assets/icons/formulaire/Group.png" alt="Parc locatif" />Parc <br> locatif
+                        </button>
+                        <button class="tablink" onclick="openPage('projetFinancer', this)">
+                        <img src="../assets/icons/formulaire/Vector-2.png" alt="Projet à financer" /> Projet <br>à financer 
+                        </button>  
                 </div>
 
+            <!-- ===Situation personnelle===-->  
                 <section id="situationPerso" class="tabcontente">
-                    <article>
-                        <div class="tbl-header">
-                            <table cellpadding="0" cellspacing="0" border="0">
-                                <thead>
-                                    <tr>
-                                        <th>No#</th>
-                                        <th>ID</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                        <div class="tbl-content">
-                            <table cellpadding="0" cellspacing="0" border="0">
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>#259986357</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>2</td>
-                                        <td>#259986357</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>3</td>
-                                        <td>3</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>4</td>
-                                        <td>#259986357</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>5</td>
-                                        <td>#259986357</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>6</td>
-                                        <td>#259986357</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>7</td>
-                                        <td>#259986357</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>8</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </article>
+                    <div>   
+                        <article class='contentPJ'>
+                            <button class='pjElt'>Photo de profil</button>
+                            <button class='pjElt'>Carte d'identité</button>
+                            <button class='pjElt'>Contrat de travail</button>
+                            <button class='pjElt'>Bulletin de salaire (trois derniers)</button>
+                            <!-- si professionnel-->
+                            <button class='pjElt'>Bilans comptables (deux derniers)</button>
+                            <!-- Si locataire-->
+                            <button class='pjElt'>Bail de résidence </button>
+                            <!-- Si propriétaire-->
+                            <button class='pjElt'>Avis de valeur résidence principale</button>
+                            <button class='pjElt'>Echeancier d'emprunt</button>
+                            <!-- fin condition-->
+                            <button class='pjElt'>Avis d'imposition</button>
+                            <button class='pjElt'>Avis de valeur résidence principale</button>
+                            <button class='pjElt'>Relevé bancaire compte courant 1</button>
+                            <button class='pjElt'>Relevé bancaire compte courant 2</button>
+                            <button class='pjElt'>Relevé livret 1</button>
+                            <button class='pjElt'>Relevé livret 2</button>
+                            <button class='pjElt'>Relevé Assurance vie</button>
+                        </article>
+                        <article class='dragndrop'>
+                            <p>DragnDrop</p>
+                            <input type='file'>
+                        </article>
+                    </div>
                 </section>
-
+            
+            <!-- ===Parc Locatif===-->
                 <section id="parcLoc" class="tabcontente">
-                    <article>
-                        <table>
-                            <tr>
-                                <th>No#</th>
-                                <th>ID</th>
-                                <th>Nom/Société</th>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>Status</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>#259986357</td>
-                                <td>Marie-Laure Morzadec</td>
-                                <td>08/09/2019</td>
-                                <td>Complet</td>
-                                <td>En cours</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>#259984635</td>
-                                <td>Sidi Chahid</td>
-                                <td>09/09/2019</td>
-                                <td>incomplet</td>
-                                <td>En cours</td>
-                            </tr>
-                        </table>
-                    </article>
+                    <div>  
+                        <article class='contentPJ'>
+                            <div id ='PjImmeuble'> <!-- Afficher si il a des immeubles dans son parc locatifs-->
+                                <button class='pjElt'>Immeuble 1 photos</button>
+                                <!-- Si immeuble loué-->
+                                <button class='pjElt'>Immeuble 1 Lot 1 bail</button>
+                                <button class='pjElt'>Immeuble 1 Lot 2 bail</button>
+                                <!-- si immeuble pas loué-->
+                                <button class='pjElt'>Immeuble 1 Lot 3 Estimation locative</button>
+                                <button class='pjElt'>Immeuble 1 avis de valeur de l'immeuble </button>
+                                <button class='pjElt'>Immeuble 1 échéancier d'emprunt</button>
+                            </div>
+                            <div id='PjMaison'> <!-- Afficher si maison,local ou appartement dans son parc locatif-->
+                                <button class='pjElt'>Habitation 1 photos</button>
+                                <!-- Si habitation loué-->
+                                <button class='pjElt'>Habitation 1 bail</button>
+                                <!-- si habitation pas loué-->
+                                <button class='pjElt'>Habitation Estimation locative</button>
+                                <button class='pjElt'>Avis de valeur de l'habitation </button>
+                                <button class='pjElt'>Echéancier d'emprunt de l'habitation</button> 
+                            </div>
+                        </article>
+                            
+                        <article class='dragndrop'>
+                            <p>DragnDrop</p>
+                            <input type='file'>
+                        </article>
+                    </div>
                 </section>
 
+            <!-- ===Projet à Financer===-->
                 <section id="projetFinancer" class="tabcontente">
-                    <article>
-                        <table>
-                            <tr>
-                                <th>No#</th>
-                                <th>ID</th>
-                                <th>Nom/Société</th>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>Status</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>#259986357</td>
-                                <td>bbbbbbbbbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</td>
-                                <td>08/09/2019</td>
-                                <td>Complet</td>
-                                <td>En cours</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>#259984635</td>
-                                <td>Sidi Chahid</td>
-                                <td>09/09/2019</td>
-                                <td>incomplet</td>
-                                <td>En cours</td>
-                            </tr>
-                        </table>
-                    </article>
+                    <div>
+                        <article class='contentPJ'></article>
+                        <article class='dragndrop'></article>
+                    </div>
                 </section>
-
-
-                <form action='#' method="POST" enctype='multipart/form-data'>
-
+                      
+                          
+                <!-- <form action='#' method="POST" enctype='multipart/form-data'> -->
+        
                     <!-- ===== Pièce jointe Situation personnelle =====-->
 
-
-                    <section id='situationPerso' class='blockJoint'>
-                        <div>
-                            <label for='photoProfil'> Photo de profil</label>
-                            <input type='file' name='photoProfil' id='photoProfil'>
-                        </div>
-                        <div>
-                            <label for='cni'>Carte di'identité</label>
-                            <input type='file' name='cni' id='cni'>
-                        </div>
-                        <div>
-                            <label for='contratTravail'>Contrat de travail</label>
-                            <input type='file' name='contratTravail' id='contratTravail'>
-                        </div>
-                        <div>
-                            <label for='bulletinSalaire'>Bulletins de salaires (trois derniers mois)</label>
-                            <input type='file' multiple files name='bulletinSalaire' id='bulletinSalaire'>
-                        </div>
-                        <!-- Si professionnel-->
-                        <div>
-                            <label for='bilansComptable'>Bilans comptables</label>
-                            <input type='file' multiple files name='bilansComptable' id='bilansComptable'>
-                        </div>
-                        <!--fin condition-->
-                        <div>
-                            <label for='avisImpots'>Avis d'imposition (deux derniers mois)</label>
-                            <input type='file' multiple files name='avisImpots' id='avisImpots'>
-                        </div>
-                        <!-- Si locataire-->
-                        <div>
-                            <label for='bailResidence'>Bail de résidence</label>
-                            <input type='file' name='bailResidence' id='bailResidence'>
-                        </div>
-                        <!-- fin condition-->
-                        <!-- Si propriétaire-->
-                        <div>
-                            <label for='echeancierEmprunt'>Echéancier d'emprunt résidence principal</label>
-                            <input type='file' name='echeancierEmprunt' id='echeancierEmprunt'>
-                        </div>
-                        <div>
-                            <label for='avisValeur'>Avis de valeur résidence principale</label>
-                            <input type='file' multiple name='avisValeur' id='avisValeur'>
-                        </div>
-                        <!-- fin condition-->
-                        <div>
-                            <label for='compteCourant1'>Relevé bancaire compte courant 1 (trois derniers mois)</label>
-                            <input type='file' multiple name='compteCourant1' id='compteCourant1'>
-                        </div>
-                        <div>
-                            <label for='compteCourant2'>Relevé bancaire compte courant 2 (trois derniers mois)</label>
-                            <input type='file' name='compteCourant2' id='compteCourant2'>
-                        </div>
-                        <div>
-                            <label for='livret1'>Relevé Livret 1</label>
-                            <input type='file' name='livret1' id='livret1'>
-                        </div>
-                        <div>
-                            <label for='livret2'>Relevé livret 2</label>
-                            <input type='file' name='livret2' id='livret2'>
-                        </div>
-                        <div>
-                            <label for='assuranceVie'>Relevé assurance vie</label>
-                            <input type='file' name='assuranceVie' id='assuranceVie'>
-                        </div>
-                    </section>
-
-                    <!--====== Pièce jointe Parc Locatif =========-->
-                    <section id#='parcLocatif'>
-                        <!-- Si immeuble-->
-                        <div id='parcImmeuble' class='blockJoint'>
-                            <div>
-                                <label for='immeublePhoto'>Immeuble 1 photos</label>
-                                <input type='file' multiple name='immeublePhoto' id='immeublePhoto'>
-                            </div>
-                            <!-- Si loué-->
-                            <div>
-                                <label for='bail1'>Immeuble 1 Bail Lot 1 </label>
-                                <input type='file' name='bail1' id='bail1'>
+                    
+                    <!-- <section  class='blockJoint'>
+                           <div>
+                                <label for='photoProfil'> Photo de profil</label>
+                                <input type='file' name='photoProfil' id='photoProfil'>
                             </div>
                             <div>
-                                <label for='bail2'>Immeuble 1 Bail Lot 2 </label>
-                                <input type='file' name='bail2' id='bail2'>
-                            </div>
-                            <!-- Si non, loué-->
-                            <div>
-                                <label for='estimationLoc'>Estimation Locative Immeuble 1 Lot x </label>
-                                <input type='file' multiple name='estimationLoc' id='estimationLoc'>
-                            </div>
-                            <!-- Si revente de l'immeuble entier-->
-                            <div>
-                                <label for='estimationLoc'>Avis de valeur de l'immeuble</label>
-                                <input type='file' name='estimationLoc' id='estimationLoc'>
+                                    <label for='cni'>Carte di'identité</label>
+                                    <input type='file' name='cni' id='cni'>
                             </div>
                             <div>
-                                <label for='echeancierEmpruntImm'>Immeuble 1 échéancier d'emprunt</label>
-                                <input type='file' name='echeancierEmpruntImm' id='echeancierEmpruntImm'>
+                                    <label for='contratTravail'>Contrat de travail</label>
+                                    <input type='file' name='contratTravail' id='contratTravail'>
                             </div>
+                            <div>
+                                    <label for='bulletinSalaire'>Bulletins de salaires (trois derniers mois)</label>
+                                    <input type='file' multiple files name='bulletinSalaire' id='bulletinSalaire'>
+                            </div> -->
+                            <!-- Si professionnel-->
+                            <!-- <div>
+                                    <label for='bilansComptable'>Bilans comptables</label>
+                                    <input type='file' multiple files name='bilansComptable' id='bilansComptable'>
+                            </div> -->
+                            <!--fin condition-->
+                            <!-- <div>
+                                    <label for='avisImpots'>Avis d'imposition (deux derniers mois)</label>
+                                    <input type='file' multiple files name='avisImpots' id='avisImpots'>
+                            </div> -->
+                            <!-- Si locataire-->
+                            <!-- <div>
+                                    <label for='bailResidence'>Bail de résidence</label>
+                                    <input type='file' name='bailResidence' id='bailResidence'>
+                            </div> -->
                             <!-- fin condition-->
-                        </div>
+                            <!-- Si propriétaire-->
+                            <!-- <div>
+                                    <label for='echeancierEmprunt'>Echéancier d'emprunt résidence principal</label>
+                                    <input type='file' name='echeancierEmprunt' id='echeancierEmprunt'>
+                            </div>
+                            <div>
+                                    <label for='avisValeur'>Avis de valeur résidence principale</label>
+                                    <input type='file' multiple name='avisValeur' id='avisValeur'>
+                            </div> -->
+                            <!-- fin condition-->
+                            <!-- <div>
+                                    <label for='compteCourant1'>Relevé bancaire compte courant 1 (trois derniers mois)</label>
+                                    <input type='file' multiple name='compteCourant1' id='compteCourant1'>
 
-                        <!-- Si maison, appartement ou local-->
-                        <div id='parcMaison' class='blockJoint'>
-                            <div>
-                                <label for='habitationPhoto'>Habitation photos</label>
-                                <input type='file' multiple name='habitationPhoto' id='habitationPhoto'>
                             </div>
-                            <!-- Si loué-->
-                            <div>
-                                <label for='bailHabit'>Bail habitation</label>
-                                <input type='file' name='bailHabit1' id='bailHabit1'>
-                            </div>
-                            <!-- Si non, loué-->
-                            <div>
-                                <label for='estimationLocHabit'>Estimation locative de l'habitation </label>
-                                <input type='file' multiple name='estimationLoc' id='estimationLoc'>
-                            </div>
-                            <!-- Si revente de l'habitation -->
-                            <div>
-                                <label for='estimationHabit'>Avis de valeur de l'habitation</label>
-                                <input type='file' name='estimationHabit' id='estimationHabit'>
-                            </div>
-                            <div>
-                                <label for='echeancierEmpruntHab'>Echéancier d'emprunt de l'habitation</label>
-                                <input type='file' name='echeancierEmpruntHab' id='echeancierEmpruntHab'>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- ======= Pièce jointe PROJET A FINANCER =========-->
+                          
+                        <!-- </section> -->
 
-                    <!-- Si immeuble-->
-                    <div id='projetImmeuble' class='blockJoint'>
-                        <div>
-                            <label for='promesseVente'>Promesse de vente</label>
-                            <input type='file' name='promesseVente' id='promesseVente'>
-                        </div>
-                        <div>
-                            <label for='projetImmPhoto'>Projet d'achat Immeuble photos</label>
-                            <input type='file' multiple name='projetImmPhoto' id='projetImmPhoto'>
-                        </div>
-                        <!-- Si loué-->
-                        <div>
-                            <label for='bailImmProjet'>Immeuble 1 - Lot 1 Bail</label>
-                            <input type='file' name='bailImmProjet' id='bailImmProjet'>
-                        </div>
-                        <div>
-                            <label for='bailImmProjet1'>Immeuble 1 - Lot 2 Bail</label>
-                            <input type='file' name='bailImmProjet1' id='bailImmProjet1'>
-                        </div>
-                        <!-- Si immeuble lot 3 pas loué-->
-                        <div>
-                            <label for='estimeLocImm'>Immeuble 1 - Lot 3 estimation locative</label>
-                            <input type='file' name='estimeLocImm' id='estimeLocImm'>
-                        </div>
-                    </div>
-                    <!-- Si maison, appartement, local-->
-                    <div id='projetHabitation' class='blockJoint'>
-                        <div>
-                            <label for='promesseVente'>Promesse de vente</label>
-                            <input type='file' name='promesseVente' id='promesseVente'>
-                        </div>
-                        <div>
-                            <label for='projetImmPhoto'>Projet d'achat Habitation photos</label>
-                            <input type='file' multiple name='projetImmPhoto' id='projetImmPhoto'>
-                        </div>
-                        <!-- Si loué-->
-                        <div>
-                            <label for='bailHabitation'> Habitation Bail</label>
-                            <input type='file' name='bailHabitation' id='bailHabitation'>
-                        </div>
+                        <!--====== Pièce jointe Parc Locatif =========-->
+                        <!-- <section id#='parcLocatif'> -->
+                            <!-- Si immeuble-->
+                            <!-- <div id='parcImmeuble' class='blockJoint'>
+                                <div>
+                                        <label for='immeublePhoto'>Immeuble 1 photos</label>
+                                        <input type='file' multiple name='immeublePhoto' id='immeublePhoto'>
+                                </div> -->
+                                <!-- Si loué-->
+                                <!-- <div>
+                                        <label for='bail1'>Immeuble 1 Bail Lot 1 </label>
+                                        <input type='file' name='bail1' id='bail1'>
+                                </div>
+                                <div>
+                                        <label for='bail2'>Immeuble 1 Bail Lot 2 </label>
+                                        <input type='file' name='bail2' id='bail2'>
+                                </div> -->
+                                <!-- Si non, loué-->
+                                <!-- <div>
+                                        <label for='estimationLoc'>Estimation Locative Immeuble 1 Lot x </label>
+                                        <input type='file' multiple name='estimationLoc' id='estimationLoc'>
+                                </div> -->
+                                <!-- Si revente de l'immeuble entier-->
+                                <!-- <div>
+                                        <label for='estimationLoc'>Avis de valeur de l'immeuble</label>
+                                        <input type='file' name='estimationLoc' id='estimationLoc'>
+                                </div> -->
+                                <!-- <div>
+                                        <label for='echeancierEmpruntImm'>Immeuble 1 échéancier d'emprunt</label>
+                                        <input type='file' name='echeancierEmpruntImm' id='echeancierEmpruntImm'>
+                                </div> -->
+                                <!-- fin condition-->
+                            <!-- </div> -->
 
-                        <!-- Si habitation pas loué-->
-                        <div>
-                            <label for='estimeLocHab'>Habitatation - estimation locative</label>
-                            <input type='file' name='estimeLocHab' id='estimeLocHab'>
-                        </div>
-                    </div>
+                            <!-- Si maison, appartement ou local-->
+                            <!-- <div id='parcMaison' class='blockJoint'>
+                                <div>
+                                        <label for='habitationPhoto'>Habitation  photos</label>
+                                        <input type='file' multiple name='habitationPhoto' id='habitationPhoto'>
+                                </div> -->
+                                <!-- Si loué-->
+                                <!-- <div>
+                                        <label for='bailHabit'>Bail habitation</label>
+                                        <input type='file' name='bailHabit1' id='bailHabit1'>
+                                </div> -->
+                                <!-- Si non, loué-->
+                                <!-- <div>
+                                        <label for='estimationLocHabit'>Estimation locative de l'habitation </label>
+                                        <input type='file' multiple name='estimationLoc' id='estimationLoc'>
+                                </div> -->
+                                <!-- Si revente de l'habitation -->
+                                <!-- <div>
+                                        <label for='estimationHabit'>Avis de valeur de l'habitation</label>
+                                        <input type='file' name='estimationHabit' id='estimationHabit'>
+                                </div>
+                                <div>
+                                        <label for='echeancierEmpruntHab'>Echéancier d'emprunt de l'habitation</label>
+                                        <input type='file' name='echeancierEmpruntHab' id='echeancierEmpruntHab'>
+                                </div>
+                            </div>
+                        </section> -->
+                        <!-- ======= Pièce jointe PROJET A FINANCER =========-->
 
-                </form>
+                            <!-- Si immeuble-->
+                            <!-- <div id ='projetImmeuble' class='blockJoint'>
+                                <div>
+                                        <label for='promesseVente'>Promesse de vente</label>
+                                        <input type='file' name='promesseVente' id='promesseVente'>
+                                </div>
+                                <div>
+                                        <label for='projetImmPhoto'>Projet d'achat Immeuble photos</label>
+                                        <input type='file' multiple name='projetImmPhoto' id='projetImmPhoto'>
+                                </div>    -->
+                                <!-- Si loué-->  
+                                <!-- <div>
+                                        <label for='bailImmProjet'>Immeuble 1 - Lot 1 Bail</label>
+                                        <input type='file' name='bailImmProjet' id='bailImmProjet'>
+                                </div>     
+                                <div>
+                                        <label for='bailImmProjet1'>Immeuble 1 - Lot 2 Bail</label>
+                                        <input type='file' name='bailImmProjet1' id='bailImmProjet1'>
+                                </div>  -->
+                                <!-- Si immeuble lot 3 pas loué-->             
+                                <!-- <div>
+                                        <label for='estimeLocImm'>Immeuble 1 - Lot 3 estimation locative</label>
+                                        <input type='file' name='estimeLocImm' id='estimeLocImm'>
+                                </div>   
+                            </div>  -->
+                            <!-- Si maison, appartement, local-->  
+                            <!-- <div id ='projetHabitation' class='blockJoint'>
+                                    <div>
+                                            <label for='promesseVente'>Promesse de vente</label>
+                                            <input type='file' name='promesseVente' id='promesseVente'>
+                                    </div>
+                                    <div>
+                                            <label for='projetImmPhoto'>Projet d'achat Habitation photos</label>
+                                            <input type='file' multiple name='projetImmPhoto' id='projetImmPhoto'>
+                                    </div>    -->
+                                    <!-- Si loué-->  
+                                    <!-- <div>
+                                            <label for='bailHabitation'> Habitation Bail</label>
+                                            <input type='file' name='bailHabitation' id='bailHabitation'>
+                                    </div>      -->
+                                    
+                                    <!-- Si habitation pas loué-->             
+                                    <!-- <div>
+                                            <label for='estimeLocHab'>Habitatation - estimation locative</label>
+                                            <input type='file' name='estimeLocHab' id='estimeLocHab'>
+                                    </div>   
+                                </div>     -->
+
+
+                <!-- </form> -->
             </article>
         </section>
         <!-- <footer>
