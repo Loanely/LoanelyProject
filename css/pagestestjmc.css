@@ -251,6 +251,7 @@ article{
 .titreprojet{
     background: #C4C4C4;
     width: 90%;
+    
 }
 .titreprojet p{
     display: flex;
@@ -266,7 +267,7 @@ article{
 }
 
 
-#projet1, #projet2, #projet3{
+#projet2, #projet3{
     width: 90%;
     height: 18em;
     margin-top: 8vh;
@@ -283,7 +284,7 @@ table tr td p{
     font-style: italic;
 }
 
-table :nth-child(2) td{
+table :nth-child(1) td{
     color: white;
 }
 
