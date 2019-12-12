@@ -231,7 +231,19 @@ let addLot = document.querySelector('#addLot');
 let creditMensuelImm = document.querySelector('#creditMensuelImm');
 let nomImmeuble = document.querySelector('#nomImmeuble');
 let unAutreLot = document.querySelector('#unAutreLot');
-
+let unAutreBien = document.querySelector('#unAutreBien');
+let ouiUnautreBien = document.querySelector('#ouiUnautreBien');
+let nonUnautreBien = document.querySelector('#nonUnautreBien');
+let ouiautreRevenu = document.querySelector('#ouiautreRevenu');
+let nonautreRevenu = document.querySelector('#nonautreRevenu');
+let unAutreRevenu = document.querySelector('#unAutreRevenu');
+let allocations = document.querySelector('#allocations');
+let epargne = document.querySelector('#epargne');
+let ouiEpargne = document.querySelector('#ouiEpargne');
+let nonEpargne = document.querySelector('#nonEpargne');
+let allEpargne = document.querySelector('#allEpargne');
+let etapePrecedent = document.querySelector('#etapePrecedent');
+let etapesuivant = document.querySelector('#etapesuivant');
 
 hideBtn.addEventListener('click', function () {
     $('#infoPersonnel').slideUp('slow');
@@ -319,44 +331,19 @@ function hide3(investImmeuble, nomImmeuble, creditMensuelImm, investMaison, addL
 typeInvest.addEventListener('click', function () {
     if (typeInvest[1].selected) {
         hide1('investImmeuble', 'nomImmeuble', 'investMaison', 'addLot');
+
     }
 
     if ((typeInvest[2].selected) || (typeInvest[3].selected) || (typeInvest[4].selected)) {
         hide2('investImmeuble', 'nomImmeuble', 'creditMensuelImm', 'investMaison', 'addLot', 'nonAddLot');
+        unAutreBien.style.display = 'inherit';
     }
 
     if (typeInvest[5].selected) {
         hide3('investImmeuble', 'nomImmeuble', 'creditMensuelImm', 'investMaison', 'addLot');
+        unAutreBien.style.display = 'none';
     }
 });
-
-// typeInvest.addEventListener('click', function () {
-//     if (typeInvest[1].selected) {
-//         $('#investImmeuble').slideDown('slow');
-//         investImmeuble.style.display = 'inherit';
-//         $('#nomImmeuble').slideDown('slow');
-//         nomImmeuble.style.display = 'inherit';
-//         $('#investMaison').slideUp('slow');
-//         addLot.style.display = 'inherit';
-//     }
-//     if ((typeInvest[2].selected) || (typeInvest[3].selected) || (typeInvest[4].selected)) {
-//         $('#investMaison').slideDown('slow');
-//         investMaison.style.display = 'inherit';
-//         $('#investImmeuble').slideUp('slow');
-//         $('#addLot').slideUp('slow');
-//         $('#nomImmeuble').slideUp('slow');
-//         $('#creditMensuelImm').slideUp('slow');
-//         nonAddLot.checked = false;
-//         addLot.style.display = 'none';
-//     }
-//     if (typeInvest[5].selected) {
-//         $('#investMaison').slideUp('slow');
-//         $('#investImmeuble').slideUp('slow');
-//         $('#nomImmeuble').slideUp('slow');
-//         $('#creditMensuelImm').slideUp('slow');
-//         addLot.style.display = 'none';
-//     }
-// })
 
 
 
@@ -370,13 +357,18 @@ ouiCredit.addEventListener('click', function () {
 nonCredit.addEventListener('click', function () {
     $('#mensualite').slideUp('slow');
     // mensualite.style.display = "none";
+    revenu.style.display = 'block';
 })
 
 // réponse oui - il y a un investissement et afficher les radio button 'type d'investissement
 ouiInvest.addEventListener('click', function () {
     typeInvest.disabled = false;
-    // investissement.style.display = 'flex';
+    typeInvest.focus();
+    $('#typeInvest').css("background-color", "rgb(92, 79, 100)");
 });
+
+$("#typeInvest").mouseleave(function(){
+    $(this).css("background-color", "#c4c4c485");})
 
 // réponse non investissement et masquer les radio button et les inputs liés
 nonInvest.addEventListener('click', function () {
@@ -389,10 +381,61 @@ nonInvest.addEventListener('click', function () {
     $('#creditMensuelImm').slideUp('slow');
     nonAddLot.checked = false;
     $('#unAutreLot').slideUp('slow');
+    unAutreBien.style.display = 'none';
+    $('#typeInvest').css("background-color", "#c4c4c485");
+    
+
 });
 
+ouiAddLot.addEventListener('click', function () {
+    lot('unAutreLot');
+    $('#unAutreLot').slideDown('slow');
+    unAutreLot.style.display = 'inherit'
+    ouiAddLot.checked = false;
+});
 
+nonAddLot.addEventListener('click', function () {
+    $('#creditMensuelImm').slideDown('slow');
+    creditMensuelImm.style.display = 'inherit';
+    addLot.style.display = 'none';
+    unAutreBien.style.display = 'inherit';
+});
 
+ouiUnautreBien.addEventListener('click', function () {
+
+});
+
+nonUnautreBien.addEventListener('click', function () {
+
+});
+
+ouiautreRevenu.addEventListener('click', function () {
+    $('#allocations').slideDown('slow');
+    allocations.style.display = 'inherit';
+});
+
+nonautreRevenu.addEventListener('click', function () {
+    $('#allocations').slideUp('slow');
+});
+
+ouiEpargne.addEventListener('click', function () {
+    $('#allEpargne').slideDown('slow');
+    allEpargne.style.display = 'inherit';
+});
+
+nonEpargne.addEventListener('click', function () {
+    $('#allEpargne').slideUp('slow');
+});
+
+etapePrecedent.addEventListener('click', function () {
+    opentab(event, 'introduction');
+    tabs[0].className += ' active';
+});
+
+etapeSuivant.addEventListener('click', function () {
+    opentab(event, 'projet');
+    tabs[2].className += ' active';
+});
 
 // appeler la fonction "opentab" en cliquant sur l'onglet
 tabs[0].addEventListener('click', function () {
@@ -406,10 +449,10 @@ tabs[1].addEventListener('click', function () {
     $('#divForm').slideDown('slow');
 });
 tabs[2].addEventListener('click', function () { opentab(event, 'projet') });
-tabs[3].addEventListener('click', function () { 
+tabs[3].addEventListener('click', function () {
     opentab(event, 'piecejoint');
     $('#situationPerso').hide();
-    $('#situationPerso').slideDown('slow'); 
+    $('#situationPerso').slideDown('slow');
 });
 
 
@@ -473,18 +516,7 @@ function lot(e) {
 
 }
 
-ouiAddLot.addEventListener('click', function () {
-    lot('unAutreLot');
-    $('#unAutreLot').slideDown('slow');
-    unAutreLot.style.display='inherit'
-    ouiAddLot.checked = false;
-});
 
-nonAddLot.addEventListener('click', function () {
-    $('#creditMensuelImm').slideDown('slow');
-    creditMensuelImm.style.display = 'inherit';
-    addLot.style.display = 'none';
-});
 
 
 // ********************* FIN du deuxième Article 'Emprunteur'  ************************
@@ -500,57 +532,66 @@ let investMaison1 = document.querySelector('#investMaison1');
 let addLot1 = document.querySelector('#addLot1');
 let nonAddLot1 = document.querySelector('#nonAddLot1');
 let ouiAddLot1 = document.querySelector('#ouiAddLot1');
-let unAutreLot1= document.querySelector('#unAutreLot1');
-let ouiLouer=document.querySelector('#ouiLouer');
-let nonLouer=document.querySelector('#nonLouer');
-let appartLouerBail=document.querySelector('#appartLouerBail');
-let ouiAppLouer=document.querySelector('#ouiAppLouer');
-let nonAppLouer=document.querySelector('#nonAppLouer');
-let appartLouerBail1=document.querySelector('#appartLouerBail1');
-let estimationLocative=document.querySelectorAll('.estimationLocative');
-let unAutreBien=document.querySelector('#unAutreBien');
-let ouiUnautreBien=document.querySelector('#ouiUnautreBien');
-let nonUnautreBien=document.querySelector('#nonUnautreBien');
-let frais=document.querySelector('#frais');
+let unAutreLot1 = document.querySelector('#unAutreLot1');
+let ouiLouer = document.querySelector('#ouiLouer');
+let nonLouer = document.querySelector('#nonLouer');
+let appartLouerBail = document.querySelector('#appartLouerBail');
+let ouiAppLouer = document.querySelector('#ouiAppLouer');
+let nonAppLouer = document.querySelector('#nonAppLouer');
+let appartLouerBail1 = document.querySelector('#appartLouerBail1');
+let estimationLocative = document.querySelectorAll('.estimationLocative');
+let unAutreBien1 = document.querySelector('#unAutreBien1');
+let ouiUnautreBien1 = document.querySelector('#ouiUnautreBien1');
+let nonUnautreBien1 = document.querySelector('#nonUnautreBien1');
+let frais = document.querySelector('#frais');
+let etapePrecedent1 = document.querySelector('#etapePrecedent1');
+let etapesuivant1 = document.querySelector('#etapesuivant1');
+let creditSouhaite = document.querySelector('#creditSouhaite');
 
 
 typeInvest1.addEventListener('click', function () {
     if (typeInvest1[1].selected) {
         hide1('investImmeuble1', 'nomImmeuble1', 'investMaison1', 'addLot1');
-        unAutreBien.style.display = 'none';
+        unAutreBien1.style.display = 'none';
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
         frais.style.display = 'none';
-        ouiUnautreBien.checked = false;
-        nonUnautreBien.checked = false;
+        creditSouhaite.style.display = 'none';
+        ouiUnautreBien1.checked = false;
+        nonUnautreBien1.checked = false;
     }
 
     if ((typeInvest1[2].selected) || (typeInvest1[3].selected) || (typeInvest1[4].selected)) {
         hide2('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1', 'nonAddLot1');
-        unAutreBien.style.display = 'inherit';
+        unAutreBien1.style.display = 'inherit';
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
         frais.style.display = 'none';
-        ouiUnautreBien.checked = false;
-        nonUnautreBien.checked = false;
+        creditSouhaite.style.display = 'none';
+        ouiUnautreBien1.checked = false;
+        nonUnautreBien1.checked = false;
     }
 
     if (typeInvest1[5].selected) {
         hide3('investImmeuble1', 'nomImmeuble1', 'creditMensuelImm1', 'investMaison1', 'addLot1');
-        unAutreBien.style.display = 'none';
+        unAutreBien1.style.display = 'none';
         frais.style.display = 'none';
-        ouiUnautreBien.checked = false;
-        nonUnautreBien.checked = false;
+        ouiUnautreBien1.checked = false;
+        nonUnautreBien1.checked = false;
         ouiAddLot1.checked = false;
         nonAddLot1.checked = false;
-        
+        $('#frais').slideDown('slow');
+        frais.style.display = 'inherit';
+        $('#creditSouhaite').slideDown('slow');
+        creditSouhaite.style.display = 'inherit';
+
     }
 });
 
 ouiAddLot1.addEventListener('click', function () {
     lot('unAutreLot1');
     $('#unAutreLot1').slideDown('slow');
-    unAutreLot1.style.display='inherit';
+    unAutreLot1.style.display = 'inherit';
     ouiAddLot1.checked = false;
 });
 
@@ -558,39 +599,49 @@ nonAddLot1.addEventListener('click', function () {
     // $('#creditMensuelImm1').slideDown('slow');
     // creditMensuelImm1.style.display = 'inherit';
     addLot1.style.display = 'none';
-    $('unAutreBien').slideDown('slow');
-    unAutreBien.style.display = 'inherit';
+    $('unAutreBien1').slideDown('slow');
+    unAutreBien1.style.display = 'inherit';
 });
 
-ouiUnautreBien.addEventListener('click', function(){})
+ouiUnautreBien1.addEventListener('click', function () { })
 
-nonUnautreBien.addEventListener('click',function(){
+nonUnautreBien1.addEventListener('click', function () {
     $('#frais').slideDown('slow');
     frais.style.display = 'inherit';
+    $('#creditSouhaite').slideDown('slow');
+    creditSouhaite.style.display = 'inherit';
 })
 
-ouiLouer.addEventListener('click',function(){
-    appartLouerBail.disabled=false;
+ouiLouer.addEventListener('click', function () {
+    appartLouerBail.disabled = false;
 });
 
-nonLouer.addEventListener('click',function(){
-    appartLouerBail.disabled=true;
+nonLouer.addEventListener('click', function () {
+    appartLouerBail.disabled = true;
 });
 
-ouiAppLouer.addEventListener('click',function(){
-    appartLouerBail1.disabled=false;
-    estimationLocative[1].style.display='none';
-    estimationLocative[0].style.display='inherit';
+ouiAppLouer.addEventListener('click', function () {
+    appartLouerBail1.disabled = false;
+    estimationLocative[1].style.display = 'none';
+    estimationLocative[0].style.display = 'inherit';
 });
 
-nonAppLouer.addEventListener('click',function(){
-    appartLouerBail1.disabled=false;
-    estimationLocative[0].style.display='none';
-    estimationLocative[1].style.display='inherit';
+nonAppLouer.addEventListener('click', function () {
+    appartLouerBail1.disabled = false;
+    estimationLocative[0].style.display = 'none';
+    estimationLocative[1].style.display = 'inherit';
 });
 
 
+etapePrecedent1.addEventListener('click', function () {
+    opentab(event, 'emprunteur');
+    tabs[1].className += ' active';
+});
 
+etapeSuivant1.addEventListener('click', function () {
+    opentab(event, 'piecejoint');
+    tabs[3].className += ' active';
+});
 
 
 // ********************* FIN du TROISIEME Article 'Projet'  ************************
@@ -640,7 +691,7 @@ function openPage(pageName, elmnt, color) {
     var i, tabcontente, tablinks;
     tabcontente = document.getElementsByClassName("tabcontente");
     for (i = 0; i < tabcontente.length; i++) {
-      tabcontente[i].style.display = "none";
+        tabcontente[i].style.display = "none";
     }
     // tablinks = document.getElementsByClassName("tablink");
     // for (i = 0; i < tablinks.length; i++) {
@@ -648,9 +699,9 @@ function openPage(pageName, elmnt, color) {
     // }
     document.getElementById(pageName).style.display = "block";
     elmnt.style.backgroundColor = color;
-  }
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
 

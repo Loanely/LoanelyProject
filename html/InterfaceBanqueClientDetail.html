@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/DefautNavFooter.css" />
+    <link rel="stylesheet" href="../css/InterfaceBanqueClientDetail.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- =================================NAV STARTS HERE===================================== -->
+    <header>
+        <nav>
+            <div id="logo">
+                <img src="../assets/logos/loanelyLogoSlogan.png" alt="logo" />
+            </div>
+
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <img src="../assets/icons/contact/accueil.png" alt="" />
+                            Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../html/contact.html">
+                            <img src="../assets/icons/accueil/contact.png" alt="" />
+                            CONTACT</a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="#">
+                            <img src="../assets/icons/interfaceBanque/deconnexion.png" alt="" />
+                            DECONNEXION</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =================================MAIN STARTS HERE===================================== -->
+
+    <main>
+        <!-- =================================BANQUE NAME AND ID===================================== -->
+
+        <div id="banque-client">
+            <h2>Banque</h2>
+            <h2>ID# 2746297</h2>
+        </div>
+
+        <section>
+            <article>
+                <div class="bar">
+                        <h2>Marie-Laure MORZADECK</h2>
+                        <h2>Client No#259986357 </h2>
+                </div>
+            </article>
+
+            <article>
+                <div class="info-perso">
+                    <div class="titre"></div>
+                    <div class="coordonnees">
+                        <div class="leftSide"></div>
+                        <div class="middle"></div>
+                        <div class="photo"></div>
+                    </div>
+                </div>
+
+                <div class="dossier">
+                    <div class="titre"></div>
+                    <div class="coordonnees">
+                        <div class="leftSide"></div>
+                        <div class="rightSide"></div>
+                    </div>
+                </div>
+
+                <div class="justificatifs">
+                    <div class="titre"></div>
+                    <div class="contain">
+                        <table>
+                            <tr></tr>
+                            <tr></tr>
+                            <tr></tr>
+                        </table>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <!-- ====================FOOTER STARTS HERE============================ -->
+
+        <footer>
+            <div id="logo">
+                <img src="../assets/logos/logo bas.png" alt="" />
+            </div>
+
+            <div class="liens-footer">
+                <div>
+                    <a href="#">Qui Somme Nous?</a>
+                    <a href="./interfaceBanque.html">Espace Banque</a>
+                    <a href="#">Espace Client</a>
+                </div>
+
+                <div>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Recrutement</a>
+                    <a href="./contact.html">Contactez-Nous</a>
+                </div>
+
+                <div>
+                    <a href="#">Plan de Site</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Mentions Legales</a>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script>
+            $(window).on("load resize ", function () {
+                var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+                $('.tbl-header').css({ 'padding-right': scrollWidth });
+            }).resize();
+
+
+
+        </script>
+</body>
+
+</html>

@@ -328,7 +328,7 @@ table {
     height: auto;
     width: 100vw;
     background-color: #44566C;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-flow: column;
     align-items: center;
