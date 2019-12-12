@@ -43,6 +43,10 @@ section {
   align-items: center;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 72f91f4f97de2e4134ae96c1b9a6d41164718ec8
 nav {
         position: relative;
         width: auto;
@@ -127,11 +131,19 @@ section{
   display: flex;
   align-items: left;
   flex-direction: column;
+<<<<<<< HEAD
 =======
 
 label {
   color: white;
 >>>>>>> dc26c0da7f7679a9c39b5f061fcd5aefb8ac95ab
+=======
+
+
+label {
+  color: white;
+
+>>>>>>> 72f91f4f97de2e4134ae96c1b9a6d41164718ec8
 }
 
 .lineOne {
@@ -216,6 +228,14 @@ h3 {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+.adresse p, .appel p{
+    margin-left: 0.3vw;
+    margin-top: 0.5vh;
+}
+>>>>>>> 72f91f4f97de2e4134ae96c1b9a6d41164718ec8
 .appel img{
     width: 1vw;
     height: 3vh;
@@ -228,9 +248,13 @@ h3 {
     display: flex;
     margin-top: 1vh;
     margin-left: 1vw; }
+<<<<<<< HEAD
     
 =======
 >>>>>>> dc26c0da7f7679a9c39b5f061fcd5aefb8ac95ab
+=======
+
+>>>>>>> 72f91f4f97de2e4134ae96c1b9a6d41164718ec8
 
 .contain-info p {
   font-size: 1.1rem;
